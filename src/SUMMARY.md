@@ -3,5 +3,9 @@
 [Introduction](./introduction.md)
 ---
 
+# PID(F) Controllers
+
+- [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
+
 ---
 [Contributors](./contributors.md)
