@@ -9,7 +9,7 @@
 
 [Manual feedforward tuner overshoots](./Roadrunner%200.5.6/manual_feedforward_tuner_overshooots.md)
 
-[Robot makes circles when spinning in place](./Roadrunner%200.5.6/robot_makes_circle_when_spinning_in_place.md)
+[Robot localization makes circles when spinning in place](./Roadrunner%200.5.6/robot_localization_makes_circle_when_spinning_in_place.md)
 
 [Robot velocity plateaus below target velocity plateau](./Roadrunner%200.5.6/robot_velocity_plateaus_below_target_velocity_plateau.md)
 
