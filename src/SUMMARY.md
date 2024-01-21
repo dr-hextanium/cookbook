@@ -3,8 +3,8 @@
 [Introduction](./introduction.md)
 ---
 
-RoadRunner 0.5.6
----
+# RoadRunner 0.5.6
+
 [Is the bump on feedforward tuner normal?](./Roadrunner%200.5.6/is_the_bump_on_manual_feedforward_tuner_normal.md)
 
 [Manual feedforward tuner overshoots](./Roadrunner%200.5.6/manual_feedforward_tuner_overshooots.md)
@@ -18,6 +18,10 @@ RoadRunner 0.5.6
 [Robot drifts while tuning follower PID](./Roadrunner%200.5.6/robot_drifts_while_tuning_follower_pid.md)
 
 [Robot drives full speed on start when following trajectory](./Roadrunner%200.5.6/robot_drives_full_speed_on_start_when_following_trajectory.md)
+
+# PID(F) Controllers
+
+- [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
 
 ---
 [Contributors](./contributors.md)
