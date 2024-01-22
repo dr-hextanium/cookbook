@@ -27,6 +27,7 @@ of the [original repository](https://github.com/dr-hextanium/cookbook).
 3. Add yourself to `contributors.md`, you deserve it :)
 
 4. Commit and push your changes to your fork.
+   - Make sure your commits abide by the (Conventional Commits)[https://www.conventionalcommits.org/en/v1.0.0/] standard.
 
 5. Submit a pull request.
    - We'll have a little discussion on things you may have to change.
