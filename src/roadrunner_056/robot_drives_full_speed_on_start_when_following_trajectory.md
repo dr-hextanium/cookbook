@@ -6,3 +6,5 @@ Trajectory traj = sampleMecanumDrive.trajectoryBuilder(startingPose)
     ...
     .build();
 ```
+
+*Last Updated: 2024-01-20*
