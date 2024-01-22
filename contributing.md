@@ -17,12 +17,15 @@ Making a recipe is actually quite simple, all you need is a working knowledge of
 of the [original repository](https://github.com/dr-hextanium/cookbook).
 
 2. Add your content under `src`. Entries should:
-   - start with an h1 for the title (`#`)
    - be one Markdown (`.md`) file
      - have the `snake_case` version of the title as their file name
      - store any media (images, audios, etc.) they may have under a subfolder titled their filename in `src/static/`
    - have an appropriate `SUMMARY.md` entry
    - answer a question, address a common misconception, provide a solution for frequently asked questions
+   - be structured thematically
+      - begin with an h1 for the title (`#`)
+      - have an h2 "Ingredients" section for requirements, if required
+      - have a "last updated" field.
 
 3. Add yourself to `contributors.md`, you deserve it :)
 
