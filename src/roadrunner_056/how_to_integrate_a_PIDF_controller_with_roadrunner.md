@@ -23,96 +23,99 @@ You can work with Finite State Machines in either a LinearOpMode or an OpMode, e
 
 We will first have a full example and then break it down piece by piece.
 
+*This example is more like pseudo code than real code and is meant to demonstrate a methodology.*
+
 ```
-// the capitalization and snake_case is just convention because the values of an enum are constants
-public enum STATES {
-    INIT,
-    START,
-    DRIVE_FORWARD,
-    STRAFE_LEFT_AND_LIFT_SLIDES,
-    DRIVE_BACKWARD,
-    STOP;
-}
+public class RoadRunnerPIDF extends LinearOpMode {
+    // the capitalization and snake_case is just convention because the values of an enum are constants
+    public enum STATES {
+        INIT,
+        DRIVE_FORWARD,
+        STRAFE_LEFT_AND_LIFT_SLIDES,
+        DRIVE_BACKWARD,
+        STOP;
+    }
 
-private STATES previousState = STATES.INIT;
-private STATES currentState = STATES.INIT;
-private int targetPosition = 0;
+    private STATES previousState = STATES.INIT;
+    private STATES currentState = STATES.INIT;
+    private int targetPosition = 0;
 
-private TrajectorySequence forward;
-private TrajectorySequence strafeLeft;
-private TrajectorySequence backward;
+    private TrajectorySequence forward;
+    private TrajectorySequence strafeLeft;
+    private TrajectorySequence backward;
 
-private SampleMecanumDrive drive;
-private DcMotorEx linearSlides;
-privaet PIDFController PIDF;
+    private SampleMecanumDrive drive;
+    private DcMotorEx linearSlides;
+    private PIDFController PIDF;
 
-public void runOpMode() {
-    /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
-    The linear slides will simply be called linearSlides.
-    */
+    public void runOpMode() {
+        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+        The linear slides will simply be called linearSlides.
+        */
 
-    // linear slide initialization code
-    // pidf initialization code
+        // linear slide initialization code
+        // pidf initialization code
 
-    drive = new SampleMecanumDrive(hardwareMap);
-    drive.setPoseEstimate(new Pose2d());
+        drive = new SampleMecanumDrive(hardwareMap);
+        drive.setPoseEstimate(new Pose2d());
 
-    forward = drive.TrajectorySequenceBuilder(new Pose2d())
-        .forward(10)
-        .build();
+        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+            .forward(10)
+            .build();
 
-    strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
-        .addDisplacementMarker(() -> {
-            targetPosition = 800;
-        })
-        .strafeLeft(10)
-        .build();
+        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+            .addDisplacementMarker(() -> {
+                targetPosition = 800;
+            })
+            .strafeLeft(10)
+            .build();
 
-    backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
-        .back(10)
-        .build();
+        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+            .back(10)
+            .build();
 
-    waitForStart();
+        waitForStart();
 
-    currentState = STATES.DRIVE_FORWARD;
+        currentState = STATES.DRIVE_FORWARD;
 
-    while(opModeIsActive) {
-        switch (currentState) {
-            case (INIT):
-                break;
-            case (DRIVE_FORWARD):
-                if (previousState != currentState) {
-                    // everything in here will run once when the state switches
+        while(opModeIsActive) {
+            switch (currentState) {
+                case (INIT):
+                    break;
+                case (DRIVE_FORWARD):
+                    if (previousState != currentState) {
+                        // everything in here will run once when the state switches
 
-                    drive.followTrajectoryAsync(forward)
-                    previousState = STATES.DRIVE_FORWARD;
-                } else if (!drive.isBusy()) {
-                    currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
-                }
-                break;
-            case (STRAFE_LEFT_AND_LIFT_SLIDES):
-                if (previousState != currentState) {
-                    // inside this trajectory sequence the targetPosition is set and the slides will start updating
-                    drive.followTrajectorySequenceAsync(strafeLeft);
-                } else if (!drive.isBusy() && linearSlides.atTarget()) {
-                    currentState = STATES.DRIVE_BACKWARD;
-                }
-                break;
-            case (DRIVE_BACKWARD):
-                if (previousState != currentState) {
-                    drive.followTrajectorySequenceAsync(backward);
-                    previousState = STATES.DRIVE_BACKWARD;
-                } else if (!drive.isBusy()) {
-                    currentState = STATES.STOP;
-                }
-                break;
-            case (STOP):
-                break;
+                        drive.followTrajectoryAsync(forward)
+                        previousState = STATES.DRIVE_FORWARD;
+                    } else if (!drive.isBusy()) {
+                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+                    }
+                    break;
+                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+                    if (previousState != currentState) {
+                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+                        drive.followTrajectorySequenceAsync(strafeLeft);
+                    } else if (!drive.isBusy() && linearSlides.atTarget()) {
+                        currentState = STATES.DRIVE_BACKWARD;
+                    }
+                    break;
+                case (DRIVE_BACKWARD):
+                    if (previousState != currentState) {
+                        drive.followTrajectorySequenceAsync(backward);
+                        previousState = STATES.DRIVE_BACKWARD;
+                    } else if (!drive.isBusy()) {
+                        currentState = STATES.STOP;
+                    }
+                    break;
+                case (STOP):
+                    break;
+            }
+
+            // outside of the switch we update our slides, that way they are always receiving new information
+            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+            linearSlides.setPower(power);
         }
-
-        // outside of the switch we update our slides, that way they are always receiving new information
-        double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
-        linearSlides.setPower(power);
     }
 }
 ```
@@ -122,7 +125,6 @@ Okay, let's break this down piece by piece. First, what is an "enum" and why do 
 ```
 public enum STATES {
     INIT,
-    START,
     DRIVE_FORWARD,
     STRAFE_LEFT_AND_LIFT_SLIDES,
     DRIVE_BACKWARD,
@@ -183,5 +185,68 @@ This example was meant to be general and explain the structure and concepts need
 
 ### State Factory
 
+[State Factory](https://state-factory.gitbook.io/state-factory/installation) is a library which helps abstract a lot of the code of a finite state machine. It also helps ensure you don't forget to write a break or an exit case.
+
+*This recipe will not cover the installation of State Factory, please follow the instructions on the gitbook to install*
+
+So, we're going to write the same fintie state machine, but using state factory.
+
+```
+public class RoadRunnerPIDF extends LinearOpMode {
+
+    public enum STATES {
+        INIT,
+        DRIVE_FORWARD,
+        STRAFE_LEFT_AND_LIFT_SLIDES,
+        DRIVE_BACKWARD,
+        STOP;
+    }
+
+    SampleMecanumDrive drive;
+    DcMotorEx linearSlides;
+    PIDFController PIDF;
+    int targetPosition = 0;
+
+    public void runOpMode() {
+
+        // all the same initialization and trajectory building as above
+
+        StateMachine machine = new StateMachine()
+            .state(STATES.INIT) // creates a new state
+            .transition(isStarted()) // condition to transition from this state to the next one
+
+            .state(STATES.DRIVE_FORWARD) // register a new state
+            .onEnter(drive.followTrajectorySequenceAsync(forward)) // code to happen one time when entering this state
+            .transition(!drive.isBusy())
+
+            .state(STATES.STRAFE_LEFT_AND_LIFT_SLIDES)
+            .onEnter(drive.followTrajectorySequenceAsync(strafeLeft))
+            .transition(!drive.isBusy() && linearSlides.atTarget())
+
+            .state(STATES.DRIVE_BACKWARD)
+            .onEnter(drive.followTrajectorySequenceAsync(backward))
+            .transition(!drive.isBusy())
+
+            .state(STATES.STOP)
+
+            .build();
+        // building this StateMachine doesn't actually do anything. We still need to run it
+
+        waitForStart();
+
+        machine.start(); // this starts the state machine, putting us into the first state
+
+        while(opModeIsActive()) {
+            machine.update();
+            double power = PIDF(linearSlides.getCurrentPosition(), targetPosition);
+            linearSlides.setPower(power);
+        }
+    }
+}
+```
+
+These two example both do the exact same thing and this introduction to State Factory was mostly meant to show how it can make writing FSMs less painful.
+
+**I think it is important to note that these were extremely simple FSMs and do not demonstrate their full capabilities. This was simply meant to show you a way to integrate RoadRunner and a PIDF controller.**
 
 *Last Updated: 2024-01-23*
