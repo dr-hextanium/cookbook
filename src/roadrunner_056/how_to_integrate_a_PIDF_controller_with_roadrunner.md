@@ -113,6 +113,7 @@ public class RoadRunnerPIDF extends LinearOpMode {
             }
 
             // outside of the switch we update our slides, that way they are always receiving new information
+            drive.update();
             double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
             linearSlides.setPower(power);
         }
@@ -179,6 +180,8 @@ case (STRAFE_LEFT_AND_LIFT_SLIDES):
 
 Here we have the same structure. However, this time our transition trigger is finishing the roadrunner trajectory and the linear slides reaching their target. Because this runs in a loop, once the displacement marker in the trajectory sequence triggers and changes the targetPosition, the PID update that runs at the end of every loop will start setting the power of the linear slides to reach that target.
 
+It is also important to note that when using async following, you must call drive.update() once every loop. This tells the path follower the updated location of the robot so it can be as accurate as possible.
+
 Whew! You should now be able to integrate a PID(F) controller with roadrunner trajectories.
 
 This example was meant to be general and explain the structure and concepts needed to make PID(F) controllers work with roadrunner. It will almost certainly require changes to make it work exactly how you wish, so don't worry if your code doesn't look exactly like this example!
@@ -213,19 +216,19 @@ public class RoadRunnerPIDF extends LinearOpMode {
 
         StateMachine machine = new StateMachine()
             .state(STATES.INIT) // creates a new state
-            .transition(isStarted()) // condition to transition from this state to the next one
+            .transition(() -> isStarted()) // condition to transition from this state to the next one
 
             .state(STATES.DRIVE_FORWARD) // register a new state
-            .onEnter(drive.followTrajectorySequenceAsync(forward)) // code to happen one time when entering this state
-            .transition(!drive.isBusy())
+            .onEnter(() -> drive.followTrajectorySequenceAsync(forward)) // code to happen one time when entering this state
+            .transition(() -> !drive.isBusy())
 
             .state(STATES.STRAFE_LEFT_AND_LIFT_SLIDES)
-            .onEnter(drive.followTrajectorySequenceAsync(strafeLeft))
-            .transition(!drive.isBusy() && linearSlides.atTarget())
+            .onEnter(() -> drive.followTrajectorySequenceAsync(strafeLeft))
+            .transition(() -> (!drive.isBusy() && linearSlides.atTarget()))
 
             .state(STATES.DRIVE_BACKWARD)
-            .onEnter(drive.followTrajectorySequenceAsync(backward))
-            .transition(!drive.isBusy())
+            .onEnter(() -> drive.followTrajectorySequenceAsync(backward))
+            .transition(() -> !drive.isBusy())
 
             .state(STATES.STOP)
 
@@ -238,6 +241,7 @@ public class RoadRunnerPIDF extends LinearOpMode {
 
         while(opModeIsActive()) {
             machine.update();
+            drive.update();
             double power = PIDF(linearSlides.getCurrentPosition(), targetPosition);
             linearSlides.setPower(power);
         }
@@ -246,6 +250,8 @@ public class RoadRunnerPIDF extends LinearOpMode {
 ```
 
 These two example both do the exact same thing and this introduction to State Factory was mostly meant to show how it can make writing FSMs less painful.
+
+Android studio may recommend changing something like `() -> !drive.isBusy()` to `!drive::isBusy`, these are simply two different ways to write the same thing. The double colon works like `class/instance::method`.
 
 **I think it is important to note that these were extremely simple FSMs and do not demonstrate their full capabilities. This was simply meant to show you a way to integrate RoadRunner and a PIDF controller.**
 
