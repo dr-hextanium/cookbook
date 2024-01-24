@@ -6,7 +6,7 @@ Have you ever tried initializing your OpMode in the REV Driver Station and getti
 
 ## NullPointerExceptions Explained
 
-Simply put, a NullPointerException occurs when your program attempts to use an object with a null value(**has not been initialized yet**). Your program cannot use the object because its reference points nowhere... *Learn more here: [*JavaNPE*](https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html)
+Simply put, a NullPointerException occurs when your program attempts to use an object with a null value(**has not been initialized yet**). Your program cannot use this object because its reference points nowhere... *Learn more here: [*JavaNPE*](https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html)
 
 ## Example
 
