@@ -45,7 +45,7 @@ public class Example extends LinearOpMode {
 
 ## Solution 
 
-Make sure to intitialize 'public Servo pivot;' in 'public void runOpMode()'. Corrected code: 
+Make sure to intitialize `public Servo pivot;` in `public void runOpMode()`. Corrected code: 
 
 ```java 
 ... //your imports
