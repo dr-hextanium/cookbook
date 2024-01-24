@@ -25,7 +25,7 @@ We will first have a full example and then break it down piece by piece.
 
 *This example is more like pseudo code than real code and is meant to demonstrate a methodology.*
 
-```
+```java
 public class RoadRunnerPIDF extends LinearOpMode {
     // the capitalization and snake_case is just convention because the values of an enum are constants
     public enum STATES {
@@ -123,7 +123,7 @@ public class RoadRunnerPIDF extends LinearOpMode {
 
 Okay, let's break this down piece by piece. First, what is an "enum" and why do we use them? Enums are a way to define a set of named constant values. They provide a convenient and readable way to work with predefined, named values in your code. Here, we used an enum to describe the various states the robot could be in.
 
-```
+```java
 public enum STATES {
     INIT,
     DRIVE_FORWARD,
@@ -137,7 +137,7 @@ By using names with meaning like these, it is much clearer when writing and read
 
 Next we initialize all our stuff and build our trajectories. The important one to note is creating `strafeLeft`, which includes slide movement.
 
-```
+```java
 strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
         .addDisplacementMarker(() -> {
             targetPosition = 800;
@@ -148,7 +148,7 @@ strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
 
 We used a displacement marker, which says "right here do this thing." The `() -> {}` is just fancy notation for a one time use function. The empty paranthesis says "this doesn't require any arguments to be passed into the function" and the curly braces denote the start of the function. In this case, we're just setting a variable `targetPosition`, but this marker could include setting servo position, reading sensors, or anything else really.
 
-```
+```java
 case (DRIVE_FORWARD):
     if (previousState != currentState) {
         // everything in here will run once when the state switches
@@ -167,7 +167,7 @@ The else if just checks if we're done with this state so it knows when to move o
 
 The next case is the more interesting one.
 
-```
+```java
 case (STRAFE_LEFT_AND_LIFT_SLIDES):
     if (previousState != currentState) {
         // inside this trajectory sequence the targetPosition is set and the slides will start updating
@@ -194,7 +194,7 @@ This example was meant to be general and explain the structure and concepts need
 
 So, we're going to write the same fintie state machine, but using state factory.
 
-```
+```java
 public class RoadRunnerPIDF extends LinearOpMode {
 
     public enum STATES {
