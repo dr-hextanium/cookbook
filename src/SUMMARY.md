@@ -2,6 +2,9 @@
 
 [Introduction](./introduction.md)
 ---
+#Common Driver Station Error Messages
+
+- [The Null Pointer Exception on Init](./nullptrexception_at_init.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
