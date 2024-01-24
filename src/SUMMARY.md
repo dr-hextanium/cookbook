@@ -2,7 +2,7 @@
 
 [Introduction](./introduction.md)
 ---
-#Common Driver Station Error Messages
+# Common Driver Station Error Messages
 
 - [The Null Pointer Exception on Init](./nullptrexception_at_init.md)
 
