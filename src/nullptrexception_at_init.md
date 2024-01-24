@@ -1,18 +1,18 @@
 # The NullPointerException on Initialization
 
-Common causes to the error, and how to fix it...
+**Common causes to the error, and how to fix it...**
 
 Have you ever tried initializing your OpMode in the REV Driver Station and getting an error message that reads - *User code threw an uncaught exception: NullPointerException* ? If so, don't worry, this is a very common error that is typically quick and easy to fix. 
 
 ## NullPointerExceptions Explained
 
-Simply put, a NullPointerException occurs when your program attempts to use an object with a null value(**has not been initialized yet**). Your program cannot use the object because its reference points nowhere... *Learn more here: [*JavaNPE*(https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html)] 
+Simply put, a NullPointerException occurs when your program attempts to use an object with a null value(**has not been initialized yet**). Your program cannot use the object because its reference points nowhere... *Learn more here: [*JavaNPE*](https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html)
 
-## Example and Solution
+## Example
 
 Here are some examples of FTC Code that would throw a NullPointerException: 
 
-'''java 
+```java 
 ... //your imports
 
 @TeleOp
@@ -41,13 +41,13 @@ public class Example extends LinearOpMode {
     }
 }
 
-'''
+```
 
-### Solution 
+## Solution 
 
 Make sure to intitialize 'public Servo pivot;' in 'public void runOpMode()'. Corrected code: 
 
-'''java 
+```java 
 ... //your imports
 
 @TeleOp
@@ -76,7 +76,7 @@ public class Example extends LinearOpMode {
     }
 }
 
-'''
+```
 
 
 
