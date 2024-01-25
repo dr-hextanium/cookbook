@@ -18,6 +18,7 @@
 
 # PID(F) Controllers
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
+- [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
 ---
 [Contributors](./contributors.md)
