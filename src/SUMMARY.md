@@ -2,7 +2,7 @@
 
 [Introduction](./introduction.md)
 ---
-#Common Driver Station Error Messages
+# Common Driver Station Error Messages
 
 - [The Null Pointer Exception on Init](./nullptrexception_at_init.md)
 
@@ -14,6 +14,7 @@
 - [Robot drifts to one side during feedforward tuning](./roadrunner_056/robot_drifts_to_one_side_during_manual_feedforward_tuning.md)
 - [Robot drifts while tuning follower PID](./roadrunner_056/robot_drifts_while_tuning_follower_pid.md)
 - [Robot drives full speed on start when following trajectory](./roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.md)
+- [How to integrate a PIDF controller with Road Runner](./roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner.md)
 
 # PID(F) Controllers
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
