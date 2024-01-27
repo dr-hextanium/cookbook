@@ -21,7 +21,7 @@
 - [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
 # Miscellaneous
-- [Acronyms](./acronyms.md)
+- [Terminology and Acronyms](./terminology_and_acronyms.md)
 
 ---
 [Contributors](./contributors.md)
