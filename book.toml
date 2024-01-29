@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "The Cookbook"
+
+[output.html.code.hidelines]
+java = "# "
+kt = "# "
