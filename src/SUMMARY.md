@@ -9,6 +9,7 @@
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
 - [Manual feedforward tuner overshoots](./roadrunner_056/manual_feedforward_tuner_overshooots.md)
+- [Manual Feedforward tuner opposite velocity](./roadrunner_056/manual_feed_forward_tuner_opposite_velocities.md)
 - [Robot localization makes circles when spinning in place](./roadrunner_056/robot_localization_makes_circle_when_spinning_in_place.md)
 - [Robot velocity plateaus below target velocity plateau](./roadrunner_056/robot_velocity_plateaus_below_target_velocity_plateau.md)
 - [Robot drifts to one side during feedforward tuning](./roadrunner_056/robot_drifts_to_one_side_during_manual_feedforward_tuning.md)
@@ -22,6 +23,9 @@
 
 # Miscellaneous
 - [Terminology and Acronyms](./terminology_and_acronyms.md)
+
+# Misc
+- [Why Kotlin?](./why_kotlin/why_kotlin.md)
 
 ---
 [Contributors](./contributors.md)
