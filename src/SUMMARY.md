@@ -20,5 +20,8 @@
 # PID(F) Controllers
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
 
+# Misc
+- [Why Kotlin?](./why_kotlin/why_kotlin.md)
+
 ---
 [Contributors](./contributors.md)
