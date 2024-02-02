@@ -15,10 +15,14 @@
 - [Robot drifts to one side during feedforward tuning](./roadrunner_056/robot_drifts_to_one_side_during_manual_feedforward_tuning.md)
 - [Robot drifts while tuning follower PID](./roadrunner_056/robot_drifts_while_tuning_follower_pid.md)
 - [Robot drives full speed on start when following trajectory](./roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.md)
-- [How to integrate a PIDF controller with Road Runner](./roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner.md)
+- [How to integrate a PIDF controller with Road Runner](./roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/how_to_integrate_a_PIDF_controller_with_roadrunner.md)
 
 # PID(F) Controllers
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
+- [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
+
+# Miscellaneous
+- [Terminology and Acronyms](./terminology_and_acronyms.md)
 
 # Misc
 - [Why Kotlin?](./why_kotlin/why_kotlin.md)
