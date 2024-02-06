@@ -21,11 +21,10 @@
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
 - [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
-# Miscellaneous
-- [Terminology and Acronyms](./terminology_and_acronyms.md)
-
 # Misc
 - [Why Kotlin?](./why_kotlin/why_kotlin.md)
+- [Terminology and Acronyms](./terminology_and_acronyms.md)
+- [Improving Loop Times](./improving_loop_times/improving_loop_times.md)
 
 ---
 [Contributors](./contributors.md)
