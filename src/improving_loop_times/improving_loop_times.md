@@ -40,9 +40,11 @@ Trying to explain what photon actually does it outside the scope of this recipe.
 
 **Some people have installed photon and Android Studio does not recognize the `@Photon` annotation. Instead of `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:v3.0.1-ALPHA'`, try `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:main-SNAPSHOT'`.**
 
+**Also, be warned. Photon somtimes when used just randomly reverses motors and servos (but it's always the same ones reversed the same way).**
+
 ### Caching Motor Powers
 
-So now let's try and reduce unnecessary hardware writes. If a motor is going at 0.5 power and we keep setting the power to 0.5, the output of the motor will not change, but these are all hardware writes and take time (there is a slight caveat here that will be addressed later). What if we set the power to 0.51 instead? The output will probably be pretty much the same, but that also takes a hardware write.
+So now let's try and reduce unnecessary hardware writes. If a motor is going at 0.5 power and we keep setting the power to 0.5, the output of the motor will not change, but these are all hardware writes and take time (there is a slight caveat here with how the sdk handles duplicate powers, but that is outside the scope of this recipe). What if we set the power to 0.51 instead? The output will probably be pretty much the same, but that also takes a hardware write.
 
 So, what we're going to do is store the last power send to a motor and check every new `setPower()` command to only run if the new power is more than a certain threshold above the last power.
 
