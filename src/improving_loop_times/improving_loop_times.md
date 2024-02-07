@@ -20,11 +20,11 @@ The main things that take a long time are not any calculations, unless they are 
 ElapsedTime elapsedTime = new ElapsedTime();
 
 public void loop() {
-    elapsedTime.reset();
 
     // do stuff
 
     telemetry.addData("Loop Times", elapsedTime.milliseconds());
+    elapsedTime.reset();
 }
 ```
 

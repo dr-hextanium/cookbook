@@ -1,5 +1,6 @@
 // imports
 
+// note the annotation at the top of the op mode (this is all you have to do to use photon)
 @Photon
 public class OptimizedOpMode extends OpMode {
 
@@ -24,14 +25,17 @@ public class OptimizedOpMode extends OpMode {
 
     @Override
     public void loop() {
-        elapsedtime.reset();
         // clears the cache on each hub
         for (LynxModule hub : allHubs) {
             hub.clearBulkCache();
         }
 
+        // after the first time, it won't actually send new commands
+        exampleMotor.setPower(1);
+
         telemetry.addData("Motor Position", exampleMotor.getPosition());
         telemetry.addData("Loop Times", elapsedtime.milliseconds());
+        elapsedtime.reset();
     }
 
 }
