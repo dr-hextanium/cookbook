@@ -4,7 +4,7 @@
 ---
 # Common Driver Station Error Messages
 
-- [The Null Pointer Exception on Init](./nullptrexception_at_init.md)
+- [The Null Pointer Exception on Init](./common_ds_errors/nullptrexception_at_init.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
@@ -29,10 +29,8 @@
 - [How to wire odometry pods](./electrical/how_to_wire_odometry_pods.md)
 
 # Miscellaneous
-- [Terminology and Acronyms](./terminology_and_acronyms.md)
-
-# Misc
-- [Why Kotlin?](./why_kotlin/why_kotlin.md)
+- [Terminology and Acronyms](./misc/terminology_and_acronyms.md)
+- [Why Kotlin?](./misc/why_kotlin/why_kotlin.md)
 
 ---
 [Contributors](./contributors.md)
