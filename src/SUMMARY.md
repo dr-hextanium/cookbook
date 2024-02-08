@@ -21,6 +21,10 @@
 - [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
 - [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
+# Electrical
+- [Why we should only use USB 3.0](./electrical/why_we_should_only_use_usb_30.md)
+- [How to wire odometry pods](./electrical/how_to_wire_odometry_pods.md)
+
 # Miscellaneous
 - [Terminology and Acronyms](./terminology_and_acronyms.md)
 
