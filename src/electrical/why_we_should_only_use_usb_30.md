@@ -15,7 +15,6 @@
 ### Overview
 The Control Hub has a lot of nuances that many people do not know of, including the dangers of the onboard USB 2.0 port.
 
-
 ### The Problem
 The Control Hub's USB 2.0 port shares a ground with the wifi chipset on the Control Hub, providing a path for a static shock to cause a disconnect mid match, given a static shock to the USB device.
 
