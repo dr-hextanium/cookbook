@@ -21,8 +21,8 @@
 - [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
 
 # PID(F) Controllers
-- [Integrating a Custom PID(F) Controller](./pidf_controllers/integrating_a_custom_pidf_controller/integrating_a_custom_PIDF_controller.md)
-- [Syncing two linear slide motors using a PID(F) Controller](./pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
+- [Integrating a Custom PID(F) Controller](./pidf_controllers/integrating_a_custom_PIDF_controller.md)
+- [Syncing two linear slide motors using a PID(F) Controller](./pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
 # Electrical
 - [Why we should only use USB 3.0](./electrical/why_we_should_only_use_usb_30.md)
