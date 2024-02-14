@@ -25,7 +25,7 @@
 - [Syncing two linear slide motors using a PID(F) Controller](./pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
 
 # Electrical
-- [Why we should only use USB 3.0](./electrical/why_we_should_only_use_usb_30.md)
+- [Why we should only use USB 3.0?](./electrical/why_we_should_only_use_usb_30.md)
 - [Where should I put my odometry pods?](./electrical/how_to_wire_odometry_pods.md)
 
 # Miscellaneous
