@@ -29,8 +29,9 @@
 - [How to wire odometry pods](./electrical/how_to_wire_odometry_pods.md)
 
 # Miscellaneous
-- [Terminology and Acronyms](./misc/terminology_and_acronyms.md)
-- [Why Kotlin?](./misc/why_kotlin/why_kotlin.md)
+- [Why Kotlin?](./why_kotlin/why_kotlin.md)
+- [Terminology and Acronyms](./terminology_and_acronyms.md)
+- [Improving Loop Times](./improving_loop_times/improving_loop_times.md)
 
 ---
 [Contributors](./contributors.md)
