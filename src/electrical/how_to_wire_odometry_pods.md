@@ -1,4 +1,4 @@
-# How to wire odometry pods
+# Where should I put my odometry pods?
 
 ### Ingredients
 

@@ -26,7 +26,7 @@
 
 # Electrical
 - [Why we should only use USB 3.0](./electrical/why_we_should_only_use_usb_30.md)
-- [How to wire odometry pods](./electrical/how_to_wire_odometry_pods.md)
+- [Where should I put my odometry pods?](./electrical/how_to_wire_odometry_pods.md)
 
 # Miscellaneous
 - [Why Kotlin?](./misc/why_kotlin/why_kotlin.md)
