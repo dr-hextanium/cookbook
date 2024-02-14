@@ -4,7 +4,7 @@
 ---
 # Common Driver Station Error Messages
 
-- [The Null Pointer Exception on Init](./nullptrexception_at_init.md)
+- [The Null Pointer Exception on Init](./common_ds_errors/nullptrexception_at_init.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
@@ -17,11 +17,18 @@
 - [Robot drives full speed on start when following trajectory](./roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.md)
 - [How to integrate a PIDF controller with Road Runner](./roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/how_to_integrate_a_PIDF_controller_with_roadrunner.md)
 
-# PID(F) Controllers
-- [Integrating a Custom PID(F) Controller](./integrating_a_custom_PIDF_controller.md)
-- [Syncing two linear slide motors using a PID(F) Controller](./syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
+# Road Runner 1.0
+- [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
 
-# Misc
+# PID(F) Controllers
+- [Integrating a Custom PID(F) Controller](./pidf_controllers/integrating_a_custom_PIDF_controller.md)
+- [Syncing two linear slide motors using a PID(F) Controller](./pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.md)
+
+# Electrical
+- [Why we should only use USB 3.0](./electrical/why_we_should_only_use_usb_30.md)
+- [How to wire odometry pods](./electrical/how_to_wire_odometry_pods.md)
+
+# Miscellaneous
 - [Why Kotlin?](./why_kotlin/why_kotlin.md)
 - [Terminology and Acronyms](./terminology_and_acronyms.md)
 - [Improving Loop Times](./improving_loop_times/improving_loop_times.md)
