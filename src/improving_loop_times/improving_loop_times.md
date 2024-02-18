@@ -48,10 +48,10 @@ So now let's try and reduce unnecessary hardware writes. If a motor is going at 
 
 So, what we're going to do is store the last power send to a motor and check every new `setPower()` command to only run if the new power is more than a certain threshold above the last power.
 
-This is the most simplistic implementation of caching motor powers and only supports (it assumes) RUN_WITHOUT_ENCODER.
+<!-- This is the most simplistic implementation of caching motor powers and only supports (it assumes) RUN_WITHOUT_ENCODER.
 ```java
 {{#rustdoc_include CachingDcMotorEx.java::}}
-```
+``` -->
 
 ### Full Example
 
