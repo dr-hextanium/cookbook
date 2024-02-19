@@ -1,0 +1,1498 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Cookbook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Driver Station Error Messages</li><li class="chapter-item expanded "><a href="common_ds_errors/nullptrexception_at_init.html"><strong aria-hidden="true">1.</strong> The Null Pointer Exception on Init</a></li><li class="chapter-item expanded affix "><li class="part-title">Road Runner 0.5.6</li><li class="chapter-item expanded "><a href="roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.html"><strong aria-hidden="true">2.</strong> Is the bump on feedforward tuner normal?</a></li><li class="chapter-item expanded "><a href="roadrunner_056/manual_feedforward_tuner_overshooots.html"><strong aria-hidden="true">3.</strong> Manual feedforward tuner overshoots</a></li><li class="chapter-item expanded "><a href="roadrunner_056/manual_feed_forward_tuner_opposite_velocities.html"><strong aria-hidden="true">4.</strong> Manual Feedforward tuner opposite velocity</a></li><li class="chapter-item expanded "><a href="roadrunner_056/robot_localization_makes_circle_when_spinning_in_place.html"><strong aria-hidden="true">5.</strong> Robot localization makes circles when spinning in place</a></li><li class="chapter-item expanded "><a href="roadrunner_056/robot_velocity_plateaus_below_target_velocity_plateau.html"><strong aria-hidden="true">6.</strong> Robot velocity plateaus below target velocity plateau</a></li><li class="chapter-item expanded "><a href="roadrunner_056/robot_drifts_to_one_side_during_manual_feedforward_tuning.html"><strong aria-hidden="true">7.</strong> Robot drifts to one side during feedforward tuning</a></li><li class="chapter-item expanded "><a href="roadrunner_056/robot_drifts_while_tuning_follower_pid.html"><strong aria-hidden="true">8.</strong> Robot drifts while tuning follower PID</a></li><li class="chapter-item expanded "><a href="roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.html"><strong aria-hidden="true">9.</strong> Robot drives full speed on start when following trajectory</a></li><li class="chapter-item expanded "><a href="roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/how_to_integrate_a_PIDF_controller_with_roadrunner.html"><strong aria-hidden="true">10.</strong> How to integrate a PIDF controller with Road Runner</a></li><li class="chapter-item expanded affix "><li class="part-title">Road Runner 1.0</li><li class="chapter-item expanded "><a href="roadrunner_10/null_list_error_in_rr_10.html"><strong aria-hidden="true">11.</strong> Empty list error in Road Runner 1.0</a></li><li class="chapter-item expanded affix "><li class="part-title">PID(F) Controllers</li><li class="chapter-item expanded "><a href="pidf_controllers/integrating_a_custom_PIDF_controller.html"><strong aria-hidden="true">12.</strong> Integrating a Custom PID(F) Controller</a></li><li class="chapter-item expanded "><a href="pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.html"><strong aria-hidden="true">13.</strong> Syncing two linear slide motors using a PID(F) Controller</a></li><li class="chapter-item expanded affix "><li class="part-title">Electrical</li><li class="chapter-item expanded "><a href="electrical/why_we_should_only_use_usb_30.html"><strong aria-hidden="true">14.</strong> Why we should only use USB 3.0?</a></li><li class="chapter-item expanded "><a href="electrical/how_to_wire_odometry_pods.html"><strong aria-hidden="true">15.</strong> Where should I put my odometry pods?</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="misc/why_kotlin/why_kotlin.html"><strong aria-hidden="true">16.</strong> Why Kotlin?</a></li><li class="chapter-item expanded "><a href="misc/terminology_and_acronyms.html"><strong aria-hidden="true">17.</strong> Terminology and Acronyms</a></li><li class="chapter-item expanded "><a href="improving_loop_times/improving_loop_times.html"><strong aria-hidden="true">18.</strong> Improving Loop Times</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributors.html">Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">introduction</a></h1>
+<p>Welcome to the Cookbook. Enjoy your stay :)</p>
+<p>The Cookbook is essentially a "handbook" maintained by the community for common (or not) issues that people have faced. The original motivation for this was to better prepare my team (4017) for when I left, since we've gained so much knowledge over just a single year that may eventually be lost. Throughout our region, I have seen many teams be completely lost after a great programmer or designer leaves, because they were simply not taught.</p>
+<p>While a list of problems and solutions is not "teaching one how to fish", it serves as an incredibly helpful guide to just get things working. I hope by making my lil' cookbook open source, <strong>everyone</strong> can both use and build on my limited knowledge base.</p>
+<p>If you (or anyone) has a problem, I'd love if you could make a lil' "recipe" and help anyone else in the future :)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-nullpointerexception-on-initialization"><a class="header" href="#the-nullpointerexception-on-initialization">The NullPointerException on Initialization</a></h1>
+<p><strong>Common causes to the error, and how to fix it...</strong></p>
+<p>Have you ever tried initializing your OpMode in the REV Driver Station and getting an error message that reads - <em>User code threw an uncaught exception: NullPointerException</em> ? If so, don't worry, this is a very common error that is typically quick and easy to fix.</p>
+<h2 id="nullpointerexceptions-explained"><a class="header" href="#nullpointerexceptions-explained">NullPointerExceptions Explained</a></h2>
+<p>Simply put, a NullPointerException occurs when your program attempts to use an object with a null value(<strong>has not been initialized yet</strong>). Your program cannot use this object because its reference points nowhere... *Learn more here: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"><em>JavaNPE</em></a></p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>Here are some examples of FTC Code that would throw a NullPointerException:</p>
+<pre><code class="language-java">... //your imports
+
+@TeleOp
+public class Example extends LinearOpMode {
+
+    public DcMotor lift; //We should have our example three objects declared here
+    public DcMotor intake;
+    public Servo pivot;
+
+    @Override
+    public void runOpMode() {
+
+        lift  = hardwareMap.get(DcMotor.class, "Lift"); 
+        intake = hardwareMap.get(DcMotor.class, "Intake");
+        //However, we only have two objects initialized here. We are missing the "Servo: pivot" initialization
+
+        waitForStart();
+
+        while (opModeisActive()) {
+
+            if (gamepad1.a) {
+                pivot.setPosition(.5); //We do not have the "pivot" Servo initialized, yet we are trying to use this object. This will throw a NullPointerException...
+            }
+
+        }
+    }
+}
+
+</code></pre>
+<h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
+<p>Make sure to intitialize <code>public Servo pivot;</code> in <code>public void runOpMode()</code>. Corrected code:</p>
+<pre><code class="language-java">... //your imports
+
+@TeleOp
+public class Example extends LinearOpMode {
+
+    public DcMotor lift; //We should have our example three objects declared here
+    public DcMotor intake;
+    public Servo pivot;
+
+    @Override
+    public void runOpMode() {
+
+        lift  = hardwareMap.get(DcMotor.class, "Lift"); 
+        intake = hardwareMap.get(DcMotor.class, "Intake");
+        pivot = hardwareMap.get(DcMotor.class, "Intake);
+
+        waitForStart();
+
+        while (opModeisActive()) {
+
+            if (gamepad1.a) {
+                pivot.setPosition(.5); 
+            }
+
+        }
+    }
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="is-the-bump-on-manual-feedforward-tuner-normal"><a class="header" href="#is-the-bump-on-manual-feedforward-tuner-normal">Is the Bump On Manual Feedforward Tuner Normal?</a></h1>
+<p><img src="roadrunner_056/../static/is_the_bump_on_manual_feedforward_tuner_normal/deceleration_bump.png" alt="image of decelleration bump" /></p>
+<p>Yes! The bump when acceleration and decelerating are normal. It's just wonky control hub / expansion hub stuff where it's not good at that. There's nothing you can do about so just try to get the plateus and slopes to match up.</p>
+<p><em>Last Updated: 2024-01-21</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="manual-feedforward-tuner-overshoots"><a class="header" href="#manual-feedforward-tuner-overshoots">Manual Feedforward Tuner Overshoots</a></h1>
+<p>This is normal! The REV hub's motor controller are not great at decelerating, so this typically causes about a 10% overshoot on manual feedforward tuner. It's okay to move on the the next tuning steps. However, when you get to the feedback tuning, whether it's "back and forth" or "followerPIDTuner", you will want to add a non-zero kd term. This will help the robot not overshoot.</p>
+<p><em>Last Updated: 2024-01-20</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="target-velocity-is-positive-when-measured-velocity-is-negative-and-vice-versa-when-tuning-manual-feedforward"><a class="header" href="#target-velocity-is-positive-when-measured-velocity-is-negative-and-vice-versa-when-tuning-manual-feedforward">Target Velocity is Positive When Measured Velocity is Negative and Vice Versa When Tuning Manual Feedforward</a></h1>
+<p>If MotorDirectionDebugger works perfectly, this simply means that either your right side encoders are plugged in to the wrong ports(so swap <code>frontRight</code> and <code>backRight</code> encoder cables) or your left side encoders are plugged in to the wrong ports(so swap <code>frontLeft</code> and <code>backLeft</code> encoder cables). An easy way to debug this is to add a <code>printEncoderValues</code> telemetry method in <code>SampleMecanumDrive</code>.</p>
+<pre><code class="language-java">public void printEncoderValues(Telemetry telemetry) {
+        telemetry.addData("LeftFrontPos: ", leftFront.getCurrentPosition());
+        telemetry.addData("RightFrontPos: ", rightFront.getCurrentPosition());
+        telemetry.addData("LeftRearPos: ", leftRear.getCurrentPosition());
+        telemetry.addData("RightBackPos: ", rightRear.getCurrentPosition());
+} 
+</code></pre>
+<p>Then at the end of every loop in MotorDirectionDebugger, call</p>
+<pre><code class="language-java">drive.printEncoderValues(telemetry);
+</code></pre>
+<p><em>Last updated: 2024-01-20</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="robot-localization-makes-circle-when-spinning-in-place"><a class="header" href="#robot-localization-makes-circle-when-spinning-in-place">Robot Localization Makes Circle When Spinning In Place</a></h1>
+<p>So when you spin the robot in place the drawing on dashboard is making a circle. This is normal and can be fixed.</p>
+<h3 id="what-causes-it"><a class="header" href="#what-causes-it">What causes it?</a></h3>
+<p>When the robot is spun, the strafing tracking wheel moves, which makes the localization think the robot moved in a circle. This can be counteracted with math (which RR luckily has) by figuring out the forward distance from the strafing tracking wheel to the center of rotation.</p>
+<h3 id="3-wheel-solution"><a class="header" href="#3-wheel-solution">3 Wheel Solution</a></h3>
+<p>For 3 wheel odometry, this means your forward offset isn't tuned correctly. Run the tuner and replace the value. If that doesn't work, check whether the strafing pod is closer to the front or the back of the robot. If it's closer to the back, the offset should be negative.</p>
+<h3 id="2-wheel-solution"><a class="header" href="#2-wheel-solution">2 Wheel Solution</a></h3>
+<p>The solution for 2 wheel odometry is largely the same. Instead of being called forward offset, it is the x and y position of the strafing pod. The same advice about positive and negative still applies.</p>
+<p><em>Last Updated: 2024-01-21</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="robot-velocity-plateaus-below-target-velocity-plateaus"><a class="header" href="#robot-velocity-plateaus-below-target-velocity-plateaus">Robot Velocity Plateaus Below Target Velocity Plateaus</a></h1>
+<p><img src="roadrunner_056/../static/robot_velocity_plateaus_below_target_velocity_plateau/lowPlateau.png" alt="image of robot velocity not reaching max target velocity" /></p>
+<p>Okay, so this means you've reached your robot's actual max velocity. You should lower the max velocity specified in DriveConstants. Run the MaxVelocityTuner to find the recommended max velocity to use.</p>
+<p><em>Last Updated: 2024-02-08</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="robot-drifts-to-one-side-during-manual-feedforward-tuning"><a class="header" href="#robot-drifts-to-one-side-during-manual-feedforward-tuning">Robot Drifts to One Side During Manual Feedforward Tuning</a></h1>
+<p>If this happens, you shouldn't worry. This can be caused by an unbalanced robot or one wheel having slightly more friction than the others. Whatever the reason, this will be corrected for in the later tuning steps so you can safely ignore this drift.</p>
+<p><em>Last Updated: 2024-01-20</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="robot-drifts-while-tuning-follower-pid"><a class="header" href="#robot-drifts-while-tuning-follower-pid">Robot Drifts While Tuning Follower PID</a></h1>
+<h3 id="check-localization"><a class="header" href="#check-localization">Check Localization</a></h3>
+<p>Run <code>LocalizationTest</code> and drive the robot back and forth a few times. You want to ensure that the behavior shown on the dashboard mirrors that of what you can see. If the robot was veering in <code>BackAndForth</code>, see if the dashboard bot is veering the same. If you notice the same discrepancy while doing running localization test, it means the problem is in your localization.</p>
+<h3 id="tuning-pid"><a class="header" href="#tuning-pid">Tuning PID</a></h3>
+<p>If you're certain that localization works fine and the robot "knows" that it's wrong, but isn't correcting, then you need to tune your PID values more.
+You can tune your controller through the steps on <a href="https://gm0.org/en/latest/docs/software/concepts/control-loops.html#tuning-a-pid-loop">this page of Game Manual 0</a>.</p>
+<p><em>Last Updated: 2024-01-21</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="robot-drive-full-speed-on-start-when-following-trajectory"><a class="header" href="#robot-drive-full-speed-on-start-when-following-trajectory">Robot Drive Full Speed on Start When Following Trajectory</a></h1>
+<p>If you are running an op mode that has roadrunner trajectories in it, and when you start moving it goes at full speed right away, this almost always means you forgot to set a pose estimate. In <code>init()</code> before you run any trajectories, make sure you have <code>sampleMecanumDrive.setPoseEstimate(startingPose)</code>, whatever your starting pose may be. Also make sure that the trajectory starting pose matches this. Like</p>
+<pre><code class="language-java">Trajectory traj = sampleMecanumDrive.trajectoryBuilder(startingPose)
+    ...
+    .build();
+</code></pre>
+<p><em>Last Updated: 2024-01-20</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-integrate-a-pidf-controller-with-roadrunner"><a class="header" href="#how-to-integrate-a-pidf-controller-with-roadrunner">How to Integrate a PIDF Controller With Roadrunner</a></h1>
+<p><em>This recipe will assume you have a functioning PIDF controller that has already been tuned. If you do not, refer to <a href="roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/./how_to_integrate_a_PIDF_controller_with_roadrunner.html">integrating a custom PIDF controller</a>.</em></p>
+<h2 id="ingredients"><a class="header" href="#ingredients">Ingredients</a></h2>
+<ol>
+<li>A PID or PIDF controller class</li>
+<li>Tuned PID(F) gains</li>
+<li>An OpMode or LinearOpMode</li>
+<li>A Finite State Machine</li>
+</ol>
+<h2 id="the-recipe"><a class="header" href="#the-recipe">The Recipe</a></h2>
+<h3 id="pidf-controller-and-gains"><a class="header" href="#pidf-controller-and-gains">PID(F) Controller and gains</a></h3>
+<p>This recipes assumes you have 1) a PID(F) class that works and 2) tuned PID(F) gains. This recipe will not go over how to implement these and you should reference <a href="roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/./how_to_integrate_a_PIDF_controller_with_roadrunner.html">integrating a custom PIDF controller</a>.</p>
+<h3 id="finite-state-machines"><a class="header" href="#finite-state-machines">Finite State Machines</a></h3>
+<p>For a more indepth understanding of what finite state machines are, visit <a href="https://gm0.org/en/latest/docs/software/concepts/finite-state-machines.html?highlight=finite">gm0</a>. In short, a finite state machine is a code structure which allows code to run linearly while also having quasi-parallel actions running. The example we will be working with today is driving with Roadrunner while controlling linear slides.</p>
+<p>You can work with Finite State Machines in either a LinearOpMode or an OpMode, either works. For the purpose of this recipe, we will be using a LinearOpMode. To use an OpMode you can move everything before the while loop can go in init and everything in the while loop into the <code>loop()</code> function.</p>
+<p>We will first have a full example and then break it down piece by piece.</p>
+<p><em>This example is more like pseudo code than real code and is meant to demonstrate a methodology.</em></p>
+<pre><code class="language-java">public class RoadRunnerPIDF extends LinearOpMode {
+    // the capitalization and snake_case is just convention because the values of an enum are constants
+    public enum STATES {
+        INIT,
+        DRIVE_FORWARD,
+        STRAFE_LEFT_AND_LIFT_SLIDES,
+        DRIVE_BACKWARD,
+        STOP;
+    }
+
+    private STATES previousState = STATES.INIT;
+    private STATES currentState = STATES.INIT;
+    private int targetPosition = 0;
+
+    private TrajectorySequence forward;
+    private TrajectorySequence strafeLeft;
+    private TrajectorySequence backward;
+
+    private SampleMecanumDrive drive;
+    private DcMotorEx linearSlides;
+    private PIDFController PIDF;
+
+    public void runOpMode() {
+        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+        The linear slides will simply be called linearSlides.
+        */
+
+        // linear slide initialization code
+        // pidf initialization code
+
+        drive = new SampleMecanumDrive(hardwareMap);
+        drive.setPoseEstimate(new Pose2d());
+
+        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+            .forward(10)
+            .build();
+
+        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+            .addDisplacementMarker(() -&gt; {
+                targetPosition = 800;
+            })
+            .strafeLeft(10)
+            .build();
+
+        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+            .back(10)
+            .build();
+
+        waitForStart();
+
+        currentState = STATES.DRIVE_FORWARD;
+
+        while(opModeIsActive) {
+            switch (currentState) {
+                case (INIT):
+                    break;
+                case (DRIVE_FORWARD):
+                    if (previousState != currentState) {
+                        // everything in here will run once when the state switches
+
+                        drive.followTrajectoryAsync(forward)
+                        previousState = STATES.DRIVE_FORWARD;
+                    } else if (!drive.isBusy()) {
+                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+                    }
+                    break;
+                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+                    if (previousState != currentState) {
+                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+                        drive.followTrajectorySequenceAsync(strafeLeft);
+                    } else if (!drive.isBusy() &amp;&amp; linearSlides.atTarget()) {
+                        currentState = STATES.DRIVE_BACKWARD;
+                    }
+                    break;
+                case (DRIVE_BACKWARD):
+                    if (previousState != currentState) {
+                        drive.followTrajectorySequenceAsync(backward);
+                        previousState = STATES.DRIVE_BACKWARD;
+                    } else if (!drive.isBusy()) {
+                        currentState = STATES.STOP;
+                    }
+                    break;
+                case (STOP):
+                    break;
+            }
+
+            // outside of the switch we update our slides, that way they are always receiving new information
+            drive.update();
+            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+            linearSlides.setPower(power);
+        }
+    }
+}
+</code></pre>
+<p>Okay, let's break this down piece by piece. First, what is an "enum" and why do we use them? Enums are a way to define a set of named constant values. They provide a convenient and readable way to work with predefined, named values in your code. Here, we used an enum to describe the various states the robot could be in.</p>
+<pre><code class="language-java"><span class="boring">public class RoadRunnerPIDF extends LinearOpMode {
+</span><span class="boring">    // the capitalization and snake_case is just convention because the values of an enum are constants
+</span>    public enum STATES {
+        INIT,
+        DRIVE_FORWARD,
+        STRAFE_LEFT_AND_LIFT_SLIDES,
+        DRIVE_BACKWARD,
+        STOP;
+    }
+<span class="boring">
+</span><span class="boring">    private STATES previousState = STATES.INIT;
+</span><span class="boring">    private STATES currentState = STATES.INIT;
+</span><span class="boring">    private int targetPosition = 0;
+</span><span class="boring">
+</span><span class="boring">    private TrajectorySequence forward;
+</span><span class="boring">    private TrajectorySequence strafeLeft;
+</span><span class="boring">    private TrajectorySequence backward;
+</span><span class="boring">
+</span><span class="boring">    private SampleMecanumDrive drive;
+</span><span class="boring">    private DcMotorEx linearSlides;
+</span><span class="boring">    private PIDFController PIDF;
+</span><span class="boring">
+</span><span class="boring">    public void runOpMode() {
+</span><span class="boring">        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+</span><span class="boring">        The linear slides will simply be called linearSlides.
+</span><span class="boring">        */
+</span><span class="boring">
+</span><span class="boring">        // linear slide initialization code
+</span><span class="boring">        // pidf initialization code
+</span><span class="boring">
+</span><span class="boring">        drive = new SampleMecanumDrive(hardwareMap);
+</span><span class="boring">        drive.setPoseEstimate(new Pose2d());
+</span><span class="boring">
+</span><span class="boring">        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+</span><span class="boring">            .forward(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+</span><span class="boring">            .addDisplacementMarker(() -&gt; {
+</span><span class="boring">                targetPosition = 800;
+</span><span class="boring">            })
+</span><span class="boring">            .strafeLeft(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+</span><span class="boring">            .back(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        waitForStart();
+</span><span class="boring">
+</span><span class="boring">        currentState = STATES.DRIVE_FORWARD;
+</span><span class="boring">
+</span><span class="boring">        while(opModeIsActive) {
+</span><span class="boring">            switch (currentState) {
+</span><span class="boring">                case (INIT):
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_FORWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // everything in here will run once when the state switches
+</span><span class="boring">
+</span><span class="boring">                        drive.followTrajectoryAsync(forward)
+</span><span class="boring">                        previousState = STATES.DRIVE_FORWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(strafeLeft);
+</span><span class="boring">                    } else if (!drive.isBusy() &amp;&amp; linearSlides.atTarget()) {
+</span><span class="boring">                        currentState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_BACKWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(backward);
+</span><span class="boring">                        previousState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STOP;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STOP):
+</span><span class="boring">                    break;
+</span><span class="boring">            }
+</span><span class="boring">
+</span><span class="boring">            // outside of the switch we update our slides, that way they are always receiving new information
+</span><span class="boring">            drive.update();
+</span><span class="boring">            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+</span><span class="boring">            linearSlides.setPower(power);
+</span><span class="boring">        }
+</span><span class="boring">    }
+</span><span class="boring">}
+</span></code></pre>
+<p>By using names with meaning like these, it is much clearer when writing and reading the code what each block does. It also means we don't have to remember that state 0 means START and state 1 means DRIVE_FORWARD, etc....</p>
+<p>Next we initialize all our stuff and build our trajectories. The important one to note is creating <code>strafeLeft</code>, which includes slide movement.</p>
+<pre><code class="language-java"><span class="boring">public class RoadRunnerPIDF extends LinearOpMode {
+</span><span class="boring">    // the capitalization and snake_case is just convention because the values of an enum are constants
+</span><span class="boring">    public enum STATES {
+</span><span class="boring">        INIT,
+</span><span class="boring">        DRIVE_FORWARD,
+</span><span class="boring">        STRAFE_LEFT_AND_LIFT_SLIDES,
+</span><span class="boring">        DRIVE_BACKWARD,
+</span><span class="boring">        STOP;
+</span><span class="boring">    }
+</span><span class="boring">
+</span><span class="boring">    private STATES previousState = STATES.INIT;
+</span><span class="boring">    private STATES currentState = STATES.INIT;
+</span><span class="boring">    private int targetPosition = 0;
+</span><span class="boring">
+</span><span class="boring">    private TrajectorySequence forward;
+</span><span class="boring">    private TrajectorySequence strafeLeft;
+</span><span class="boring">    private TrajectorySequence backward;
+</span><span class="boring">
+</span><span class="boring">    private SampleMecanumDrive drive;
+</span><span class="boring">    private DcMotorEx linearSlides;
+</span><span class="boring">    private PIDFController PIDF;
+</span><span class="boring">
+</span><span class="boring">    public void runOpMode() {
+</span><span class="boring">        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+</span><span class="boring">        The linear slides will simply be called linearSlides.
+</span><span class="boring">        */
+</span><span class="boring">
+</span><span class="boring">        // linear slide initialization code
+</span><span class="boring">        // pidf initialization code
+</span><span class="boring">
+</span><span class="boring">        drive = new SampleMecanumDrive(hardwareMap);
+</span><span class="boring">        drive.setPoseEstimate(new Pose2d());
+</span><span class="boring">
+</span><span class="boring">        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+</span><span class="boring">            .forward(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span>        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+            .addDisplacementMarker(() -&gt; {
+                targetPosition = 800;
+            })
+            .strafeLeft(10)
+            .build();
+<span class="boring">
+</span><span class="boring">        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+</span><span class="boring">            .back(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        waitForStart();
+</span><span class="boring">
+</span><span class="boring">        currentState = STATES.DRIVE_FORWARD;
+</span><span class="boring">
+</span><span class="boring">        while(opModeIsActive) {
+</span><span class="boring">            switch (currentState) {
+</span><span class="boring">                case (INIT):
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_FORWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // everything in here will run once when the state switches
+</span><span class="boring">
+</span><span class="boring">                        drive.followTrajectoryAsync(forward)
+</span><span class="boring">                        previousState = STATES.DRIVE_FORWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(strafeLeft);
+</span><span class="boring">                    } else if (!drive.isBusy() &amp;&amp; linearSlides.atTarget()) {
+</span><span class="boring">                        currentState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_BACKWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(backward);
+</span><span class="boring">                        previousState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STOP;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STOP):
+</span><span class="boring">                    break;
+</span><span class="boring">            }
+</span><span class="boring">
+</span><span class="boring">            // outside of the switch we update our slides, that way they are always receiving new information
+</span><span class="boring">            drive.update();
+</span><span class="boring">            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+</span><span class="boring">            linearSlides.setPower(power);
+</span><span class="boring">        }
+</span><span class="boring">    }
+</span><span class="boring">}
+</span></code></pre>
+<p>We used a displacement marker, which says "right here do this thing." The <code>() -&gt; {}</code> is just fancy notation for a one time use function. The empty paranthesis says "this doesn't require any arguments to be passed into the function" and the curly braces denote the start of the function. In this case, we're just setting a variable <code>targetPosition</code>, but this marker could include setting servo position, reading sensors, or anything else really.</p>
+<pre><code class="language-java"><span class="boring">public class RoadRunnerPIDF extends LinearOpMode {
+</span><span class="boring">    // the capitalization and snake_case is just convention because the values of an enum are constants
+</span><span class="boring">    public enum STATES {
+</span><span class="boring">        INIT,
+</span><span class="boring">        DRIVE_FORWARD,
+</span><span class="boring">        STRAFE_LEFT_AND_LIFT_SLIDES,
+</span><span class="boring">        DRIVE_BACKWARD,
+</span><span class="boring">        STOP;
+</span><span class="boring">    }
+</span><span class="boring">
+</span><span class="boring">    private STATES previousState = STATES.INIT;
+</span><span class="boring">    private STATES currentState = STATES.INIT;
+</span><span class="boring">    private int targetPosition = 0;
+</span><span class="boring">
+</span><span class="boring">    private TrajectorySequence forward;
+</span><span class="boring">    private TrajectorySequence strafeLeft;
+</span><span class="boring">    private TrajectorySequence backward;
+</span><span class="boring">
+</span><span class="boring">    private SampleMecanumDrive drive;
+</span><span class="boring">    private DcMotorEx linearSlides;
+</span><span class="boring">    private PIDFController PIDF;
+</span><span class="boring">
+</span><span class="boring">    public void runOpMode() {
+</span><span class="boring">        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+</span><span class="boring">        The linear slides will simply be called linearSlides.
+</span><span class="boring">        */
+</span><span class="boring">
+</span><span class="boring">        // linear slide initialization code
+</span><span class="boring">        // pidf initialization code
+</span><span class="boring">
+</span><span class="boring">        drive = new SampleMecanumDrive(hardwareMap);
+</span><span class="boring">        drive.setPoseEstimate(new Pose2d());
+</span><span class="boring">
+</span><span class="boring">        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+</span><span class="boring">            .forward(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+</span><span class="boring">            .addDisplacementMarker(() -&gt; {
+</span><span class="boring">                targetPosition = 800;
+</span><span class="boring">            })
+</span><span class="boring">            .strafeLeft(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+</span><span class="boring">            .back(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        waitForStart();
+</span><span class="boring">
+</span><span class="boring">        currentState = STATES.DRIVE_FORWARD;
+</span><span class="boring">
+</span><span class="boring">        while(opModeIsActive) {
+</span><span class="boring">            switch (currentState) {
+</span><span class="boring">                case (INIT):
+</span><span class="boring">                    break;
+</span>                case (DRIVE_FORWARD):
+                    if (previousState != currentState) {
+                        // everything in here will run once when the state switches
+
+                        drive.followTrajectoryAsync(forward)
+                        previousState = STATES.DRIVE_FORWARD;
+                    } else if (!drive.isBusy()) {
+                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+                    }
+                    break;
+<span class="boring">                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(strafeLeft);
+</span><span class="boring">                    } else if (!drive.isBusy() &amp;&amp; linearSlides.atTarget()) {
+</span><span class="boring">                        currentState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_BACKWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(backward);
+</span><span class="boring">                        previousState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STOP;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STOP):
+</span><span class="boring">                    break;
+</span><span class="boring">            }
+</span><span class="boring">
+</span><span class="boring">            // outside of the switch we update our slides, that way they are always receiving new information
+</span><span class="boring">            drive.update();
+</span><span class="boring">            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+</span><span class="boring">            linearSlides.setPower(power);
+</span><span class="boring">        }
+</span><span class="boring">    }
+</span><span class="boring">}
+</span></code></pre>
+<p>So now we're getting to the Finite State Machine (FSM) part. The first part of this case, which you'll see in each part, is checking whether previous and current states are equal. This allows us to run code the first time it enters this state, like starting a trajectory (in this example). Then inside that same block, we also need to set the previous state to the one we're in.</p>
+<p>The else if just checks if we're done with this state so it knows when to move on. This is the transition trigger, in this case, finishing the roadrunner trajectory.</p>
+<p>The next case is the more interesting one.</p>
+<pre><code class="language-java"><span class="boring">public class RoadRunnerPIDF extends LinearOpMode {
+</span><span class="boring">    // the capitalization and snake_case is just convention because the values of an enum are constants
+</span><span class="boring">    public enum STATES {
+</span><span class="boring">        INIT,
+</span><span class="boring">        DRIVE_FORWARD,
+</span><span class="boring">        STRAFE_LEFT_AND_LIFT_SLIDES,
+</span><span class="boring">        DRIVE_BACKWARD,
+</span><span class="boring">        STOP;
+</span><span class="boring">    }
+</span><span class="boring">
+</span><span class="boring">    private STATES previousState = STATES.INIT;
+</span><span class="boring">    private STATES currentState = STATES.INIT;
+</span><span class="boring">    private int targetPosition = 0;
+</span><span class="boring">
+</span><span class="boring">    private TrajectorySequence forward;
+</span><span class="boring">    private TrajectorySequence strafeLeft;
+</span><span class="boring">    private TrajectorySequence backward;
+</span><span class="boring">
+</span><span class="boring">    private SampleMecanumDrive drive;
+</span><span class="boring">    private DcMotorEx linearSlides;
+</span><span class="boring">    private PIDFController PIDF;
+</span><span class="boring">
+</span><span class="boring">    public void runOpMode() {
+</span><span class="boring">        /* for the purpose of this recipe, I will be using linear slides with PIDF control to demonstrate.
+</span><span class="boring">        The linear slides will simply be called linearSlides.
+</span><span class="boring">        */
+</span><span class="boring">
+</span><span class="boring">        // linear slide initialization code
+</span><span class="boring">        // pidf initialization code
+</span><span class="boring">
+</span><span class="boring">        drive = new SampleMecanumDrive(hardwareMap);
+</span><span class="boring">        drive.setPoseEstimate(new Pose2d());
+</span><span class="boring">
+</span><span class="boring">        forward = drive.TrajectorySequenceBuilder(new Pose2d())
+</span><span class="boring">            .forward(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        strafeLeft = drive.TrajectorySequenceBuilder(forward.end())
+</span><span class="boring">            .addDisplacementMarker(() -&gt; {
+</span><span class="boring">                targetPosition = 800;
+</span><span class="boring">            })
+</span><span class="boring">            .strafeLeft(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        backward = drive.TrajectorySequenceBuilder(strafeLeft.end())
+</span><span class="boring">            .back(10)
+</span><span class="boring">            .build();
+</span><span class="boring">
+</span><span class="boring">        waitForStart();
+</span><span class="boring">
+</span><span class="boring">        currentState = STATES.DRIVE_FORWARD;
+</span><span class="boring">
+</span><span class="boring">        while(opModeIsActive) {
+</span><span class="boring">            switch (currentState) {
+</span><span class="boring">                case (INIT):
+</span><span class="boring">                    break;
+</span><span class="boring">                case (DRIVE_FORWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        // everything in here will run once when the state switches
+</span><span class="boring">
+</span><span class="boring">                        drive.followTrajectoryAsync(forward)
+</span><span class="boring">                        previousState = STATES.DRIVE_FORWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STRAFE_LEFT_AND_LIFT_SLIDES;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span>                case (STRAFE_LEFT_AND_LIFT_SLIDES):
+                    if (previousState != currentState) {
+                        // inside this trajectory sequence the targetPosition is set and the slides will start updating
+                        drive.followTrajectorySequenceAsync(strafeLeft);
+                    } else if (!drive.isBusy() &amp;&amp; linearSlides.atTarget()) {
+                        currentState = STATES.DRIVE_BACKWARD;
+                    }
+                    break;
+<span class="boring">                case (DRIVE_BACKWARD):
+</span><span class="boring">                    if (previousState != currentState) {
+</span><span class="boring">                        drive.followTrajectorySequenceAsync(backward);
+</span><span class="boring">                        previousState = STATES.DRIVE_BACKWARD;
+</span><span class="boring">                    } else if (!drive.isBusy()) {
+</span><span class="boring">                        currentState = STATES.STOP;
+</span><span class="boring">                    }
+</span><span class="boring">                    break;
+</span><span class="boring">                case (STOP):
+</span><span class="boring">                    break;
+</span><span class="boring">            }
+</span><span class="boring">
+</span><span class="boring">            // outside of the switch we update our slides, that way they are always receiving new information
+</span><span class="boring">            drive.update();
+</span><span class="boring">            double power = PIDF.calculate(linearSlides.getCurrentPosition(), targetPosition)
+</span><span class="boring">            linearSlides.setPower(power);
+</span><span class="boring">        }
+</span><span class="boring">    }
+</span><span class="boring">}
+</span></code></pre>
+<p>Here we have the same structure. However, this time our transition trigger is finishing the roadrunner trajectory and the linear slides reaching their target. Because this runs in a loop, once the displacement marker in the trajectory sequence triggers and changes the targetPosition, the PID update that runs at the end of every loop will start setting the power of the linear slides to reach that target.</p>
+<p>It is also important to note that when using async following, you must call drive.update() once every loop. This tells the path follower the updated location of the robot so it can be as accurate as possible.</p>
+<p>Whew! You should now be able to integrate a PID(F) controller with roadrunner trajectories.</p>
+<p>This example was meant to be general and explain the structure and concepts needed to make PID(F) controllers work with roadrunner. It will almost certainly require changes to make it work exactly how you wish, so don't worry if your code doesn't look exactly like this example!</p>
+<h3 id="state-factory"><a class="header" href="#state-factory">State Factory</a></h3>
+<p><a href="https://state-factory.gitbook.io/state-factory/installation">State Factory</a> is a library which helps abstract a lot of the code of a finite state machine. It also helps ensure you don't forget to write a break or an exit case.</p>
+<p><em>This recipe will not cover the installation of State Factory, please follow the instructions on the gitbook to install</em></p>
+<p>So, we're going to write the same fintie state machine, but using state factory.</p>
+<pre><code class="language-java">public class RoadRunnerPIDFSF extends LinearOpMode {
+
+    public enum STATES {
+        INIT,
+        DRIVE_FORWARD,
+        STRAFE_LEFT_AND_LIFT_SLIDES,
+        DRIVE_BACKWARD,
+        STOP;
+    }
+
+    SampleMecanumDrive drive;
+    DcMotorEx linearSlides;
+    PIDFController PIDF;
+    int targetPosition = 0;
+
+    public void runOpMode() {
+
+        // all the same initialization and trajectory building as above
+
+        StateMachine machine = new StateMachine()
+            .state(STATES.INIT) // creates a new state
+            .transition(() -&gt; isStarted()) // condition to transition from this state to the next one
+
+            .state(STATES.DRIVE_FORWARD) // register a new state
+            .onEnter(() -&gt; drive.followTrajectorySequenceAsync(forward)) // code to happen one time when entering this state
+            .transition(() -&gt; !drive.isBusy())
+
+            .state(STATES.STRAFE_LEFT_AND_LIFT_SLIDES)
+            .onEnter(() -&gt; drive.followTrajectorySequenceAsync(strafeLeft))
+            .transition(() -&gt; (!drive.isBusy() &amp;&amp; linearSlides.atTarget()))
+
+            .state(STATES.DRIVE_BACKWARD)
+            .onEnter(() -&gt; drive.followTrajectorySequenceAsync(backward))
+            .transition(() -&gt; !drive.isBusy())
+
+            .state(STATES.STOP)
+
+            .build();
+        // building this StateMachine doesn't actually do anything. We still need to run it
+
+        waitForStart();
+
+        machine.start(); // this starts the state machine, putting us into the first state
+
+        while(opModeIsActive()) {
+            machine.update();
+            drive.update();
+            double power = PIDF(linearSlides.getCurrentPosition(), targetPosition);
+            linearSlides.setPower(power);
+        }
+    }
+}
+</code></pre>
+<p>These two example both do the exact same thing and this introduction to State Factory was mostly meant to show how it can make writing FSMs less painful.</p>
+<p>Android studio may recommend changing something like <code>() -&gt; !drive.isBusy()</code> to <code>!drive::isBusy</code>, these are simply two different ways to write the same thing. The double colon works like <code>class/instance::method</code>.</p>
+<p><strong>I think it is important to note that these were extremely simple FSMs and do not demonstrate their full capabilities. This was simply meant to show you a way to integrate RoadRunner and a PIDF controller.</strong></p>
+<p><em>Last Updated: 2024-01-23</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="null-list-error-in-road-runner-10"><a class="header" href="#null-list-error-in-road-runner-10">Null list error in Road Runner 1.0</a></h1>
+<h3 id="ingredients-1"><a class="header" href="#ingredients-1">Ingredients</a></h3>
+<ol>
+<li>A Road Runner 1.0 setup</li>
+<li>Completed ForwardPushTest and LateralPushTest</li>
+</ol>
+<h2 id="the-recipe-1"><a class="header" href="#the-recipe-1">The Recipe</a></h2>
+<h3 id="the-problem"><a class="header" href="#the-problem">The problem</a></h3>
+<p>If you have gotten through Road Runner 1.0 tuning to the ForwardRampLogger tuning step (you may also see this in LateralRampLogger or AngularRampLogger), sometimes you will get an empty list error when you press the "latest" button.</p>
+<h3 id="solution-1"><a class="header" href="#solution-1">Solution</a></h3>
+<p>This is a pretty normal error to see, as the Road Runner docs do not state how to perform this test very well. You must first run the OpMode from the rc, let it finish, and then open the list on your RC network as the Road Runner docs say.</p>
+<p><em>last Updated: 2024-02-08</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="integrating-a-custom-pidf-controller"><a class="header" href="#integrating-a-custom-pidf-controller">Integrating a Custom PID(F) Controller</a></h1>
+<p><em>This recipe does not cover usage for Roadrunner or Command-Based structure.</em></p>
+<p><a href="https://www.ctrlaltftc.com/the-pid-controller">PID(F) controllers</a> are some of the most used controllers in FTC. However, it can be confusing and difficult to properly integrate them into your OpModes. This recipe will go over an example of how to integrate a PID(F) controller alongside a manual control system.</p>
+<h2 id="ingredients-2"><a class="header" href="#ingredients-2">Ingredients</a></h2>
+<ol>
+<li>A PID or PIDF controller class (this should be a file that is something like PIDFController.java, or you may use a premade one from a library like FTCLib).</li>
+<li>A use case for the PID(F).</li>
+<li>An OpMode or LinearOpMode.</li>
+</ol>
+<h2 id="the-recipe-2"><a class="header" href="#the-recipe-2">The Recipe</a></h2>
+<h3 id="creating-a-pidf-controller"><a class="header" href="#creating-a-pidf-controller">Creating a PID(F) Controller</a></h3>
+<p>The first part of using a PID(F) controller is creating one. In order to do this, we need to declare the PID(F) controller within the OpMode:</p>
+<pre><code class="language-java">package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode; // This example is for a LinearOpMode, though a similar idea applies to regular OpModes.
+import org.firstinspires.ftc.teamcode.controllers.PIDController; // This may vary depending on what implementation you are using.
+import org.firstinspires.ftc.teamcode.controllers.PIDFController; // This may vary depending on what implementation you are using.
+
+@TeleOp
+public class ExampleOpMode extends LinearOpMode {
+
+    // This line creates a PIDF controller named examplePIDF that has coefficients of:
+    // kP = 0
+    // kI = 0
+    // kD = 0
+    // kF = 0
+    private PIDFController examplePIDF = new PIDFController(0, 0, 0, 0);
+
+    // This line creates a PID controller named examplePID that has coefficients of:
+    // kP = 0
+    // kI = 0
+    // kD = 0
+    private PIDController examplePID = new PIDController(0, 0, 0);
+
+    @Override
+    public void runOpMode() {
+        // OpMode code goes here
+    }
+
+}
+</code></pre>
+<p>Now that we have our PID(F) controller, we need to use it! One of the most common use cases for a PID(F) controller is moving a motor to a certain motor encoder position. As an example, let's say we had a linear slide and we want to move it to 500 ticks when we press "a", but otherwise we want to be able to move it up and down using the triggers. The following code is for a LinearOpMode (the <code>while (opModeIsActive())</code> section would go in the <code>loop()</code> function for a OpMode):</p>
+<pre><code class="language-java">
+
+public void runOpMode() {
+    // Put all of your initialization here.
+    DcMotor slides = hardwareMap.dcMotor.get("slides");
+    waitForStart();
+
+    int targetPosition = 500;
+
+    // We will use this variable to determine if we want the PIDF to run.
+    boolean usePIDF = false;
+
+    Gamepad lastGamepad1 = new Gamepad();
+    Gamepad lastGamepad2 = new Gamepad();
+
+    while (opModeIsActive()) {
+
+        // Rising edge detector; runs if and only if "a" was pressed this loop.
+        if (gamepad1.a &amp;&amp; !lastGamepad1.a) {
+            usePIDF = true;
+        }
+
+
+        if (gamepad1.left_trigger &gt; 0) {
+            slides.setPower(gamepad1.left_trigger);
+
+            // If we get any sort of manual input, turn PIDF off.
+            usePIDF = false;
+        } else if (gamepad1.right_trigger &gt; 0) {
+            slides.setPower(gamepad1.right_trigger);
+
+             // If we get any sort of manual input, turn PIDF off.
+            usePIDF = false;
+        } else if (usePIDF) {
+            // Sets the slide motor power according to the PIDF output.
+            slides.setPower(examplePIDF.calculate(slides.getCurrentPosition(), targetPosition));
+        }
+    }
+}
+
+
+</code></pre>
+<p>This is a lot, so let's break it down piece by piece. First, we initialize our slide motor, which we call <code>slides</code>.</p>
+<pre><code class="language-java">DcMotor slides = hardwareMap.dcMotor.get("slides");
+</code></pre>
+<p>Next, we wait for the program to start and declare some variables.</p>
+<pre><code class="language-java">waitForStart();
+
+int targetPosition = 500;
+
+// We will use this variable to determine if we want the PIDF to run.
+boolean usePIDF = false;
+
+Gamepad lastGamepad1 = new Gamepad();
+Gamepad lastGamepad2 = new Gamepad();
+</code></pre>
+<p><code>targetPosition</code> is simply the position we want the slides to go to, which is 500. <code>usePIDF</code> stores the state of our system, i.e. whether we want to run the PIDF or use manual control. <code>lastGamepad1</code> and <code>lastGamepad2</code> are used for <a href="https://gm0.org/en/latest/docs/software/tutorials/gamepad.html?detector#rising-edge-detector">Rising Edge Detectors</a>. In short, they detect when a button is pressed, and ignore when it is held.</p>
+<p>The next part is the while loop, which ensures that the code runs in a loop until the OpMode stops.</p>
+<pre><code class="language-java">while (opModeIsActive())
+</code></pre>
+<p>We then use a <a href="https://gm0.org/en/latest/docs/software/tutorials/gamepad.html?detector#rising-edge-detector">Rising Edge Detectors</a> to check if "a" was pressed. If it was, we set <code>usePIDF</code> to true in order to tell the program to move to the target position.</p>
+<pre><code class="language-java">// Rising edge detector; runs if and only if "a" was pressed this loop.
+if (gamepad1.a &amp;&amp; !lastGamepad1.a) {
+    usePIDF = true;
+}
+</code></pre>
+<p>The next part is a little complicated, but the idea is that we only want to call <code>slide.setPower()</code> once, so we group all of the ways it can be called together so that they can't happen at the same time.</p>
+<p>First, we check if the left trigger is pressed. If it is, we set the slide power to an appropriate value and switch to manual control mode by setting <code>usePIDF</code> to <code>false</code>.</p>
+<pre><code class="language-java">if (gamepad1.left_trigger &gt; 0) {
+    slides.setPower(gamepad1.left_trigger);
+
+    // If we get any sort of manual input, turn PIDF off.
+    usePIDF = false;
+}
+</code></pre>
+<p>Next, we do the same check, but for the right trigger.</p>
+<pre><code class="language-java">else if (gamepad1.right_trigger &gt; 0) {
+    slides.setPower(gamepad1.right_trigger);
+
+        // If we get any sort of manual input, turn PIDF off.
+    usePIDF = false;
+}
+</code></pre>
+<p>Note that we only run this code if the left trigger is not pressed, so even if we press both at the same time, there won't be any issues.</p>
+<p><strong>Tip:</strong> If your triggers return nonzero values even when they are not being pressed, you can simply increase the minimum value (the <code>0</code> in the statement <code>if (gamepad1.left_trigger &gt; 0)</code>) from <code>0</code> to something like <code>0.1</code>.</p>
+<p>Finally, if there are no manual inputs, and we are in the PID(F) state, we run the PID(F).</p>
+<pre><code class="language-java">else if (usePIDF) {
+    // Sets the slide motor power according to the PIDF output.
+    slides.setPower(examplePIDF.calculate(slides.getCurrentPosition(), targetPosition));
+}
+</code></pre>
+<p>This is a pretty standard way of using the PID(F) output to set a motor power. <code>slides.getCurrentPosition()</code>, as the name implies, just returns the current slide position, in ticks. The <a href="https://ftclib.org/"><em>FTCLib</em></a> PID(F) assumes that the first input of the function is the place where your motor is, and the second input is the place where your motor wants to be. We will be using the <em>FTCLib</em> PID(F) syntax here for the sake of having some standard, but either way works.</p>
+<p>If you've read through this entire thing, then congrats! You should now have a fully functioning PID(F) controller that you can implement anywhere, even in conjunction with manual control.</p>
+<p>Note that the example we went through is just one way PID(F)s can be used, and there are many ways to achieve this result. Don't worry if your code doesn't look exactly like mine!</p>
+<p>As an aside, the technique we used to make sure the PID(F) control and manual control did not interfere is a simple version of what's known as a <a href="https://gm0.org/en/latest/docs/software/concepts/finite-state-machines.html"><strong>Finite State Machine</strong></a>. This idea of having multiple possible states and only running one at a time to ensure they don't interfere can be used for much more complex systems, such as controlling an entire Autonomous!</p>
+<p>Best of luck with your code!</p>
+<p><em>Last updated: 2024-01-20</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="syncing-two-linear-slide-motors-using-a-pidf-controller"><a class="header" href="#syncing-two-linear-slide-motors-using-a-pidf-controller">Syncing Two Linear Slide Motors Using a PIDF Controller</a></h1>
+<h3 id="ingredients-3"><a class="header" href="#ingredients-3">Ingredients</a></h3>
+<ol>
+<li>A PID(F) controller</li>
+<li>Tuned PID(F) coefficients</li>
+</ol>
+<h2 id="the-recipe-3"><a class="header" href="#the-recipe-3">The Recipe</a></h2>
+<h3 id="the-problem-1"><a class="header" href="#the-problem-1">The Problem</a></h3>
+<p>Linear slides powered by two different motors can end up twisted, with one slide higher than the other. This can happen if the two encoders get out of sync. If you are using the RUN_TO_POSITION motor mode, this causes one slide to be supplied more power than the other and even if you are using a PIDF controller on each motor, the same problem would occur.</p>
+<h3 id="methodology"><a class="header" href="#methodology">Methodology</a></h3>
+<p><strong>The BEST way to keep these in sync is to have them be mechanically connected with a bar or a piece of channel. If the two act as one rigid body, then it is a lot less dependent on software. However, this is not always possible, hence the software solutions.</strong></p>
+<p>So, the way we're going to set this up is with a leader and a follower linear slide motor. This means we will use a PID(F) controller on one of the linear slide positions and just set that power to both motors. This resolves the issue of the two linear slides being supplied different powers. If both motors are going the same speed and both linear slides are well tensioned (whether it's belt or string) then the linear slides should stay synced.</p>
+<h3 id="code-example"><a class="header" href="#code-example">Code Example</a></h3>
+<p>This code example is going to assume you have a working PID(F) controller class and tuned coefficients.</p>
+<pre><code class="language-java"><span class="boring">public class PIDFExample extends LinearOpMode {
+</span><span class="boring">
+</span>    // PID(F) declaration
+    // kp = 0, ki = 0, kd = 0, kf = 0;
+
+    private PIDFController examplePIDF = new PIDFController(0, 0, 0, 0);
+
+    @Override
+    public void runOpMode() {
+        int targetPosition = 0;
+
+        // motor setup
+        DcMotorEx leftSlide = hardwareMap.get(DcMotorEx.class, "leftSlide");
+        DcMotorEx rightSlide = hardwareMap.get(DcMotorEx.class, "rightSlide");
+
+        waitForStart();
+
+        while(opModeIsActive()) {
+            /* 
+            Calculates PID based only on one encoder.
+            This can also be the average position of the two linear slides, but we haven't noticed much difference
+            */
+            double power = PIDFController.update(leftSlide.getCurrentPosition(), targetPosition);
+
+            // see how both motors are getting the same power
+            leftSlide.setPower(power);
+            rightSlide.setPower(power);
+        }
+    }
+<span class="boring">
+</span><span class="boring">}
+</span></code></pre>
+<p>Hopefully this help!</p>
+<p><em>Last Updated: 2024-01-25</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-we-should-only-use-usb-30"><a class="header" href="#why-we-should-only-use-usb-30">Why we should only use USB 3.0</a></h1>
+<h3 id="ingredients-4"><a class="header" href="#ingredients-4">Ingredients</a></h3>
+<ol>
+<li>A Control Hub</li>
+<li>At least 1 USB device</li>
+<li>A USB hub (optional)</li>
+</ol>
+<h2 id="the-recipe-4"><a class="header" href="#the-recipe-4">The Recipe</a></h2>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<p>The Control Hub has a lot of nuances that many people do not know of, including the dangers of the onboard USB 2.0 port.</p>
+<h3 id="the-problem-2"><a class="header" href="#the-problem-2">The Problem</a></h3>
+<p>The Control Hub's USB 2.0 port shares a ground with the wifi chipset on the Control Hub, providing a path for a static shock to cause a disconnect mid match, given a static shock to the USB device.</p>
+<h3 id="how-to-mitigate-the-problem"><a class="header" href="#how-to-mitigate-the-problem">How to Mitigate the Problem</a></h3>
+<p>The best way to mitigate the problem is to not use the USB 2.0 port on your Control Hub. For teams with no or only one USB device, that's not a problem, just use the USB 3.0 port instead of the USB 2.0 port. If your team needs more than one device, such as a Expansion Hub over USB <em>and</em> a USB camera for object detection, it gets more complicated. To prevent shock, we have to get a USB hub, and connect all devices through just the USB 3.0 port.</p>
+<p><em>Last Updated: 2024-02-07</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="where-should-i-put-my-odometry-pods"><a class="header" href="#where-should-i-put-my-odometry-pods">Where should I put my odometry pods?</a></h1>
+<h3 id="ingredients-5"><a class="header" href="#ingredients-5">Ingredients</a></h3>
+<ol>
+<li>An Expansion Hub or Control Hub</li>
+<li>either 2 or 3 odometry pods/modules</li>
+</ol>
+<h2 id="the-recipe-5"><a class="header" href="#the-recipe-5">The Recipe</a></h2>
+<h3 id="the-problem-3"><a class="header" href="#the-problem-3">The problem</a></h3>
+<p>The Rev Control Hub and Expansion hub, as found <a href="https://blog.eeshwark.com/robotblog/rev-hub-quadrature">here</a> by 7244 alum Eeshwar, only has 2 reliable quadrature encoder ports, meaning for teams that use high CPR/PPR encoders, such as the Rev Through Bore encoder, will miss counts on ports 1 and 2.</p>
+<h3 id="solutions"><a class="header" href="#solutions">Solutions</a></h3>
+<h3 id="2-wheel-odometry"><a class="header" href="#2-wheel-odometry">2 Wheel Odometry</a></h3>
+<p>For teams that use a 2 wheel + IMU setup, the solution is simple! AS you don't need drive encoders, put all motors on the main hub and put the odometry encoders on encoder ports 0 and 3 main hub, where you would usually put the motor encoders.</p>
+<h3 id="3-wheel-odometry"><a class="header" href="#3-wheel-odometry">3 Wheel Odometry</a></h3>
+<p>For teams with 3 wheel odometry, it gets much more complex. Since the most important encoders are the parallel pods, since encoder drift with them will cause heading drift, causing significant localization error across a 30 second autonomous. Since they're the most important, the parallel pods should go in ports 0 and 3 on your main hub. The perpendicular, or strafe pod, is less important to localization, and since mecanum strafe speed is lower, so it is fine to put it in port 1 or 2, as the accuracy loss of using the secondary hub, due to requiring another bulk read, is not worth the increase of a more accurate port.</p>
+<p><em>Last Updated: 2024-02-08</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-do-some-ftc-programmers-use-kotlin-should-i-switch"><a class="header" href="#why-do-some-ftc-programmers-use-kotlin-should-i-switch">Why do some FTC programmers use Kotlin? Should I switch?</a></h1>
+<p><em>Have you ever seen Kotlin mentioned in the context of FTC code?</em></p>
+<p><em>Are you curious about why some FTC programmers like to use Kotlin for their code bases?</em></p>
+<p>Kotlin is a language with very high cross compatability with Java, which means it can be used to write your FTC code.</p>
+<p>FIRST provides official instructions for adding Kotlin to your project <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/installing_kotlin/Installing-Kotlin.html">here</a></p>
+<h2 id="ingredients-6"><a class="header" href="#ingredients-6">Ingredients</a></h2>
+<ol>
+<li>Good understanding of Java</li>
+<li>Interest in learning and exploring Kotlin</li>
+</ol>
+<h2 id="the-recipe-6"><a class="header" href="#the-recipe-6">The Recipe</a></h2>
+<p>Kotlin is a language that makes a very solid attempt at modernising Java. It makes writing common Java patterns extremely concise, and makes it easy to write safer code, that is less likely to have strange bugs or throw null pointer exceptions that are hard to deal with.</p>
+<p>Kotlin is unlikely to be particularly useful to you if you are not using Object-Oriented aspects of Java already, if you are just writing [Linear]OpModes, but are not writing your own classes, Kotlin is probably not for you, while Kotlin certainly does offer some nice features in this environment, the challenges that come with using Kotlin may also prove hard to overcome unless you are writing more complex and involved code. It is also advisable not to try to switch to Kotlin at the same time as learning more Object-Oriented skills.</p>
+<p>Due to Kotlin's concise nature, Kotlin can often prove difficult to read, where Java likes to put everything out in the open, and is very direct, Kotlin tends to imply much more.</p>
+<p>This recipe will cover some basics, but large parts of common Kotlin syntax, with direct comparisons to Java.</p>
+<h3 id="vars-and-vals"><a class="header" href="#vars-and-vals">Vars and Vals</a></h3>
+<p>A big part of Kotlin is its changes to fields, getters, setters, and how they interact with paramaters from the constructor.</p>
+<p>The following two snippets are equivalent (this is not quite true, but close enough, and gets the idea across):</p>
+<pre><code class="language-kt"><span class="boring">class VarsAndVals {
+</span>	var var1 = 0
+	private var var2 = "variable string"
+
+	val val1 = 0
+	private val val2 = "value string"
+<span class="boring">
+</span><span class="boring">	fun getting() {
+</span><span class="boring">		val local1 = var1
+</span><span class="boring">		val local2 = var2
+</span><span class="boring">
+</span><span class="boring">		val local3 = val1
+</span><span class="boring">		val local4 = val2
+</span><span class="boring">	}
+</span><span class="boring">
+</span><span class="boring">	fun setting() {
+</span><span class="boring">		var1 = 100
+</span><span class="boring">		var2 = "new value"
+</span><span class="boring">	}
+</span><span class="boring">}
+</span></code></pre>
+<pre><code class="language-java"><span class="boring">public class VarsAndVals {
+</span>	private int var1 = 0;
+	private String var2 = "variable string";
+	
+	private final int val1 = 0;
+	private final String val2 = "value string";
+	
+	public int getVar1() {
+		return var1;
+	}
+	
+	public void setVar1(int var1) {
+		this.var1 = var1;
+	}
+	
+	private String getVar2() {
+		return var2;
+	}
+	
+	private void setVar2(String string) {
+		this.var2 = string;
+	}
+	
+	public int getVal1() {
+		return val1;
+	}
+	
+	private String getVar2() {
+		return var2;
+	}
+<span class="boring">	
+</span><span class="boring">	public void getting() {
+</span><span class="boring">		final int local1 = getVar1();
+</span><span class="boring">		final String local2 = getVar2();
+</span><span class="boring">		
+</span><span class="boring">		final int local3 = getVal1();
+</span><span class="boring">		final String local4 = getVal2();
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public void setting() {
+</span><span class="boring">		setVar1(100);
+</span><span class="boring">		setVar2("new value");
+</span><span class="boring">	}
+</span><span class="boring">}
+</span></code></pre>
+<p>Its pretty clear that Kotlin saves a lot of work on the front of writing getters and setters. While this isn't too big of a deal, after all, android studio offers some helpful tools to auto generate these functions in Java, Kotlin makes itself invaluable in enforcing the usage of these functions, in a syntactically shorter manner.</p>
+<pre><code class="language-kt"><span class="boring">class VarsAndVals {
+</span><span class="boring">	var var1 = 0
+</span><span class="boring">	private var var2 = "variable string"
+</span><span class="boring">
+</span><span class="boring">	val val1 = 0
+</span><span class="boring">	private val val2 = "value string"
+</span><span class="boring">
+</span>	fun getting() {
+		val local1 = var1
+		val local2 = var2
+
+		val local3 = val1
+		val local4 = val2
+	}
+
+	fun setting() {
+		var1 = 100
+		var2 = "new value"
+	}
+<span class="boring">}
+</span></code></pre>
+<pre><code class="language-java"><span class="boring">public class VarsAndVals {
+</span><span class="boring">	private int var1 = 0;
+</span><span class="boring">	private String var2 = "variable string";
+</span><span class="boring">	
+</span><span class="boring">	private final int val1 = 0;
+</span><span class="boring">	private final String val2 = "value string";
+</span><span class="boring">	
+</span><span class="boring">	public int getVar1() {
+</span><span class="boring">		return var1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public void setVar1(int var1) {
+</span><span class="boring">		this.var1 = var1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private String getVar2() {
+</span><span class="boring">		return var2;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private void setVar2(String string) {
+</span><span class="boring">		this.var2 = string;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public int getVal1() {
+</span><span class="boring">		return val1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private String getVar2() {
+</span><span class="boring">		return var2;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span>	public void getting() {
+		final int local1 = getVar1();
+		final String local2 = getVar2();
+		
+		final int local3 = getVal1();
+		final String local4 = getVal2();
+	}
+	
+	public void setting() {
+		setVar1(100);
+		setVar2("new value");
+	}
+<span class="boring">}
+</span></code></pre>
+<p>Kotlin enforces the use of getters and setters for property access, but uses the property access syntax!</p>
+<p>Already, our java code is ~2.5 times longer than Kotlin.</p>
+<p>If you're worried about defining custom getters and setters, don't worry, Kotlin allows that too, but we won't cover it here. Kotlin allows for a fairly wide range of cool features around this concept.</p>
+<h3 id="storing-constructor-parameters"><a class="header" href="#storing-constructor-parameters">Storing Constructor Parameters</a></h3>
+<p>Kotlin makes it super easy and fast to take in constructor paramaters and store them in the class. The following two snippets are once again, equivalent:</p>
+<pre><code class="language-kt">class ConstructorParams (val val1: String, var var1: Int)
+</code></pre>
+<pre><code class="language-java">public class ConstructorParams {
+	private final String val1;
+	private int var1;
+	
+	public ConstructorParams(String val1, int var1) {
+		this.val1 = val1;
+		this.var1 = var1;
+	}
+	
+	public int getVar1() {
+		return var1;
+	}
+	
+	public String getVal1() {
+		return val1;
+	}
+	
+	public void setVar1(int var1) {
+		this.var1 = var1;
+	}
+}
+</code></pre>
+<p>In this case, what was numerous lines in Java was only one in Kotlin, which is even a little easier to read!</p>
+<h3 id="default-values-in-methods-and-constructors"><a class="header" href="#default-values-in-methods-and-constructors">Default Values In Methods and Constructors</a></h3>
+<p>Kotlin makes it easy to specify default values to functions and constructors, again, the following two snippets are equivalent:</p>
+<pre><code class="language-kt">class DefaultValues {
+	fun function(arg: Int = 0) {
+		val a = arg + 10
+	}
+}
+</code></pre>
+<pre><code class="language-java">public class DefaultValues {
+	public void function(int arg) {
+		int a = arg + 10;
+	}
+	
+	public void function() {
+		function(0);
+	}
+}
+</code></pre>
+<p>Kotlin makes this a little more powerful than demonstrated here, but for most situations, this is pretty simple.</p>
+<h3 id="null-safety"><a class="header" href="#null-safety">Null Safety</a></h3>
+<p>Kotlin makes it easy to work with values that can and can't be null, much easier than Java</p>
+<pre><code class="language-kt">val neverNull: Int = 10
+val nullable: Int? = null
+</code></pre>
+<p>The <code>?</code> lets us know that the variable could be null, and Kotlin will throw compilation warnings if we try to use it without checking and handling it.</p>
+<p>Lets look at some more:</p>
+<pre><code class="language-kt">fun addOrThrow(a: Int?, b: Int?) {
+    val safeA = a ?: throw IllegalStateException("a is null")
+    val safeB = b!!
+    return safeA + safeB
+}
+</code></pre>
+<p>The <code>?:</code> operator is known as the Elvis operator, and means that the code after it gets run if the left hand side is null, which means that we know we exit early and throw an exception if either of our inputs are null</p>
+<p>The <code>!!</code> operator is like a shortcut for this operation in this situation, the Elvis operator is more powerful and flexible, if we don't want to throw our own error, and just want to crash, the <code>!!</code> operator basically insists that the value isn't null</p>
+<p>Finally:</p>
+<pre><code class="language-kt">fun nullSafeMethodCall(a: Int?): Double {
+    return a?.toDouble() ?: throw IllegalStateException("a is null")
+}
+</code></pre>
+<p>We'll combine the concept above with the <code>?.</code> operator, which performs a null safe method call, if a is null, Kotlin won't try to call <code>.toDouble()</code> on it, and will just return null, which will then be caught by the Elvis operator!</p>
+<h3 id="overview-1"><a class="header" href="#overview-1">Overview</a></h3>
+<p>Kotlin has a lot more to it than this short overview, but these are some of the features that I find make a big common difference with Java, hopefully, this arms you with an expectation of what the rest of Kotlin is like, and some of the reasons that more advanced FTC programmers like to chose it over Java.</p>
+<p><a href="https://kotlinlang.org/docs/home.html">Kotlin official documentation</a></p>
+<p>Overall, the best way to learn is just to jump in and give it a try, if you get stuck, search it up, or take a look at the <a href="https://kotlinlang.org/docs/home.html">docs</a> again!</p>
+<p>If you feel like you need a complete example of using Kotlin for FTC, I advise you ask in the unoffical Discord. Most people who use Kotlin write fairly complex codebases, and use different combinations of libraries, so you might need to ask some questions in order to find an example that you can follow, and matches the libraries you plan to use.</p>
+<p>Another good place to search for Kotlin code in an FTC context is in libraries. A good portion of FTC software libraries are written in Kotlin, so they may provide usage examples for Kotlin, or you may find reading their contents a good place to learn.</p>
+<p><em>Last updated: 2024-01-30</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="acronyms"><a class="header" href="#acronyms">Acronyms</a></h1>
+<h2 id="hardware-and-electronics"><a class="header" href="#hardware-and-electronics">Hardware and Electronics</a></h2>
+<p><strong>CHub</strong>: Control Hub<br>
+<strong>EHub/ExHub</strong>: Expansion Hub<br>
+<strong>DS</strong>: Driver Station<br>
+<strong>RC</strong>: Robot Controller<br>
+<strong>ESD</strong>: Electro-Static Discharge<br>
+<strong>DC</strong>: Disconnect</p>
+<h2 id="sdk-built-in"><a class="header" href="#sdk-built-in">SDK Built-In</a></h2>
+<p><strong>SDK</strong>: <a href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">Standard Development Kit</a><br>
+<strong>RTP</strong>: RUN_TO_POSITION Motor Mode<br>
+<strong>RUE</strong>: RUN_USING_ENCODERS Motor Mode<br>
+<strong>IMU</strong>: <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/imu/imu.html">Internal Measurement Unit (Gyroscope)</a><br>
+<strong>EOCV/OCV</strong>: Easy OpenCV/OpenCV | <a href="https://ftc-docs.firstinspires.org/en/latest/apriltag/vision_portal/visionportal_overview/visionportal-overview.html">Vision Processor</a>, <a href="https://github.com/OpenFTC/EasyOpenCV">Pipelines</a><br>
+<strong>TFOD</strong>: <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/index.html#tensorflow-programming">TensorFlow Object Detection</a><br>
+<strong>hmap/hwmap</strong>: HardwareMap</p>
+<h2 id="libraries"><a class="header" href="#libraries">Libraries</a></h2>
+<p><strong>RR</strong>: RoadRunner (Motion Planning Library) <a href="https://learnroadrunner.com/">0.5.6</a>, <a href="https://rr.brott.dev/docs/v1-0/installation/">1.0</a></p>
+<h2 id="controllers"><a class="header" href="#controllers">Controllers+</a></h2>
+<p><strong>Odo</strong>: <a href="https://gm0.org/en/latest/docs/software/concepts/odometry.html?highlight=odometry">Odometry</a><br>
+<strong>MP</strong>: <a href="https://www.ctrlaltftc.com/advanced/motion-profiling">Motion Profiling</a><br>
+<strong>FF</strong>: <a href="https://www.ctrlaltftc.com/feedforward-control">FeedForward</a><br>
+<strong>PID(F)</strong>: <a href="https://www.ctrlaltftc.com/the-pid-controller">Proportional Integral Derivative FeedForward Controller</a><br>
+<strong>KF/EKF</strong>: <a href="https://www.ctrlaltftc.com/advanced/the-kalman-filter">Kalman Filter / Extended Kalman Filter</a></p>
+<h2 id="other"><a class="header" href="#other">Other</a></h2>
+<p><strong>GH</strong>: <a href="https://github.com/">GitHub</a><br>
+<strong>AS</strong>: <a href="https://developer.android.com/studio">Android Studio</a><br>
+<strong>OBJ</strong>: <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/onbot_java/OnBot-Java-Tutorial.html">OnBot Java</a><br>
+<strong>ADB</strong>: <a href="https://developer.android.com/tools/adb">Android Debug Bridge (used to wireless connect to control hub)</a></p>
+<p><em>Last Updated: 2024-01-26</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="improving-loop-times"><a class="header" href="#improving-loop-times">Improving Loop Times</a></h1>
+<h2 id="recipe"><a class="header" href="#recipe">Recipe</a></h2>
+<p><strong>This recipe will first cover the various methods to improve loop times. At the end there is a full example of mode that uses all these methods</strong></p>
+<h3 id="why-are-fast-loop-times-important"><a class="header" href="#why-are-fast-loop-times-important">Why are fast loop times important?</a></h3>
+<p>If things are being updated more often, they will be more responsive to button clicks and joystick changes. This can make driving easier. Additionally, if you are using PID(F) controllers, the more frequently they update powers. They will oscilate less around a target and the more accurately reach the target.</p>
+<h3 id="what-causes-slow-loop-times"><a class="header" href="#what-causes-slow-loop-times">What causes slow loop times?</a></h3>
+<p>The main things that take a long time are not any calculations, unless they are very very complex, or making classes and stuff like that. Most of the time is used on hardware reads and hardware writes. Hardware reads are things like getting an encoder position, reading a color sensor, anything that retrieves data. Hardware writes are sending data to the hub, so setting a motor power and setting a servo position.</p>
+<h3 id="checking-loop-times"><a class="header" href="#checking-loop-times">Checking loop times</a></h3>
+<pre><code class="language-java">// assume that this is enclosed in an entire op mode
+
+ElapsedTime elapsedTime = new ElapsedTime();
+
+public void loop() {
+
+    // do stuff
+
+    telemetry.addData("Loop Times", elapsedTime.milliseconds());
+    elapsedTime.reset();
+}
+</code></pre>
+<h3 id="bulk-reading"><a class="header" href="#bulk-reading">Bulk Reading</a></h3>
+<p>Reads (with the exception of I2C) can be done in one command. By default, every time you do a hardware read, it sends a new command to retrieve it. Using one command to retrieve ALL the data is bulk reading.</p>
+<p>This recipe will not go into the different bulk reading modes. To learn more look <a href="https://gm0.org/en/latest/docs/software/tutorials/bulk-reads.html">here</a>.</p>
+<h3 id="photon"><a class="header" href="#photon">Photon</a></h3>
+<p>Trying to explain what photon actually does it outside the scope of this recipe. If you are interested, Eeshwar (the person who wrote photon) has a <a href="https://blog.eeshwark.com/robotblog/photonftc-basic-explanation">blog</a> that simply explains it. <a href="https://github.com/Eeshwar-Krishnan/PhotonFTC/tree/main">Here</a> is the github repo that has instructions for installing photon.</p>
+<p><strong>Some people have installed photon and Android Studio does not recognize the <code>@Photon</code> annotation. Instead of <code>implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:v3.0.1-ALPHA'</code>, try <code>implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:main-SNAPSHOT'</code>.</strong></p>
+<p><strong>Also, be warned. Photon somtimes when used just randomly reverses motors and servos (but it's always the same ones reversed the same way).</strong></p>
+<h3 id="caching-motor-powers"><a class="header" href="#caching-motor-powers">Caching Motor Powers</a></h3>
+<p>So now let's try and reduce unnecessary hardware writes. If a motor is going at 0.5 power and we keep setting the power to 0.5, the output of the motor will not change, but these are all hardware writes and take time (there is a slight caveat here with how the sdk handles duplicate powers, but that is outside the scope of this recipe). What if we set the power to 0.51 instead? The output will probably be pretty much the same, but that also takes a hardware write.</p>
+<p>So, what we're going to do is store the last power send to a motor and check every new <code>setPower()</code> command to only run if the new power is more than a certain threshold above the last power.</p>
+<!-- This is the most simplistic implementation of caching motor powers and only supports (it assumes) RUN_WITHOUT_ENCODER.
+```java
+// assume all the imports exist
+
+public class CachingDcMotorEx extends DcMotorEx {
+
+    private final double tolerance;
+    private double lastPower = 0.0;
+
+    public CachingDcMotorEx(DcMotorEx motor) {
+        this(motor, 0.02);
+    }
+
+    public CachingDcMotorEx(DcMotorEx motor, double threshold) {
+        tolerance = threshold;
+    }
+
+    @Override
+    public void setPower(double power) {
+        if (Math.abs(power - lastPower) > tolerance) {
+            super(power);
+        }
+    }
+}
+``` -->
+<h3 id="full-example"><a class="header" href="#full-example">Full Example</a></h3>
+<pre><code class="language-java">// imports
+
+// note the annotation at the top of the op mode (this is all you have to do to use photon)
+@Photon
+public class OptimizedOpMode extends OpMode {
+
+    private DcMotorEx exampleMotor;
+    private List&lt;LynxModule&gt; allHubs;
+    private ElapsedTime elapsedtime;
+
+    @Override
+    public void init() {
+
+        elapsedtime = new ElapsedTime();
+
+        // this just sets the bulk reading mode for each hub
+        allHubs = hardwareMap.getAll(LynxModule.class);
+        for (LynxModule hub : allHubs) {
+            hub.setBulkCachingMode(LynxModule.BulkCachingMode.MANUAL);
+        }
+
+        exampleMotor = new CachingDcMotorEx(hardwareMap.get(DcMotorEx.class, "example motor"));
+        elapsedtime.reset();
+    }
+
+    @Override
+    public void loop() {
+        // clears the cache on each hub
+        for (LynxModule hub : allHubs) {
+            hub.clearBulkCache();
+        }
+
+        // after the first time, it won't actually send new commands
+        exampleMotor.setPower(1);
+
+        telemetry.addData("Motor Position", exampleMotor.getPosition());
+        telemetry.addData("Loop Times", elapsedtime.milliseconds());
+        elapsedtime.reset();
+    }
+
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">contributors</a></h1>
+<ul>
+<li>hex <a href="https://github.com/dr-hextanium">(github)</a> <a href="https://discord.com/users/280024224121356288">(discord)</a></li>
+<li>0verkil <a href="https://github.com/0verkil">(github)</a> <a href="https://discord.com/users/671902633430089748">(discord)</a></li>
+<li>Ruckus Robotics (14712) <a href="https://discord.com/users/292086403926589441">(discord)</a></li>
+<li>JL <a href="https://github.com/JoelLee3">(github)</a> <a href="https://discordapp.com/users/760523424635813980">(discord)</a></li>
+<li>rjan939 <a href="https://github.com/rjan939">(github)</a> <a href="https://discordapp.com/users/292725814556884995">(discord)</a></li>
+<li>Froze 'n' Milk <a href="https://github.com/Froze-N-Milk">(github)</a></li>
+<li>Iris <a href="https://github.com/Iris-TheRainbow">(github)</a> <a href="https://discord.com/users/705965203807928381">(discord)</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

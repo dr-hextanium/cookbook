@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Why Kotlin? - The Cookbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Common Driver Station Error Messages</li><li class="chapter-item expanded "><a href="../../common_ds_errors/nullptrexception_at_init.html"><strong aria-hidden="true">1.</strong> The Null Pointer Exception on Init</a></li><li class="chapter-item expanded affix "><li class="part-title">Road Runner 0.5.6</li><li class="chapter-item expanded "><a href="../../roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.html"><strong aria-hidden="true">2.</strong> Is the bump on feedforward tuner normal?</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/manual_feedforward_tuner_overshooots.html"><strong aria-hidden="true">3.</strong> Manual feedforward tuner overshoots</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/manual_feed_forward_tuner_opposite_velocities.html"><strong aria-hidden="true">4.</strong> Manual Feedforward tuner opposite velocity</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/robot_localization_makes_circle_when_spinning_in_place.html"><strong aria-hidden="true">5.</strong> Robot localization makes circles when spinning in place</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/robot_velocity_plateaus_below_target_velocity_plateau.html"><strong aria-hidden="true">6.</strong> Robot velocity plateaus below target velocity plateau</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/robot_drifts_to_one_side_during_manual_feedforward_tuning.html"><strong aria-hidden="true">7.</strong> Robot drifts to one side during feedforward tuning</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/robot_drifts_while_tuning_follower_pid.html"><strong aria-hidden="true">8.</strong> Robot drifts while tuning follower PID</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.html"><strong aria-hidden="true">9.</strong> Robot drives full speed on start when following trajectory</a></li><li class="chapter-item expanded "><a href="../../roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/how_to_integrate_a_PIDF_controller_with_roadrunner.html"><strong aria-hidden="true">10.</strong> How to integrate a PIDF controller with Road Runner</a></li><li class="chapter-item expanded affix "><li class="part-title">Road Runner 1.0</li><li class="chapter-item expanded "><a href="../../roadrunner_10/null_list_error_in_rr_10.html"><strong aria-hidden="true">11.</strong> Empty list error in Road Runner 1.0</a></li><li class="chapter-item expanded affix "><li class="part-title">PID(F) Controllers</li><li class="chapter-item expanded "><a href="../../pidf_controllers/integrating_a_custom_PIDF_controller.html"><strong aria-hidden="true">12.</strong> Integrating a Custom PID(F) Controller</a></li><li class="chapter-item expanded "><a href="../../pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.html"><strong aria-hidden="true">13.</strong> Syncing two linear slide motors using a PID(F) Controller</a></li><li class="chapter-item expanded affix "><li class="part-title">Electrical</li><li class="chapter-item expanded "><a href="../../electrical/why_we_should_only_use_usb_30.html"><strong aria-hidden="true">14.</strong> Why we should only use USB 3.0?</a></li><li class="chapter-item expanded "><a href="../../electrical/how_to_wire_odometry_pods.html"><strong aria-hidden="true">15.</strong> Where should I put my odometry pods?</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="../../misc/why_kotlin/why_kotlin.html" class="active"><strong aria-hidden="true">16.</strong> Why Kotlin?</a></li><li class="chapter-item expanded "><a href="../../misc/terminology_and_acronyms.html"><strong aria-hidden="true">17.</strong> Terminology and Acronyms</a></li><li class="chapter-item expanded "><a href="../../improving_loop_times/improving_loop_times.html"><strong aria-hidden="true">18.</strong> Improving Loop Times</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../contributors.html">Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="why-do-some-ftc-programmers-use-kotlin-should-i-switch"><a class="header" href="#why-do-some-ftc-programmers-use-kotlin-should-i-switch">Why do some FTC programmers use Kotlin? Should I switch?</a></h1>
+<p><em>Have you ever seen Kotlin mentioned in the context of FTC code?</em></p>
+<p><em>Are you curious about why some FTC programmers like to use Kotlin for their code bases?</em></p>
+<p>Kotlin is a language with very high cross compatability with Java, which means it can be used to write your FTC code.</p>
+<p>FIRST provides official instructions for adding Kotlin to your project <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/installing_kotlin/Installing-Kotlin.html">here</a></p>
+<h2 id="ingredients"><a class="header" href="#ingredients">Ingredients</a></h2>
+<ol>
+<li>Good understanding of Java</li>
+<li>Interest in learning and exploring Kotlin</li>
+</ol>
+<h2 id="the-recipe"><a class="header" href="#the-recipe">The Recipe</a></h2>
+<p>Kotlin is a language that makes a very solid attempt at modernising Java. It makes writing common Java patterns extremely concise, and makes it easy to write safer code, that is less likely to have strange bugs or throw null pointer exceptions that are hard to deal with.</p>
+<p>Kotlin is unlikely to be particularly useful to you if you are not using Object-Oriented aspects of Java already, if you are just writing [Linear]OpModes, but are not writing your own classes, Kotlin is probably not for you, while Kotlin certainly does offer some nice features in this environment, the challenges that come with using Kotlin may also prove hard to overcome unless you are writing more complex and involved code. It is also advisable not to try to switch to Kotlin at the same time as learning more Object-Oriented skills.</p>
+<p>Due to Kotlin's concise nature, Kotlin can often prove difficult to read, where Java likes to put everything out in the open, and is very direct, Kotlin tends to imply much more.</p>
+<p>This recipe will cover some basics, but large parts of common Kotlin syntax, with direct comparisons to Java.</p>
+<h3 id="vars-and-vals"><a class="header" href="#vars-and-vals">Vars and Vals</a></h3>
+<p>A big part of Kotlin is its changes to fields, getters, setters, and how they interact with paramaters from the constructor.</p>
+<p>The following two snippets are equivalent (this is not quite true, but close enough, and gets the idea across):</p>
+<pre><code class="language-kt"><span class="boring">class VarsAndVals {
+</span>	var var1 = 0
+	private var var2 = "variable string"
+
+	val val1 = 0
+	private val val2 = "value string"
+<span class="boring">
+</span><span class="boring">	fun getting() {
+</span><span class="boring">		val local1 = var1
+</span><span class="boring">		val local2 = var2
+</span><span class="boring">
+</span><span class="boring">		val local3 = val1
+</span><span class="boring">		val local4 = val2
+</span><span class="boring">	}
+</span><span class="boring">
+</span><span class="boring">	fun setting() {
+</span><span class="boring">		var1 = 100
+</span><span class="boring">		var2 = "new value"
+</span><span class="boring">	}
+</span><span class="boring">}
+</span></code></pre>
+<pre><code class="language-java"><span class="boring">public class VarsAndVals {
+</span>	private int var1 = 0;
+	private String var2 = "variable string";
+	
+	private final int val1 = 0;
+	private final String val2 = "value string";
+	
+	public int getVar1() {
+		return var1;
+	}
+	
+	public void setVar1(int var1) {
+		this.var1 = var1;
+	}
+	
+	private String getVar2() {
+		return var2;
+	}
+	
+	private void setVar2(String string) {
+		this.var2 = string;
+	}
+	
+	public int getVal1() {
+		return val1;
+	}
+	
+	private String getVar2() {
+		return var2;
+	}
+<span class="boring">	
+</span><span class="boring">	public void getting() {
+</span><span class="boring">		final int local1 = getVar1();
+</span><span class="boring">		final String local2 = getVar2();
+</span><span class="boring">		
+</span><span class="boring">		final int local3 = getVal1();
+</span><span class="boring">		final String local4 = getVal2();
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public void setting() {
+</span><span class="boring">		setVar1(100);
+</span><span class="boring">		setVar2("new value");
+</span><span class="boring">	}
+</span><span class="boring">}
+</span></code></pre>
+<p>Its pretty clear that Kotlin saves a lot of work on the front of writing getters and setters. While this isn't too big of a deal, after all, android studio offers some helpful tools to auto generate these functions in Java, Kotlin makes itself invaluable in enforcing the usage of these functions, in a syntactically shorter manner.</p>
+<pre><code class="language-kt"><span class="boring">class VarsAndVals {
+</span><span class="boring">	var var1 = 0
+</span><span class="boring">	private var var2 = "variable string"
+</span><span class="boring">
+</span><span class="boring">	val val1 = 0
+</span><span class="boring">	private val val2 = "value string"
+</span><span class="boring">
+</span>	fun getting() {
+		val local1 = var1
+		val local2 = var2
+
+		val local3 = val1
+		val local4 = val2
+	}
+
+	fun setting() {
+		var1 = 100
+		var2 = "new value"
+	}
+<span class="boring">}
+</span></code></pre>
+<pre><code class="language-java"><span class="boring">public class VarsAndVals {
+</span><span class="boring">	private int var1 = 0;
+</span><span class="boring">	private String var2 = "variable string";
+</span><span class="boring">	
+</span><span class="boring">	private final int val1 = 0;
+</span><span class="boring">	private final String val2 = "value string";
+</span><span class="boring">	
+</span><span class="boring">	public int getVar1() {
+</span><span class="boring">		return var1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public void setVar1(int var1) {
+</span><span class="boring">		this.var1 = var1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private String getVar2() {
+</span><span class="boring">		return var2;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private void setVar2(String string) {
+</span><span class="boring">		this.var2 = string;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	public int getVal1() {
+</span><span class="boring">		return val1;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span><span class="boring">	private String getVar2() {
+</span><span class="boring">		return var2;
+</span><span class="boring">	}
+</span><span class="boring">	
+</span>	public void getting() {
+		final int local1 = getVar1();
+		final String local2 = getVar2();
+		
+		final int local3 = getVal1();
+		final String local4 = getVal2();
+	}
+	
+	public void setting() {
+		setVar1(100);
+		setVar2("new value");
+	}
+<span class="boring">}
+</span></code></pre>
+<p>Kotlin enforces the use of getters and setters for property access, but uses the property access syntax!</p>
+<p>Already, our java code is ~2.5 times longer than Kotlin.</p>
+<p>If you're worried about defining custom getters and setters, don't worry, Kotlin allows that too, but we won't cover it here. Kotlin allows for a fairly wide range of cool features around this concept.</p>
+<h3 id="storing-constructor-parameters"><a class="header" href="#storing-constructor-parameters">Storing Constructor Parameters</a></h3>
+<p>Kotlin makes it super easy and fast to take in constructor paramaters and store them in the class. The following two snippets are once again, equivalent:</p>
+<pre><code class="language-kt">class ConstructorParams (val val1: String, var var1: Int)
+</code></pre>
+<pre><code class="language-java">public class ConstructorParams {
+	private final String val1;
+	private int var1;
+	
+	public ConstructorParams(String val1, int var1) {
+		this.val1 = val1;
+		this.var1 = var1;
+	}
+	
+	public int getVar1() {
+		return var1;
+	}
+	
+	public String getVal1() {
+		return val1;
+	}
+	
+	public void setVar1(int var1) {
+		this.var1 = var1;
+	}
+}
+</code></pre>
+<p>In this case, what was numerous lines in Java was only one in Kotlin, which is even a little easier to read!</p>
+<h3 id="default-values-in-methods-and-constructors"><a class="header" href="#default-values-in-methods-and-constructors">Default Values In Methods and Constructors</a></h3>
+<p>Kotlin makes it easy to specify default values to functions and constructors, again, the following two snippets are equivalent:</p>
+<pre><code class="language-kt">class DefaultValues {
+	fun function(arg: Int = 0) {
+		val a = arg + 10
+	}
+}
+</code></pre>
+<pre><code class="language-java">public class DefaultValues {
+	public void function(int arg) {
+		int a = arg + 10;
+	}
+	
+	public void function() {
+		function(0);
+	}
+}
+</code></pre>
+<p>Kotlin makes this a little more powerful than demonstrated here, but for most situations, this is pretty simple.</p>
+<h3 id="null-safety"><a class="header" href="#null-safety">Null Safety</a></h3>
+<p>Kotlin makes it easy to work with values that can and can't be null, much easier than Java</p>
+<pre><code class="language-kt">val neverNull: Int = 10
+val nullable: Int? = null
+</code></pre>
+<p>The <code>?</code> lets us know that the variable could be null, and Kotlin will throw compilation warnings if we try to use it without checking and handling it.</p>
+<p>Lets look at some more:</p>
+<pre><code class="language-kt">fun addOrThrow(a: Int?, b: Int?) {
+    val safeA = a ?: throw IllegalStateException("a is null")
+    val safeB = b!!
+    return safeA + safeB
+}
+</code></pre>
+<p>The <code>?:</code> operator is known as the Elvis operator, and means that the code after it gets run if the left hand side is null, which means that we know we exit early and throw an exception if either of our inputs are null</p>
+<p>The <code>!!</code> operator is like a shortcut for this operation in this situation, the Elvis operator is more powerful and flexible, if we don't want to throw our own error, and just want to crash, the <code>!!</code> operator basically insists that the value isn't null</p>
+<p>Finally:</p>
+<pre><code class="language-kt">fun nullSafeMethodCall(a: Int?): Double {
+    return a?.toDouble() ?: throw IllegalStateException("a is null")
+}
+</code></pre>
+<p>We'll combine the concept above with the <code>?.</code> operator, which performs a null safe method call, if a is null, Kotlin won't try to call <code>.toDouble()</code> on it, and will just return null, which will then be caught by the Elvis operator!</p>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<p>Kotlin has a lot more to it than this short overview, but these are some of the features that I find make a big common difference with Java, hopefully, this arms you with an expectation of what the rest of Kotlin is like, and some of the reasons that more advanced FTC programmers like to chose it over Java.</p>
+<p><a href="https://kotlinlang.org/docs/home.html">Kotlin official documentation</a></p>
+<p>Overall, the best way to learn is just to jump in and give it a try, if you get stuck, search it up, or take a look at the <a href="https://kotlinlang.org/docs/home.html">docs</a> again!</p>
+<p>If you feel like you need a complete example of using Kotlin for FTC, I advise you ask in the unoffical Discord. Most people who use Kotlin write fairly complex codebases, and use different combinations of libraries, so you might need to ask some questions in order to find an example that you can follow, and matches the libraries you plan to use.</p>
+<p>Another good place to search for Kotlin code in an FTC context is in libraries. A good portion of FTC software libraries are written in Kotlin, so they may provide usage examples for Kotlin, or you may find reading their contents a good place to learn.</p>
+<p><em>Last updated: 2024-01-30</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../electrical/how_to_wire_odometry_pods.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../misc/terminology_and_acronyms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../electrical/how_to_wire_odometry_pods.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../misc/terminology_and_acronyms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
