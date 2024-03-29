@@ -4,7 +4,7 @@
 ---
 # Common Driver Station Error Messages
 
-- [The Null Pointer Exception on Init](./common_ds_errors/nullptrexception_at_init.md)
+- [`NullPointerException` on initialization](./common_ds_errors/npe_at_init/npe_at_init.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
