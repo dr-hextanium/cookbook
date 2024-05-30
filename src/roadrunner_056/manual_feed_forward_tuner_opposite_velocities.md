@@ -1,6 +1,7 @@
-# Target Velocity is Positive When Measured Velocity is Negative and Vice Versa When Tuning Manual Feedforward
+# Target Velocity is Positive When Measured Velocity is Negative When Tuning Manual Feedforward
 
-If MotorDirectionDebugger works perfectly, this simply means that either your right side encoders are plugged in to the wrong ports(so swap `frontRight` and `backRight` encoder cables) or your left side encoders are plugged in to the wrong ports(so swap `frontLeft` and `backLeft` encoder cables). An easy way to debug this is to add a `printEncoderValues` telemetry method in `SampleMecanumDrive`.
+If MotorDirectionDebugger works perfectly, this means that either your right side encoders are plugged in to the wrong ports (so swap `frontRight` and `backRight` encoder cables) or your left side encoders are plugged in to the wrong ports (so swap `frontLeft` and `backLeft` encoder cables). 
+An easy way to debug this is to add a `printEncoderValues` telemetry method in `SampleMecanumDrive`.
 
 ```java
 public void printEncoderValues(Telemetry telemetry) {
@@ -17,4 +18,4 @@ drive.printEncoderValues(telemetry);
 
 
 
-*Last updated: 2024-01-20*
+*Last updated: 2024-05-30*
