@@ -24,7 +24,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
       <br>
 3. **Download and Open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController)**:
     - In the [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) GitHub repository, press the blue **code** button and press [download zip](https://github.com/FIRST-Tech-Challenge/FtcRobotController/archive/refs/heads/master.zip).
-    - Extract the contents of the zip file to a folder (typically in your Downloads folder).
+    - Extract the contents of the zip file to a folder (typically in your Downloads or Documents folder).
     - In [Android Studio](https://developer.android.com/studio/), press File &rarr; Open (⌘ + O on Mac or Win + O on Windows).
     - Select the folder you extracted the zip file to, and press open. **DO NOT** open any folder inside the extracted folder.
     - Wait for the project to load. You should end up with 3 folders in the project view: **FtcRobotController**, **TeamCode**, and **Gradle Scripts**. <br>
@@ -33,7 +33,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
     **<br>NOTE: Installing [ADB](https://developer.android.com/studio/releases/platform-tools) may require Admin Permissions.**
     - Download the latest version of [ADB](https://developer.android.com/studio/releases/platform-tools).
     Press on one of the three links depending on your operating system.
-    - Extract the contents of the zip file to a folder (typically in your Downloads folder).
+    - Extract the contents of the zip file to a folder (typically in your Downloads or Documents folder).
     - Add the folder to your system's PATH variable:
         - **Windows**:
             - Open the start menu and search for "Environment Variables", and press enter.
@@ -72,8 +72,10 @@ Access to **Admin Permissions** on aforementioned computer.<br>
             ```bash
             source ~/.bash_profile
               ```
-        - **Linux**:
-            - Open a terminal window and run the following command:
+        - **Linux**: 
+          <br>[ADB](https://developer.android.com/studio/releases/platform-tools) should already be installed by default with the installation of Android Studio. If not, you can use the following steps below to install [ADB](https://developer.android.com/studio/releases/platform-tools) manually:<br>
+          <br>
+          - Open a terminal window and run the following command:
             ```bash
             nano ~/.bashrc
             ```
@@ -96,4 +98,4 @@ Congratulations! You have successfully installed the necessary software to progr
 
 ## Troubleshooting
 - If you have questions/issues with the installation process, the [Unofficial FTC Discord](https://discord.gg/first-tech-challenge) has many experienced programmers who can help you with all sorts of issues, including installation issues.
-- Last updated on May 29th, 2024.
+- Last updated on May 30th, 2024.
