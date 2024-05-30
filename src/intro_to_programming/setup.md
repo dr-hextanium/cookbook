@@ -27,6 +27,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
     - Extract the contents of the zip file to a folder (typically in your Downloads or Documents folder).
     - In [Android Studio](https://developer.android.com/studio/), press File &rarr; Open (⌘ + O on Mac or Win + O on Windows).
     - Select the folder you extracted the zip file to, and press open. **DO NOT** open any folder inside the extracted folder.
+        - On MacOS, you can alternatively drag the folder from Finder onto the [Android Studio](https://developer.android.com/studio/) icon in your taskbar to open the folder.
     - Wait for the project to load. You should end up with 3 folders in the project view: **FtcRobotController**, **TeamCode**, and **Gradle Scripts**. <br>
         <br>
 4. Install [ADB](https://developer.android.com/studio/releases/platform-tools):
@@ -59,7 +60,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
             ```bash
             cd ~/Downloads/
                ```
-            - Then, to avoid deleting the ADB files, move the downloaded file to a new folder (should still work with modern versions of MacOS):
+            - Then, to avoid deleting the ADB files, move the downloaded file to a new folder (the commands below should still work with modern versions of MacOS):
             ```bash
             mkdir ~/.android-sdk-macosx
             mv platform-tools/ ~/.android-sdk-macosx/platform-tools
@@ -88,7 +89,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
             ```bash
             source ~/.bashrc
             ```
-    - Finally, to check that your properly installed [ADB](https://developer.android.com/studio/releases/platform-tools), In the Android Studio Terminal (Control + F12 on Windows or ⌘ + F12 on macOS), or your default/preferred terminal run the following command:
+    - Finally, to check that your properly installed [ADB](https://developer.android.com/studio/releases/platform-tools), In the Android Studio Terminal (Control + F12 on Windows or ⌘ + F12 on Mac), or your default/preferred terminal run the following command:
     ```bash
     adb devices
     ```
