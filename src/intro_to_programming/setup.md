@@ -23,14 +23,15 @@ Access to **Admin Permissions** on aforementioned computer.<br>
     - Open [Android Studio](https://developer.android.com/studio/). <br>
       <br>
 3. **Download and Open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController)**:
-    - In the [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) GitHub repository, press the blue **code** button and press [download zip](https://github.com/FIRST-Tech-Challenge/FtcRobotController/archive/refs/heads/master.zip).
+    - In the [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) GitHub repository, press the blue **code** button and press [download zip](https://github.com/FIRST-Tech-Challenge/FtcRobotController/archive/refs/heads/master.zip). 
+      - You can alternatively use [Github Desktop](https://desktop.github.com/) to open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) in [Android Studio](https://developer.android.com/studio/), which is not covered in this Recipe.  
     - Extract the contents of the zip file to a folder (typically in your Downloads or Documents folder).
     - In [Android Studio](https://developer.android.com/studio/), press File &rarr; Open (⌘ + O on Mac or Win + O on Windows).
     - Select the folder you extracted the zip file to, and press open. **DO NOT** open any folder inside the extracted folder.
         - On MacOS, you can alternatively drag the folder from Finder onto the [Android Studio](https://developer.android.com/studio/) icon in your taskbar to open the folder.
-    - Wait for the project to load. You should end up with 3 folders in the project view: **FtcRobotController**, **TeamCode**, and **Gradle Scripts**. <br>
+    - Wait for the project to load. You should end up with 3 folders in the Android view panel (which you should automatically be moved to once ready): **FtcRobotController**, **TeamCode**, and **Gradle Scripts**. <br>
         <br>
-4. Install [ADB](https://developer.android.com/studio/releases/platform-tools):
+4. **Install** [**ADB**](https://developer.android.com/studio/releases/platform-tools):
     **<br>NOTE: Installing [ADB](https://developer.android.com/studio/releases/platform-tools) may require Admin Permissions.**
     - Download the latest version of [ADB](https://developer.android.com/studio/releases/platform-tools).
     Press on one of the three links depending on your operating system.
@@ -89,7 +90,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
             ```bash
             source ~/.bashrc
             ```
-    - Finally, to check that your properly installed [ADB](https://developer.android.com/studio/releases/platform-tools), In the Android Studio Terminal (Control + F12 on Windows or ⌘ + F12 on Mac), or your default/preferred terminal run the following command:
+    - Finally, to check that your properly installed [ADB](https://developer.android.com/studio/releases/platform-tools), in the Android Studio Terminal (Control + F12 on Windows or ⌘ + F12 on Mac), or on your default/preferred terminal, run the following command:
     ```bash
     adb devices
     ```
