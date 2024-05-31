@@ -58,8 +58,7 @@ Kotlin enforces the use of getters and setters for property access, but uses the
 Already, our Kotlin code is ~2.5 times shorter than Java.
 
 If you're worried about defining custom getters and setters, Kotlin allows that too.
-More detail is available in the [Kotlin docs](https://kotlinlang.org/docs/properties.html#getters-and-setters]
-Kotlin).
+More detail is available in the [Kotlin docs](https://kotlinlang.org/docs/properties.html#getters-and-setters).
 Kotlin allows for a fairly wide range of cool features around this concept.
 
 ### Storing Constructor Parameters

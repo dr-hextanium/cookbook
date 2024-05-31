@@ -26,7 +26,7 @@ This can rapidly ruin your localization as heading is used as a basis for all ot
 Since they're the most important, the parallel pods should go in ports 0 and 3 on the Control Hub. 
 The perpendicular (strafe) pod is less important to localization, so it is fine to put it in port 1 or 2 on the Control Hub.
 
-Note that you should always put odometry on the Control Hub (or at least  all on the same hub) even if you must place it in ports 1 or 2.
+Note that you should always put odometry on the Control Hub (or at least all on the same hub) even if you must place it in ports 1 or 2.
 This is because reading from the Expansion Hub requires an additional bulk read.
 This can greatly worsen loop times and is not worth the benefits of using the 0 and 3 ports.
 
