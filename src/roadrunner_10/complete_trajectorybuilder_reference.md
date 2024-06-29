@@ -15,8 +15,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 ## TrajectoryBuilder Reference
 
 ### Path Primitives #
-The begin pose is the origin (0,0) with a heading of π/6
+The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
-This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
 
 *Last Updated: 2024-06-29*
