@@ -5,7 +5,7 @@
 **EHub/ExHub**: Expansion Hub<br>
 **DS**: Driver Station<br>
 **RC**: Robot Controller<br>
-**ESD**: Electro-Static Discharge<br>
+**ESD**: Electrostatic Discharge<br>
 **DC**: Disconnect
 
 ## SDK Built-In

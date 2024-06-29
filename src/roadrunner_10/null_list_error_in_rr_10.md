@@ -13,7 +13,8 @@
 If you have gotten through Road Runner 1.0 tuning to the ForwardRampLogger tuning step (you may also see this in LateralRampLogger or AngularRampLogger), sometimes you will get an empty list error when you press the "latest" button.
 
 ### Solution
-This is a pretty normal error to see, as the Road Runner docs do not state how to perform this test very well. You must first run the OpMode from the rc, let it finish, and then open the list on your RC network as the Road Runner docs say.
+You must first run the OpMode from the Driver Station and then stop it once the robot's speed stops increasing.
+Finally, you can open the tuning page on your robot's Wi-Fi network, as the Road Runner docs say.
 
 
-*last Updated: 2024-02-08*
+*last Updated: 2024-05-29*

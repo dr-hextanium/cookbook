@@ -6,4 +6,5 @@
 - rjan939 [(github)](https://github.com/rjan939) [(discord)](https://discordapp.com/users/292725814556884995)
 - Froze 'n' Milk [(github)](https://github.com/Froze-N-Milk)
 - Iris [(github)](https://github.com/Iris-TheRainbow) [(discord)](https://discord.com/users/705965203807928381)
+- j5155 [(github)](https://github.com/j5155) [(discord)](https://discord.com/users/496774369054425109)
 - Arush [(github)](https://github.com/ArushYadlapati) [(discord)](https://discord.com/users/764258716463529986)

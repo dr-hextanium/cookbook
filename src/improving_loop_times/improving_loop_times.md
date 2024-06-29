@@ -6,13 +6,24 @@
 
 ### Why are fast loop times important?
 
-If things are being updated more often, they will be more responsive to button clicks and joystick changes. This can make driving easier. Additionally, if you are using PID(F) controllers, the more frequently they update powers. They will oscilate less around a target and the more accurately reach the target.
+The more often your teleop is updated, the more responsive it will be to button clicks and joystick changes. 
+This can make driving easier. 
+Additionally, if you are using PID(F) controllers, the more frequently they update the more accurate they are and the less they oscillate.
 
 ### What causes slow loop times?
 
-The main things that take a long time are not any calculations, unless they are very very complex, or making classes and stuff like that. Most of the time is used on hardware reads and hardware writes. Hardware reads are things like getting an encoder position, reading a color sensor, anything that retrieves data. Hardware writes are sending data to the hub, so setting a motor power and setting a servo position.
+Surprisingly, the main cause of slow loop times is not processing difficulties or code complexity.
+Most of the processing time is spent on communicating with hardware devices, known as hardware "reads" and hardware "writes". 
+
+Hardware reads are when you are receiving data. 
+For example, getting an encoder position, reading a color sensor, or accessing the IMU are all hardware reads.
+On the other hand, hardware writes are when you are sending data. 
+For example, setting a motor power, setting a servo position, or configuring an LED are all hardware writes.
 
 ### Checking loop times
+
+Here is some basic code to measure your loop times in milliseconds. 
+The more milliseconds your loop takes, the slower your loop times are.
 
 ```java
 // assume that this is enclosed in an entire op mode
@@ -30,28 +41,46 @@ public void loop() {
 
 ### Bulk Reading
 
-Reads (with the exception of I2C) can be done in one command. By default, every time you do a hardware read, it sends a new command to retrieve it. Using one command to retrieve ALL the data is bulk reading.
+Other than I2C devices, reading can be done all at once in a "bulk read" for a huge loop time improvement.
+
+By default, every time you do a hardware read, a new command is sent to retrieve it. 
+Using one command to retrieve ALL the data is bulk reading.
 
 This recipe will not go into the different bulk reading modes. To learn more look [here](https://gm0.org/en/latest/docs/software/tutorials/bulk-reads.html).
 
+### Caching Motor Powers
+
+So now let's try and reduce unnecessary hardware writes. 
+
+If a motor is going at 0.5 power, and we keep setting the power to 0.5, the output of the motor will not change. 
+However, each one of those `setPower()` commands is a hardware write which will delay your loop.
+A simple solution to this is to only send a new motor power when it is different from the previous.
+
+However, we can go even further then just difference to remove much more unnecessary writes.
+If the motor is currently running at 0.5 power, and you tell it to run at 0.51 power instead, it will have very little effect.
+However, it will unnecessarily perform a loop-delaying hardware write.
+
+Instead, you can store the last power sent to a motor and check every new `setPower()` command to only run if the new power is sufficiently different from the previous power.
+
+<!-- This is the most simplistic implementation of caching motor powers and only supports RUN_WITHOUT_ENCODER mode.
+```java
+{{#rustdoc_include CachingDcMotorEx.java::}}
+``` -->
+
+
 ### Photon
 
-Trying to explain what photon actually does it outside the scope of this recipe. If you are interested, Eeshwar (the person who wrote photon) has a [blog](https://blog.eeshwark.com/robotblog/photonftc-basic-explanation) that simply explains it. [Here](https://github.com/Eeshwar-Krishnan/PhotonFTC/tree/main) is the github repo that has instructions for installing photon.
+Photon is another way of increasing loop times. 
+Photon is an experimental library developed by Eeshwar, an alumni originally from team 7244.
+It allows for significantly faster loop times by parallelizing much more of the hardware reads and writes.
+Installation instructions for Photon are available [here](https://github.com/Eeshwar-Krishnan/PhotonFTC/tree/main).
+
+Photon has a few known issues at the moment, here's some troubleshooting steps:
 
 **Some people have installed photon and Android Studio does not recognize the `@Photon` annotation. Instead of `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:v3.0.1-ALPHA'`, try `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:main-SNAPSHOT'`.**
 
 **Also, be warned. Photon somtimes when used just randomly reverses motors and servos (but it's always the same ones reversed the same way).**
 
-### Caching Motor Powers
-
-So now let's try and reduce unnecessary hardware writes. If a motor is going at 0.5 power and we keep setting the power to 0.5, the output of the motor will not change, but these are all hardware writes and take time (there is a slight caveat here with how the sdk handles duplicate powers, but that is outside the scope of this recipe). What if we set the power to 0.51 instead? The output will probably be pretty much the same, but that also takes a hardware write.
-
-So, what we're going to do is store the last power send to a motor and check every new `setPower()` command to only run if the new power is more than a certain threshold above the last power.
-
-<!-- This is the most simplistic implementation of caching motor powers and only supports (it assumes) RUN_WITHOUT_ENCODER.
-```java
-{{#rustdoc_include CachingDcMotorEx.java::}}
-``` -->
 
 ### Full Example
 
