@@ -17,5 +17,11 @@ the TrajectoryBuilder class for Road Runner 1.0.
 ### Path Primitives #
 The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
+`lineToX()`
+
+```java
+.lineToX(48)
+```
+
 
 *Last Updated: 2024-06-29*
