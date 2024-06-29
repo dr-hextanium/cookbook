@@ -2,9 +2,9 @@
 
 [Introduction](./introduction.md)
 ---
-# Common Driver Station Error Messages
 
-- [`NullPointerException` on initialization](./common_ds_errors/npe_at_init/npe_at_init.md)
+# Road Runner 1.0
+- [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)
@@ -17,8 +17,8 @@
 - [Robot drives full speed on start when following trajectory](./roadrunner_056/robot_drives_full_speed_on_start_when_following_trajectory.md)
 - [How to integrate a PIDF controller with Road Runner](./roadrunner_056/how_to_integrate_a_PIDF_controller_with_roadrunner/how_to_integrate_a_PIDF_controller_with_roadrunner.md)
 
-# Road Runner 1.0
-- [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
+# Common Driver Station Error Messages
+- [`NullPointerException` on initialization](./common_ds_errors/npe_at_init/npe_at_init.md)
 
 # PID(F) Controllers
 - [Integrating a Custom PID(F) Controller](./pidf_controllers/integrating_a_custom_PIDF_controller.md)
