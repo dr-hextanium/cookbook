@@ -1,4 +1,4 @@
-# Setup
+# Development Environment Setup
 This is a guide designed to assist new FTC programmers setup the [Android Studio](https://developer.android.com/studio/) environment to program a robot.
 ## Ingredients
 A **Computer** that has the [required specs](https://developer.android.com/studio/install) for [Android Studio](https://developer.android.com/studio/) and installing [Java](https://www.oracle.com/java/technologies/downloads/). <br>

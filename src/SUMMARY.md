@@ -2,6 +2,8 @@
 
 [Introduction](./introduction.md)
 ---
+# Introduction to Programming
+- [Development Environment Setup](./intro_to_programming/setup.md)
 
 # Road Runner 1.0
 - [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
