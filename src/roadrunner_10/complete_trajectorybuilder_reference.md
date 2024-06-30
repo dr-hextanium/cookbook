@@ -17,7 +17,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
-`lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
+#### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
 ```java
 .lineToX(48)
@@ -28,7 +28,7 @@ WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://cookbook.da
 // Both of these do the exact same thing and are effectively the same.
 // 🚨 Will cause an error if your heading is perpendicular to direction your robot is traveling! 🚨 
 
-`lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
+#### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
 ```java
 .lineToY(48)
