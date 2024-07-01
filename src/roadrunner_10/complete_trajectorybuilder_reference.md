@@ -19,7 +19,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
-🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://cookbook.dairy.foundation/roadrunner_10/null_list_error_in_rr_10.html#the-problem) instead of any `lineTo()`'s! 🚨 
+🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨 
 
 ```java
 // Robot moves to the specified x coordinate in the direction of the robot heading (straight line).
@@ -32,7 +32,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
-🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://cookbook.dairy.foundation/roadrunner_10/null_list_error_in_rr_10.html#the-problem) instead of any `lineTo()`'s! 🚨
+🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
 
 ```java
 // Robot moves to the specified y coordinate in the direction of the robot heading (straight line).
