@@ -13,9 +13,22 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ## TrajectoryBuilder Reference
 
-### Path Primitives #
+### Path Primitives
 
 The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
+
+#### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
+
+```java
+// Robot moves to the specified coordinates while maintaining the heading.
+// Both `strafeTo()` and `strafeToConstantHeading()` do the exact same thing and are effectively the same.
+// So, if you start at a 90 degree angle, it will keep that angle the entire path.
+
+.strafeTo(new Vector2d(48, 48))
+.strafeToConstantHeading(new Vector2d(48, 48))
+```
+
+---
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
@@ -29,7 +42,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 .lineToX(48)
 .lineToXConstantHeading(48)
 ```
-
+---
 #### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
 🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
@@ -41,17 +54,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 .lineToY(36)
 .lineToYConstantHeading(36)
-```
-
-#### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
-
-```java
-// Robot moves to the specified coordinates while maintaining the heading.
-// Both `strafeTo()` and `strafeToConstantHeading()` do the exact same thing and are effectively the same.
-// So, if you start at a 90 degree angle, it will keep that angle the entire path.
-
-.strafeTo(new Vector2d(48, 48))
-.strafeToConstantHeading(new Vector2d(48, 48))
 ```
 
 *Last Updated: 2024-07-02*
