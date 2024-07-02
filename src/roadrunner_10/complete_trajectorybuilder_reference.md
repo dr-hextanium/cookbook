@@ -45,4 +45,14 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
+```java
+// Robot moves to the specified coordinates while maintaining the heading.
+// Both `strafeTo()` and `strafeToConstantHeading()` do the exact same thing and are effectively the same.
+// So, if you start at a 90 degree angle, it will keep that angle the entire path.
+
+.strafeTo(new Vector2d(48, 48))
+.strafeToConstantHeading(new Vector2d(48, 48))
+
+```
+
 *Last Updated: 2024-07-02*
