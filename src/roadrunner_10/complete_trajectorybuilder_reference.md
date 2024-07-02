@@ -52,7 +52,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 .strafeTo(new Vector2d(48, 48))
 .strafeToConstantHeading(new Vector2d(48, 48))
-
 ```
 
 *Last Updated: 2024-07-02*
