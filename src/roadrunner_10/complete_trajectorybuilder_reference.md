@@ -17,7 +17,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ### Table of Contents
 
-#### [Path Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#path-primitives)
+#### [Path Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#path-primitives-1)
 1. [`waitSeconds(double: seconds)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#waitsecondsdouble-seconds)
 2. [`turn(Math.toRadians(double: angle))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-angle)
 3. [`turnTo(Math.toRadians(double: heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turntomathtoradiansdouble-heading)
@@ -30,7 +30,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 10. [`lineToY(y: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
 11. [`splineTo(new Vector2d(x, y), tangent)`]()
 
-#### [Heading Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#heading-primitives)
+#### [Heading Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#heading-primitives-1)
 12. [`Tangent Heading (default)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#tangent-heading-default)
 13. [`Constant Heading`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#constant-heading)
 14. [`Linear Heading`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linear-heading)
