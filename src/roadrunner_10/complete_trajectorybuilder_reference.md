@@ -243,5 +243,4 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 ---
 
-
 *Last Updated: 2024-07-02*
