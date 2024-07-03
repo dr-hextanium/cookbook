@@ -17,6 +17,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ### Table of Contents
 
+#### [Path Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#path-primitives)
 1. [`waitSeconds(double: seconds)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#waitsecondsdouble-seconds)
 2. [`turn(Math.toRadians(double: angle))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-angle)
 3. [`turnTo(Math.toRadians(double: heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turntomathtoradiansdouble-heading)
@@ -27,6 +28,13 @@ the TrajectoryBuilder class for Road Runner 1.0.
 8. [`strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetosplineheadingnew-vector2dx-y-mathtoradiansheading)
 9. [`lineToX(x: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoxx-double--linetoxconstantheadingx-double)
 10. [`lineToY(y: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
+11. [`splineTo(new Vector2d(x, y), tangent)`]()
+
+#### [Heading Primitives:](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#heading-primitives)
+12. [`Tangent Heading (default)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#tangent-heading-default)
+13. [`Constant Heading`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#constant-heading)
+14. [`Linear Heading`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linear-heading)
+15. [`Spline Heading`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#spline-heading)
 
 ### Path Primitives
 
@@ -176,7 +184,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `splineTo(new Vector2d(x, y), tangent)`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator
 
 .splineTo(new Vector2d(48, 48), Math.PI / 2)
 ```
@@ -190,7 +198,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Tangent Heading (default)`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator
 
 .setTangent(0)
 .splineTo(new Vector2d(48, 48), Math.PI / 2)
@@ -201,7 +209,9 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Constant Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+// Robot moves to the specified coordinates in a spline path while keeping the heading constant
+// The robot maintains the heading it starts at throughout the trajectory.
+// To change the shape of the spline, change `endTangent`.
 
 .setTangent(0)
 .splineToConstantHeading(new Vector2d(48, 48), Math.PI / 2)
@@ -212,7 +222,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Linear Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+// Robot moves to the specified coordinates in a spline path while separately linearly interpolating the heading
+// To change the shape of the spline, change `endTangent`.
 
 .setTangent(0)
 .splineToLinearHeading(new Pose2d(48, 48, 0), Math.PI / 2)
@@ -223,7 +234,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Spline Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+// Robot moves to the specified coordinates in a spline path while separately spline interpolating the heading
+// To change the shape of the spline, change `endTangent`.
 
 .setTangent(0)
 .splineToSplineHeading(new Pose2d(48, 48, 0), Math.PI / 2)
