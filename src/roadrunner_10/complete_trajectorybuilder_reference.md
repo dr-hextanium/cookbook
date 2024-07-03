@@ -41,14 +41,29 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `turn(Math.toRadians(double: angle))`
 
+```java
+// Robot turns counterclockwise by the specified angle
+// This turn is in radians, so you must convert degrees to radians using `Math.toRadians()`.
+// If you see `Math.PI`, it is already in radians, and does not need `Math.toRadians()`. Degrees from 0 to 360 need to be converted to radians.
+// To turn clockwise, use a negative angle.
 
+.turn(-Math.PI / 6) // Turns clockwise by `Math.PI / 6` degrees, ending at a heading of 0 degrees
+.turn(Math.PI / 6) // Turns counterclockwise by `Math.PI / 6` degrees, ending at the original heading
+```
+
+---
+
+#### `turnTo(Math.toRadians(double: heading))`
 
 ```java
-// Robot turns
-// This is a turn
+// Robot turns counterclockwise to the specified angle
+// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`
+// By default, the robot will turn in the shortest direction to the specified heading.
+// To turn in the opposite direction, you can add or subtract a very small number (1e-6) to the heading you want to turn to.
+// If it still does not work, you can use the `turn()` method instead.
 
-.turn(angle)
-.turnTo(heading)
+.turnTo(Math.toRadians(90)) // Turns to a heading of 90 degrees
+.turnTo(Math.PI / 6) // Turns to a heading of `Math.PI / 6` degrees, ending at the original heading
 ```
 
 ---
