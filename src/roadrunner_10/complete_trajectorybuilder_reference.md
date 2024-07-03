@@ -25,10 +25,10 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
-#### `waitSeconds(seconds)`
+#### `waitSeconds(double: seconds)`
 
-🚨 WARNING: Ensure that you are using `waitSeconds()` and not `wait()`. All Java objects have a `wait()` function which causes the current thread to wait until another thread invokes a `notify()` or `notifyAll()` method. See further details in the [Oracle JavaDoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#wait()). We don't care for this function but it does show up in intellisense. Make sure you are using the `waitSeconds()` function instead of `wait()`.
- 🚨
+> 🚨 **WARNING:** 🚨  
+> Ensure that you are using `waitSeconds()` and not `wait()`. All Java objects have a `wait()` function which causes the current thread to wait until another thread invokes a `notify()` or `notifyAll()` method. See further details in the [Oracle JavaDoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#wait()). We don't care for this function but it does show up in intellisense. Make sure you are using the `waitSeconds()` function instead of `wait()`.
 
 ```java
 // Robot waits for the specified time in seconds
@@ -36,6 +36,21 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 .waitSeconds(5)
 ```
+
+---
+
+#### `turn(Math.toRadians(double: angle))`
+
+
+
+```java
+// Robot turns
+// This is a turn
+
+.turn(angle)
+.turnTo(heading)
+```
+
 ---
 
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
@@ -53,7 +68,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
-🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨 
+> 🚨 **WARNING:** 🚨  
+> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨 
 
 ```java
 // Robot moves to the specified x coordinate in the direction of the robot heading (straight line).
@@ -68,7 +84,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 #### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
-🚨 WARNING: It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
+> 🚨 **WARNING:** 🚨  
+> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
 
 ```java
 // Robot moves to the specified y coordinate in the direction of the robot heading (straight line).
