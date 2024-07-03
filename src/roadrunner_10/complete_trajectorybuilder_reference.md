@@ -58,7 +58,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // Robot turns counterclockwise by the specified angle
-// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`
+// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`.
 // By default, the robot will turn in the shortest direction to the specified heading.
 // If you see `Math.PI`, it is already in radians, and does not need `Math.toRadians()`. Degrees from 0 to 360 need to be converted to radians.
 // To turn clockwise, use a negative angle.
@@ -73,7 +73,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // Robot turns counterclockwise to the specified angle
-// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`
+// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`.
 // By default, the robot will turn in the shortest direction to the specified heading.
 // To turn in the opposite direction, you can add or subtract a very small number (1e-6) to the heading you want to turn to.
 // If it still does not work, you can use the `turn()` method instead.
@@ -88,7 +88,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // `setTangent()` allows you to set a heading tangent on a trajectory, allowing you to follow a trajectory at arbitrary heading tangents
-// This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor
+// This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor.
 
 .setTangent(90) // Sets tangent to 90
 ```
