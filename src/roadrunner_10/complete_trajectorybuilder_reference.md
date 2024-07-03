@@ -20,9 +20,13 @@ the TrajectoryBuilder class for Road Runner 1.0.
 1. [`waitSeconds(double: seconds)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#waitsecondsdouble-seconds)
 2. [`turn(Math.toRadians(double: angle))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-angle)
 3. [`turnTo(Math.toRadians(double: heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-angle)
-4. [`strafeTo(new Vector2d(double: x, double: y))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
-5. [`lineToX(x: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoxx-double--linetoxconstantheadingx-double)
-6. [`lineToY(y: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
+4. [`setTangent(double: r)`]()
+5. [`setReversed(boolean: reversed)`]()
+6. [`strafeTo(new Vector2d(double: x, double: y))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
+7. [`strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
+8. [`strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
+9. [`lineToX(x: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoxx-double--linetoxconstantheadingx-double)
+10. [`lineToY(y: double)`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
 
 ### Path Primitives
 
@@ -72,6 +76,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ---
 
+#### `setTangent(double: r)`
+
+```java
+// `setTangent()` allows you to set a heading tangent on a trajectory, allowing you to follow a trajectory at arbitrary heading tangents
+// This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor
+
+.setTangent(0) // Sets tangent to 0
+```
+
+---
+
+#### `setReversed(boolean: reversed)`
+
+```java
+// If you see these hooks on the start and/or end of spline trajectories, you can use `setReversed()` to fix them
+// By default, each trajectory is set to `setReversed(false)`. 
+
+.setReversed(false) // Unreversed trajectory has hooks on the start and end
+.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+
+```
+
+```java
+.setReversed(true) // Reversed trajectory has no hooks on the start and end
+.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+```
+
+---
+
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
 ```java
@@ -84,6 +117,29 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```
 
 ---
+
+#### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
+
+```java
+// Robot moves to the specified coordinates while linearly interpolating between the start heading and a specified end heading
+// In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates. 
+
+.strafeToLinearHeading(new Vector2d(36, 36), Math.toRadians(90))
+```
+
+---
+
+#### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
+
+```java
+// Robot moves to the specified coordinates while splinely interpolating between the start heading and a specified end heading
+// In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates. 
+
+.strafeToSplineHeading(new Vector2d(36, 36), Math.toRadians(90))
+```
+
+---
+
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
