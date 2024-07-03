@@ -82,7 +82,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 // `setTangent()` allows you to set a heading tangent on a trajectory, allowing you to follow a trajectory at arbitrary heading tangents
 // This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor
 
-.setTangent(0) // Sets tangent to 0
+.setTangent(90) // Sets tangent to 90
 ```
 
 ---
@@ -170,5 +170,66 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 .lineToY(36)
 .lineToYConstantHeading(36)
 ```
+
+---
+
+#### `splineTo(new Vector2d(x, y), tangent)`
+
+```java
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+
+.splineTo(new Vector2d(48, 48), Math.PI / 2)
+```
+
+---
+
+### Heading Primitives
+
+The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
+
+#### `Tangent Heading (default)`
+
+```java
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+
+.setTangent(0)
+.splineTo(new Vector2d(48, 48), Math.PI / 2)
+```
+
+---
+
+#### `Constant Heading`
+
+```java
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+
+.setTangent(0)
+.splineToConstantHeading(new Vector2d(48, 48), Math.PI / 2)
+```
+
+---
+
+#### `Linear Heading`
+
+```java
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+
+.setTangent(0)
+.splineToLinearHeading(new Pose2d(48, 48, 0), Math.PI / 2)
+```
+
+---
+
+#### `Spline Heading`
+
+```java
+// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator.
+
+.setTangent(0)
+.splineToSplineHeading(new Pose2d(48, 48, 0), Math.PI / 2)
+```
+
+---
+
 
 *Last Updated: 2024-07-02*
