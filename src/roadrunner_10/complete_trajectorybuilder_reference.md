@@ -13,6 +13,10 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ## TrajectoryBuilder Reference
 
+### Table of Contents
+
+1. [`strafeTo(new Vector2d(double: x, double: y))`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
+
 ### Path Primitives
 
 The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
