@@ -54,13 +54,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `turn(Math.toRadians(double: angle))`
 
 ```java
-// Robot turns counterclockwise by the specified angle
-// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`.
-// If you see `Math.PI`, it is already in radians, and does not need `Math.toRadians()`. Degrees from 0 to 360 need to be converted to radians.
-// To turn clockwise, use a negative angle.
-
-.turn(-Math.PI / 6) // Turns clockwise by `Math.PI / 6` degrees, ending at a heading of 0 degrees
-.turn(Math.PI / 6) // Turns counterclockwise by `Math.PI / 6` degrees, ending at the original heading
+{{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
 ---
@@ -68,14 +62,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `turnTo(Math.toRadians(double: heading))`
 
 ```java
-// Robot turns counterclockwise to the specified angle
-// This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`.
-// By default, the robot will turn in the shortest direction to the specified heading.
-// To turn in the opposite direction, you can add or subtract a very small number (1e-6) to the heading you want to turn to.
-// If it still does not work, you can use the `turn()` method instead.
-
-.turnTo(Math.toRadians(90)) // Turns to a heading of 90 degrees
-.turnTo(Math.PI / 6) // Turns to a heading of `Math.PI / 6` degrees, ending at the original heading
+{{#rustdoc_include BuilderReference.java:18:25}}
 ```
 
 ---
@@ -83,10 +70,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `setTangent(double: r)`
 
 ```java
-// `setTangent()` allows you to set a heading tangent on a trajectory, allowing you to follow a trajectory at arbitrary heading tangents
-// This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor.
-
-.setTangent(90) // Sets tangent to 90
+{{#rustdoc_include BuilderReference.java:29:32}}
 ```
 
 ---
@@ -94,17 +78,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `setReversed(boolean: reversed)`
 
 ```java
-// If you see these hooks on the start and/or end of spline trajectories, you can use `setReversed()` to fix them
-// These hooks make your robot move backwards instead of forward or vice versa in splines, creating suboptimal paths. 
-// This can be fixed by reversing the path using `setReversed(true)`. By default, each trajectory is set to `setReversed(false)`, which does not reverse the paths. 
-
-.setReversed(false) // Unreversed trajectory has hooks on the start and end
-.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:36:41}}
 ```
 
 ```java
-.setReversed(true) // Reversed trajectory has no hooks on the start and end
-.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:43:44}}
 ```
 
 ---
@@ -112,12 +90,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
 ```java
-// Robot moves to the specified coordinates while maintaining its heading.
-// Both `strafeTo()` and `strafeToConstantHeading()` are equivalent.
-// So, if you start at a 90 degree angle, it will keep that angle the entire path.
-
-.strafeTo(new Vector2d(48, 48))
-.strafeToConstantHeading(new Vector2d(48, 48))
+{{#rustdoc_include BuilderReference.java:48:53}}
 ```
 
 ---
@@ -125,10 +98,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-// Robot moves to the specified coordinates while linearly interpolating between the start heading and a specified end heading
-// In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates. 
-
-.strafeToLinearHeading(new Vector2d(36, 36), Math.toRadians(90))
+{{#rustdoc_include BuilderReference.java:57:60}
 ```
 
 ---
@@ -136,10 +106,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-// Robot moves to the specified coordinates while splinely interpolating between the start heading and a specified end heading
-// In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates. 
-
-.strafeToSplineHeading(new Vector2d(36, 36), Math.toRadians(90))
+{{#rustdoc_include BuilderReference.java:64:67}
 ```
 
 > **What is the difference between spline interpolation and linear interpolation?** 
@@ -155,12 +122,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨 
 
 ```java
-// Robot moves to the specified x coordinate in the direction of the robot heading (straight line).
-// Both `lineToX()` and `lineToXConstantHeading()` are equivalent.
-// 🚨 Will cause an error if your heading is perpendicular to direction your robot is traveling! 🚨
-
-.lineToX(48)
-.lineToXConstantHeading(48)
+{{#rustdoc_include BuilderReference.java:71:76}
 ```
 
 ---
@@ -171,12 +133,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
 
 ```java
-// Robot moves to the specified y coordinate in the direction of the robot heading (straight line).
-// Both `lineToY()` and `lineToYConstantHeading()` are equivalent.
-// 🚨 Will cause an error if your heading is perpendicular to direction your robot is traveling! 🚨
-
-.lineToY(36)
-.lineToYConstantHeading(36)
+{{#rustdoc_include BuilderReference.java:80:85}
 ```
 
 ---
@@ -184,9 +141,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `splineTo(new Vector2d(x, y), tangent)`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator
-
-.splineTo(new Vector2d(48, 48), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:89:91}
 ```
 
 ---
@@ -198,10 +153,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Tangent Heading (default)`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while following a tangent heading interpolator
-
-.setTangent(0)
-.splineTo(new Vector2d(48, 48), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:95:98}
 ```
 
 ---
@@ -209,12 +161,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Constant Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while keeping the heading constant
-// The robot maintains the heading it starts at throughout the trajectory.
-// To change the shape of the spline, change `endTangent`.
-
-.setTangent(0)
-.splineToConstantHeading(new Vector2d(48, 48), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:102:107}
 ```
 
 ---
@@ -222,11 +169,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Linear Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while separately linearly interpolating the heading
-// To change the shape of the spline, change `endTangent`.
-
-.setTangent(0)
-.splineToLinearHeading(new Pose2d(48, 48, 0), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:111:115}
 ```
 
 ---
@@ -234,11 +177,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Spline Heading`
 
 ```java
-// Robot moves to the specified coordinates in a spline path while separately spline interpolating the heading
-// To change the shape of the spline, change `endTangent`.
-
-.setTangent(0)
-.splineToSplineHeading(new Pose2d(48, 48, 0), Math.PI / 2)
+{{#rustdoc_include BuilderReference.java:119:123}
 ```
 
 ---
