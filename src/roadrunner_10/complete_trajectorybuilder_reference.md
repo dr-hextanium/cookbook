@@ -46,10 +46,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 > Ensure that you are using `waitSeconds()` and not `wait()`. All Java objects have a `wait()` function which causes the current thread to wait until another thread invokes a `notify()` or `notifyAll()` method. See further details in the [Oracle JavaDoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#wait()). We don't care for this function but it does show up in intellisense. Make sure you are using the `waitSeconds()` function instead of `wait()`.
 
 ```java
-// Robot waits for the specified time in seconds
-// This is a simple wait segment that is useful for running actions in between trajectories.
-
-.waitSeconds(5)
+{{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
 ---
@@ -59,7 +56,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 // Robot turns counterclockwise by the specified angle
 // This turn is in radians, so you must convert your degrees to radians using `Math.toRadians()`.
-// By default, the robot will turn in the shortest direction to the specified heading.
 // If you see `Math.PI`, it is already in radians, and does not need `Math.toRadians()`. Degrees from 0 to 360 need to be converted to radians.
 // To turn clockwise, use a negative angle.
 
@@ -99,11 +95,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // If you see these hooks on the start and/or end of spline trajectories, you can use `setReversed()` to fix them
-// By default, each trajectory is set to `setReversed(false)`. 
+// These hooks make your robot move backwards instead of forward or vice versa in splines, creating suboptimal paths. 
+// This can be fixed by reversing the path using `setReversed(true)`. By default, each trajectory is set to `setReversed(false)`, which does not reverse the paths. 
 
 .setReversed(false) // Unreversed trajectory has hooks on the start and end
 .splineTo(new Vector2d(-24, 24), Math.PI / 2)
-
 ```
 
 ```java
@@ -116,8 +112,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
 ```java
-// Robot moves to the specified coordinates while maintaining the heading.
-// Both `strafeTo()` and `strafeToConstantHeading()` do the exact same thing and are effectively the same.
+// Robot moves to the specified coordinates while maintaining its heading.
+// Both `strafeTo()` and `strafeToConstantHeading()` are equivalent.
 // So, if you start at a 90 degree angle, it will keep that angle the entire path.
 
 .strafeTo(new Vector2d(48, 48))
@@ -146,8 +142,12 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 .strafeToSplineHeading(new Vector2d(36, 36), Math.toRadians(90))
 ```
 
----
+> **What is the difference between spline interpolation and linear interpolation?** 
+> - Interpolation is a method of finding new data points (angle heading) in between two given data points (initial heading and final heading).
+> - Linear interpolation means that the robot interpolates its heading and turns at a constant, linear rate, from start to the end of the trajectory.
+> - Spline interpolation is the opposite, as the robot turns at a non-linear rate.
 
+---
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
@@ -156,7 +156,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // Robot moves to the specified x coordinate in the direction of the robot heading (straight line).
-// Both `lineToX()` and `lineToXConstantHeading()` do the exact same thing and are effectively the same.
+// Both `lineToX()` and `lineToXConstantHeading()` are equivalent.
 // 🚨 Will cause an error if your heading is perpendicular to direction your robot is traveling! 🚨
 
 .lineToX(48)
@@ -172,7 +172,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 
 ```java
 // Robot moves to the specified y coordinate in the direction of the robot heading (straight line).
-// Both `lineToY()` and `lineToYConstantHeading()` do the exact same thing and are effectively the same.
+// Both `lineToY()` and `lineToYConstantHeading()` are equivalent.
 // 🚨 Will cause an error if your heading is perpendicular to direction your robot is traveling! 🚨
 
 .lineToY(36)
@@ -244,3 +244,5 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 ---
 
 *Last Updated: 2024-07-02*
+
+
