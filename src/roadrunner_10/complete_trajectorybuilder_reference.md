@@ -100,7 +100,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:57:60}
+{{#rustdoc_include BuilderReference.java:57:60}}
 ```
 
 ---
@@ -108,7 +108,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:64:67}
+{{#rustdoc_include BuilderReference.java:64:67}}
 ```
 
 > **What is the difference between spline interpolation and linear interpolation?** 
@@ -124,7 +124,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨 
 
 ```java
-{{#rustdoc_include BuilderReference.java:71:76}
+{{#rustdoc_include BuilderReference.java:71:76}}
 ```
 
 ---
@@ -135,7 +135,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://github.com/ArushYadlapati/cookbook/blob/main/src/roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double) instead of any `lineTo()`'s! 🚨
 
 ```java
-{{#rustdoc_include BuilderReference.java:80:85}
+{{#rustdoc_include BuilderReference.java:80:85}}
 ```
 
 ---
@@ -143,7 +143,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `splineTo(new Vector2d(x, y), tangent)`
 
 ```java
-{{#rustdoc_include BuilderReference.java:89:91}
+{{#rustdoc_include BuilderReference.java:89:91}}
 ```
 
 ---
@@ -155,7 +155,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Tangent Heading (default)`
 
 ```java
-{{#rustdoc_include BuilderReference.java:95:98}
+{{#rustdoc_include BuilderReference.java:95:98}}
 ```
 
 ---
@@ -163,7 +163,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Constant Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:102:107}
+{{#rustdoc_include BuilderReference.java:102:107}}
 ```
 
 ---
@@ -171,7 +171,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Linear Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:111:115}
+{{#rustdoc_include BuilderReference.java:111:115}}
 ```
 
 ---
@@ -179,7 +179,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 #### `Spline Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:119:123}
+{{#rustdoc_include BuilderReference.java:119:123}}
 ```
 
 ---
