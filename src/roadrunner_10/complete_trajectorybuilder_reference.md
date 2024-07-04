@@ -13,7 +13,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ---
 
-## TrajectoryBuilder Reference
+## TrajectoryBuilder Reference 
 
 ### Table of Contents
 
