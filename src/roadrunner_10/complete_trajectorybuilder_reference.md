@@ -57,11 +57,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
-<video width="320" height="240" controls>
-  <source src="https://rr-playground-server.brott.dev/87cc4fcf-da46-4cda-a55e-77ddb90039f1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+![](/src/roadrunner_10/BuilderReferenceVideos/turn().mp4)
 
 ---
 
