@@ -184,6 +184,17 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 ---
 
+
+## Resources
+
+- [Official Road Runner 1.0 Builder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/)
+- [Official Road Runner 1.0 Builder Playground](https://rr.brott.dev/playground/)
+- [`waitSeconds()` Video Playground](https://rr.brott.dev/playground/?367582b88299b654)
+- [`turn()` Video Playground](https://rr.brott.dev/playground/?5a434271b239e5bc )
+- [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
+
+
+---
 *Last Updated: 2024-07-02*
 
 
