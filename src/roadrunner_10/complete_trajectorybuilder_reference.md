@@ -49,6 +49,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
+{% embed youtube id="eRQwtMEw4io" loading="lazy" %}
+
 ---
 
 #### `turn(Math.toRadians(double: angle))`
