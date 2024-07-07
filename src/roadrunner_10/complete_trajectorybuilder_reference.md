@@ -154,7 +154,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
