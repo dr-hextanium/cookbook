@@ -98,6 +98,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
   <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+
 ---
 
 #### `setTangent(double: r)`
@@ -126,6 +127,17 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:48:53}}
 ```
 
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="video-container">
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/xf1rt9NDlm8" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
@@ -133,6 +145,17 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 {{#rustdoc_include BuilderReference.java:57:60}}
 ```
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="video-container">
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -224,7 +247,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`turn()` Video Playground](https://rr.brott.dev/playground/?5a434271b239e5bc )
 - [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
 - [`strafeTo()` / `strafeToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?f49042fdf5ea3ab0)
-
+- [`.strafeToLinearHeading` Video Playground](https://rr.brott.dev/playground/?ed5d41566d46b59f) 
 
 ---
 *Last Updated: 2024-07-02*
