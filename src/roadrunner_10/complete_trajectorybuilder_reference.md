@@ -57,7 +57,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -76,7 +76,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ" title="turn()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -95,9 +95,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 ---
 
@@ -135,7 +134,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/xf1rt9NDlm8" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/b1d601e3-a32a-41a3-bc2b-1d579dd70e49.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
