@@ -49,8 +49,8 @@
 // Both `strafeTo()` and `strafeToConstantHeading()` are equivalent.
 // So, if you start at a 90 degree angle, it will keep that angle the entire path.
 
-.strafeTo(new Vector2d(48, 48))
-.strafeToConstantHeading(new Vector2d(48, 48))
+.strafeTo(new Vector2d(48, -48))
+.strafeToConstantHeading(new Vector2d(48, -48))
 
 
 

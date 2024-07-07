@@ -57,7 +57,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -68,7 +68,16 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
-![](/src/roadrunner_10/BuilderReferenceVideos/turn().mp4)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="video-container">
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ" title="turn()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+</div>
 
 ---
 
@@ -77,6 +86,17 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 {{#rustdoc_include BuilderReference.java:18:25}}
 ```
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="video-container">
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -203,6 +223,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`waitSeconds()` Video Playground](https://rr.brott.dev/playground/?367582b88299b654)
 - [`turn()` Video Playground](https://rr.brott.dev/playground/?5a434271b239e5bc )
 - [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
+- [`strafeTo()` / `strafeToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?f49042fdf5ea3ab0)
 
 
 ---
