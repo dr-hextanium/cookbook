@@ -49,30 +49,10 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
-<style>
-    .video-container {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      padding-bottom: 100%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      background: #000;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-</style>
-
-<div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="text-align: center;">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
 </div>
 
 ---
@@ -83,31 +63,10 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
-<style>
-    .video-container {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      padding-bottom: 100%; /* 9:16 aspect ratio for YouTube Shorts */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      background: #000;
-      margin-bottom: 20px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-</style>
-
-<div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4" title="turn()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<div style="text-align: center;">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
 </div>
 
 ---
@@ -118,32 +77,10 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:18:25}}
 ```
 
-<style>
-    .video-container {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      background: #000;
-      margin-bottom: 20px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-</style>
-
-
-<div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4" title="turnTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="text-align: center;">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
 </div>
 
 ---
