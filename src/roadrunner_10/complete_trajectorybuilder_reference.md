@@ -87,7 +87,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
       display: flex;
       justify-content: center;
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
       height: 0;
       overflow: hidden;
       max-width: 100%;
