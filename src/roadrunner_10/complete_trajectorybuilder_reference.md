@@ -50,14 +50,28 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```
 
 <style>
-  .video-container {
-    display: flex;
-    justify-content: center;
-  }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM?rel=0&modestbranding=1" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -69,14 +83,30 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```
 
 <style>
-  .video-container {
-    display: flex;
-    justify-content: center;
-  }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ" title="turn()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ?rel=0&modestbranding=1" title="turn()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
 </div>
 
 ---
@@ -95,7 +125,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io?rel=0&modestbranding=1" title="turnTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
