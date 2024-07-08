@@ -59,7 +59,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
       overflow: hidden;
       max-width: 100%;
       background: #000;
-      margin-bottom: 20px;
     }
 
     .video-container iframe {
