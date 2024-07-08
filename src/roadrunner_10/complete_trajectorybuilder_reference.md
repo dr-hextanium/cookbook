@@ -50,28 +50,30 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```
 
 <style>
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
+    .video-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      margin-bottom: 20px;
+    }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM?rel=0&modestbranding=1" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -106,7 +108,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ?rel=0&modestbranding=1" title="turn()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4" title="turn()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
 </div>
 
 ---
@@ -122,7 +124,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
       display: flex;
       justify-content: center;
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 177.78%; /* 9:16 aspect ratio for YouTube Shorts */
       height: 0;
       overflow: hidden;
       max-width: 100%;
@@ -138,18 +140,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
       height: 100%;
       border: 0;
     }
-
-    @media (min-width: 768px) {
-        .video-container {
-            max-width: 50%;
-            padding-bottom: 28.125%; /* Maintain aspect ratio */
-        }
-    }
 </style>
 
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io?rel=0&modestbranding=1" title="turnTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4" title="turnTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
