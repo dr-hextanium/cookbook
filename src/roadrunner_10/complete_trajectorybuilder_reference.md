@@ -1,16 +1,3 @@
-<style>
-  .video-container {
-    display: flex;
-    justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
-  }
-</style>
-
 # Complete TrajectoryBuilder Reference
 
 ### Ingredients
@@ -62,35 +49,22 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
-[//]: # (<style>)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 450px; /* Set the maximum width */
+  }
 
-[//]: # (  .video-container {)
+  .video-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
+  }
+</style>
 
-[//]: # (    display: flex;)
-
-[//]: # (    justify-content: center;)
-
-[//]: # (    max-width: 450px; /* Set the maximum width */)
-
-[//]: # (  })
-
-[//]: # ()
-[//]: # (  .video-container iframe {)
-
-[//]: # (    width: 100%; /* Make the iframe take the full width of the container */)
-
-[//]: # (    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */)
-
-[//]: # (  })
-
-[//]: # (</style>)
-
-[//]: # ()
-[//]: # (<div class="video-container">)
-
-[//]: # (  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds&#40;&#41;" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
-
-[//]: # (</div>)
+<div class="video-container">
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -100,35 +74,22 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
-[//]: # (<style>)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 450px; /* Set the maximum width */
+  }
 
-[//]: # (  .video-container {)
+  .video-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
+  }
+</style>
 
-[//]: # (    display: flex;)
-
-[//]: # (    justify-content: center;)
-
-[//]: # (    max-width: 450px; /* Set the maximum width */)
-
-[//]: # (  })
-
-[//]: # ()
-[//]: # (  .video-container iframe {)
-
-[//]: # (    width: 100%; /* Make the iframe take the full width of the container */)
-
-[//]: # (    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */)
-
-[//]: # (  })
-
-[//]: # (</style>)
-
-[//]: # ()
-[//]: # (<div class="video-container">)
-
-[//]: # (  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds&#40;&#41;" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
-
-[//]: # (</div>)
+<div class="video-container">
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -138,28 +99,18 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:18:25}}
 ```
 
-[//]: # (<style>)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 450px; /* Set the maximum width */
+  }
 
-[//]: # (  .video-container {)
-
-[//]: # (    display: flex;)
-
-[//]: # (    justify-content: center;)
-
-[//]: # (    max-width: 450px; /* Set the maximum width */)
-
-[//]: # (  })
-
-[//]: # ()
-[//]: # (  .video-container iframe {)
-
-[//]: # (    width: 100%; /* Make the iframe take the full width of the container */)
-
-[//]: # (    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */)
-
-[//]: # (  })
-
-[//]: # (</style>)
+  .video-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
+  }
+</style>
 
 <div class="video-container">
   <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -193,35 +144,22 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:48:53}}
 ```
 
-[//]: # (<style>)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 450px; /* Set the maximum width */
+  }
 
-[//]: # (  .video-container {)
+  .video-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
+  }
+</style>
 
-[//]: # (    display: flex;)
-
-[//]: # (    justify-content: center;)
-
-[//]: # (    max-width: 450px; /* Set the maximum width */)
-
-[//]: # (  })
-
-[//]: # ()
-[//]: # (  .video-container iframe {)
-
-[//]: # (    width: 100%; /* Make the iframe take the full width of the container */)
-
-[//]: # (    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */)
-
-[//]: # (  })
-
-[//]: # (</style>)
-
-[//]: # ()
-[//]: # (<div class="video-container">)
-
-[//]: # (  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/b1d601e3-a32a-41a3-bc2b-1d579dd70e49.mp4?autoplay=0" title="strafeTo&#40;&#41;" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
-
-[//]: # (</div>)
+<div class="video-container">
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/b1d601e3-a32a-41a3-bc2b-1d579dd70e49.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -231,37 +169,22 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:57:60}}
 ```
 
-[//]: # (<style>)
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 450px; /* Set the maximum width */
+  }
 
-[//]: # (  .video-container {)
+  .video-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
+  }
+</style>
 
-[//]: # (    display: flex;)
-
-[//]: # (    justify-content: center;)
-
-[//]: # (    max-width: 450px; /* Set the maximum width */)
-
-[//]: # (  })
-
-[//]: # ()
-[//]: # (  .video-container iframe {)
-
-[//]: # (    width: 100%; /* Make the iframe take the full width of the container */)
-
-[//]: # (    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */)
-
-[//]: # ()
-[//]: # (  })
-
-[//]: # ()
-[//]: # (</style>)
-
-[//]: # ()
-[//]: # (<div class="video-container">)
-
-[//]: # (  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4?autoplay=0" title="strafeTo&#40;&#41;" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
-
-[//]: # (</div>)
+<div class="video-container">
+  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
