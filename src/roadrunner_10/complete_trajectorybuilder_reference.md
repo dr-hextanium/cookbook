@@ -6,14 +6,14 @@
 
 ### The Problem
 
-The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/) in 
+The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/) in
 the official Road Runner 1.0 docs only has a few TrajectoryBuilder methods, and does
 not explain them very well in depth. This is a complete reference for more methods in
 the TrajectoryBuilder class for Road Runner 1.0.
 
 ---
 
-## TrajectoryBuilder Reference  
+## TrajectoryBuilder Reference
 
 ### Table of Contents
 
@@ -53,17 +53,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
   .video-container {
     display: flex;
     justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
   }
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/JuYdXikOhzM" title="waitSeconds()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -78,17 +72,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
   .video-container {
     display: flex;
     justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
   }
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/tTfQ6Diz_GQ" title="turn()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
 </div>
 
 ---
@@ -103,17 +91,11 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
   .video-container {
     display: flex;
     justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
   }
 </style>
 
 <div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4?autoplay=0" title="waitSeconds()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="505" height="650" src="https://www.youtube.com/embed/eRQwtMEw4io" title="turnTo()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -144,23 +126,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:48:53}}
 ```
 
-<style>
-  .video-container {
-    display: flex;
-    justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
-  }
-</style>
-
-<div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/b1d601e3-a32a-41a3-bc2b-1d579dd70e49.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
 ---
 
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
@@ -168,23 +133,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 {{#rustdoc_include BuilderReference.java:57:60}}
 ```
-
-<style>
-  .video-container {
-    display: flex;
-    justify-content: center;
-    max-width: 450px; /* Set the maximum width */
-  }
-
-  .video-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container's width */
-  }
-</style>
-
-<div class="video-container">
-  <iframe width="505" height="650" src="https://rr-playground-server.brott.dev/7de2ded0-b44a-4c07-8e3a-fd718017b1f6.mp4?autoplay=0" title="strafeTo()" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ---
 
@@ -194,7 +142,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:64:67}}
 ```
 
-> **What is the difference between spline interpolation and linear interpolation?** 
+> **What is the difference between spline interpolation and linear interpolation?**
 > - Interpolation is a method of finding new data points (angle heading) in between two given data points (initial heading and final heading).
 > - Linear interpolation means that the robot interpolates its heading and turns at a constant, linear rate, from start to the end of the trajectory.
 > - Spline interpolation is the opposite, as the robot turns at a non-linear rate.
@@ -204,7 +152,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
 > 🚨 **WARNING:** 🚨  
-> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨 
+> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
 
 ```java
 {{#rustdoc_include BuilderReference.java:71:76}}
@@ -267,7 +215,6 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 ---
 
-
 ## Resources
 
 - [Official Road Runner 1.0 Builder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/)
@@ -276,9 +223,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`turn()` Video Playground](https://rr.brott.dev/playground/?5a434271b239e5bc )
 - [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
 - [`strafeTo()` / `strafeToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?f49042fdf5ea3ab0)
-- [`.strafeToLinearHeading` Video Playground](https://rr.brott.dev/playground/?ed5d41566d46b59f) 
+- [`.strafeToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?ed5d41566d46b59f)
 
 ---
 *Last Updated: 2024-07-02*
-
 
