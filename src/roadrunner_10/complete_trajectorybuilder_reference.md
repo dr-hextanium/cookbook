@@ -49,12 +49,34 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
-<div style="text-align: center;">
-    <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4" title="waitSeconds()" style="border: none;">
+<div class="video-container">
+    <iframe width="505" height="650" 
+        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
+<style>
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 ---
 
 #### `turn(Math.toRadians(double: angle))`
