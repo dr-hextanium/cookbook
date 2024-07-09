@@ -1,3 +1,23 @@
+<script/>
+
+    // Detect if the browser is on a mobile device
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    // Function to stop video autoplay on mobile devices
+    function stopVideoAutoplayOnMobile() {
+        var videoFrame = document.getElementById('video-frame');
+        if (isMobileDevice()) {
+            videoFrame.removeAttribute('autoplay');
+        }
+    }
+
+    // Call the function to stop autoplay on mobile devices
+    stopVideoAutoplayOnMobile();
+
+</script\>
+
 # Complete TrajectoryBuilder Reference
 
 ### Ingredients
@@ -455,6 +475,10 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`.lineToX()` Video Playground](https://rr.brott.dev/playground/?24fae2ad24c95f39)
 - [`.lineToY()` Video Playground](https://rr.brott.dev/playground/?539e8ead2f501b29)
 - [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToConstantHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToLinearHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToSplineHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 
 ---
 *Last Updated: 2024-07-02*
