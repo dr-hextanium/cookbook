@@ -492,7 +492,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 <div class = "video-container-12">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -529,7 +529,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 <div class = "video-container-13">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -573,8 +573,8 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?0a660e7b5fae2b70d)
 - [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?728d3c0e2e969023)
 - [`.splineToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?31ac47a09d8222c7)
-- [`.splineToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineToSplineHeading(0` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?b152980ce38bbdaa)
+- [`.splineToSplineHeading(0` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
 *Last Updated: 2024-07-02*
