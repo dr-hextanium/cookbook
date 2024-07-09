@@ -38,7 +38,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ### Path Primitives
 
-The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
+The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the exception of [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent), which has a heading of $\frac{\pi}{2}$.
 
 #### `waitSeconds(double: seconds)`
 
@@ -253,6 +253,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:64:67}}
 ```
 
+<div class = "video-container-6">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-6 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-6 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-6 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 > **What is the difference between spline interpolation and linear interpolation?**
 > - Interpolation is a method of finding new data points (angle heading) in between two given data points (initial heading and final heading).
 > - Linear interpolation means that the robot interpolates its heading and turns at a constant, linear rate, from start to the end of the trajectory.
@@ -269,6 +298,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:71:76}}
 ```
 
+<div class = "video-container-7">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-7 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-7 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-7 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 ---
 
 #### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
@@ -280,6 +338,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:80:85}}
 ```
 
+<div class = "video-container-8">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-8 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-8 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-8 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 ---
 
 #### `splineTo(new Vector2d(x, y), tangent)`
@@ -287,6 +374,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 {{#rustdoc_include BuilderReference.java:89:91}}
 ```
+
+<div class = "video-container-8">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-8 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-8 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-8 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
@@ -335,6 +451,10 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
 - [`strafeTo()` / `strafeToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?f49042fdf5ea3ab0)
 - [`.strafeToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?ed5d41566d46b59f)
+- [`.strafeToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?2df122402fceaecc)
+- [`.lineToX()` Video Playground](https://rr.brott.dev/playground/?24fae2ad24c95f39)
+- [`.lineToY()` Video Playground](https://rr.brott.dev/playground/?539e8ead2f501b29)
+- [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 
 ---
 *Last Updated: 2024-07-02*
