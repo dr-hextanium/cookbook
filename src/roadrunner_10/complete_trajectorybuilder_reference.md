@@ -1,4 +1,4 @@
-<script/>
+<script>
 
     // Detect if the browser is on a mobile device
     function isMobileDevice() {
@@ -16,7 +16,7 @@
     // Call the function to stop autoplay on mobile devices
     stopVideoAutoplayOnMobile();
 
-</script\>
+</script>
 
 # Complete TrajectoryBuilder Reference
 
@@ -395,14 +395,14 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 {{#rustdoc_include BuilderReference.java:89:91}}
 ```
 
-<div class = "video-container-8">
+<div class = "video-container-9">
     <iframe width="505" height="650"
         src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
 <style>
-.video-container-8 {
+.video-container-9 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -412,12 +412,12 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 }
 
 @media (max-width: 600px) {
-    .video-container-8 {
+    .video-container-9 {
         width: 328px;
         height: 423px;
     }
     
-    .video-container-8 iframe {
+    .video-container-9 iframe {
         width: 328px;
         height: 423px;
     }
@@ -435,6 +435,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 ```java
 {{#rustdoc_include BuilderReference.java:95:98}}
 ```
+
+<div class = "video-container-10">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-10 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-10 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-10 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
@@ -476,9 +505,9 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`.lineToY()` Video Playground](https://rr.brott.dev/playground/?539e8ead2f501b29)
 - [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 - [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineToConstantHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineToLinearHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineToSplineHeading` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineToSplineHeading(0` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 
 ---
 *Last Updated: 2024-07-02*
