@@ -179,6 +179,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:48:53}}
 ```
 
+<div class = "video-container-4">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-4 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-4 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 ---
 
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
@@ -186,6 +215,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 ```java
 {{#rustdoc_include BuilderReference.java:57:60}}
 ```
+
+<div class = "video-container-5">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-5 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-5 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
@@ -280,4 +338,3 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 ---
 *Last Updated: 2024-07-02*
-
