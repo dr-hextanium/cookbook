@@ -23,12 +23,12 @@ the TrajectoryBuilder class for Road Runner 1.0.
 3. [`turnTo(Math.toRadians(double: heading))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#turntomathtoradiansdouble-heading)
 4. [`setTangent(double: r)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#settangentdouble-r)
 5. [`setReversed(boolean: reversed)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#setreversedboolean-reversed)
-6. [`strafeTo(new Vector2d(double: x, double: y))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
+6. [`.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
 7. [`strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#strafetolinearheadingnew-vector2dx-y-mathtoradiansheading)
 8. [`strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#strafetosplineheadingnew-vector2dx-y-mathtoradiansheading)
-9. [`lineToX(x: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoxx-double--linetoxconstantheadingx-double)
-10. [`lineToY(y: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoyy-double--linetoyconstantheadingy-double)
-11. [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-
+9. [`lineToX(x: double) & .lineToXConstantHeading(x: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoxx-double--linetoxconstantheadingx-double)
+10. [`lineToY(y: double) & .lineToYConstantHeading(y: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoyy-double--linetoyconstantheadingy-double)
+11. [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-)
     
 #### [Heading Primitives:](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#heading-primitives-1)
 12. [`Tangent Heading (default)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#tangent-heading-default)
@@ -38,7 +38,7 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ### Path Primitives
 
-The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), with the exception of [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent), which has a heading of \\( \frac{\pi}{2} \\).
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), with the exception of [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-), which has a heading of \\( \frac{\pi}{2} \\).
 
 
 #### `waitSeconds(double: seconds)`
