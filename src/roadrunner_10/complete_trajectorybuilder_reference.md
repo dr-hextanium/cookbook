@@ -51,7 +51,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class="video-container-1">
     <iframe width="505" height="650" 
-        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;" autoplay = "false">
     </iframe>
 </div>
 
