@@ -49,14 +49,14 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 
-<div class="video-container">
+<div class="video-container-1">
     <iframe width="505" height="650" 
         src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
 <style>
-.video-container {
+.video-container-1 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -66,12 +66,12 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 }
 
 @media (max-width: 600px) {
-    .video-container {
+    .video-container-1 {
         width: 328px;
         height: 423px;
     }
     
-    .video-container iframe {
+    .video-container-1 iframe {
         width: 328px;
         height: 423px;
     }
@@ -85,11 +85,34 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:8:14}}
 ```
 
-<div style="text-align: center;">
+<div class="video-container-2">
     <iframe width="505" height="650"
         src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
+
+<style>
+.video-container-2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-2 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-2 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
@@ -99,11 +122,34 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$.
 {{#rustdoc_include BuilderReference.java:18:25}}
 ```
 
-<div style="text-align: center;">
+<div class = "video-container-3">
     <iframe width="505" height="650"
         src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
+
+<style>
+.video-container-3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-3 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-3 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
