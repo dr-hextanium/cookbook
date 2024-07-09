@@ -1,23 +1,3 @@
-<script>
-
-    // Detect if the browser is on a mobile device
-    function isMobileDevice() {
-        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
-
-    // Function to stop video autoplay on mobile devices
-    function stopVideoAutoplayOnMobile() {
-        var videoFrame = document.getElementById('video-frame');
-        if (isMobileDevice()) {
-            videoFrame.removeAttribute('autoplay');
-        }
-    }
-
-    // Call the function to stop autoplay on mobile devices
-    stopVideoAutoplayOnMobile();
-
-</script>
-
 # Complete TrajectoryBuilder Reference
 
 ### Ingredients
@@ -71,7 +51,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class="video-container-1">
     <iframe width="505" height="650" 
-        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;" autoplay = "false">
+        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -107,7 +87,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class="video-container-2">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -144,7 +124,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-3">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -201,7 +181,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -238,7 +218,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-5">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -275,7 +255,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -320,7 +300,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -360,7 +340,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-8">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -397,7 +377,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 <div class = "video-container-9">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -438,7 +418,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 <div class = "video-container-10">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/22fefc44-44cb-42dd-bac5-1384cfa2d35d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -473,6 +453,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 {{#rustdoc_include BuilderReference.java:102:107}}
 ```
 
+<div class = "video-container-11">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-11 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-11 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-11 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 ---
 
 #### `Linear Heading`
@@ -481,6 +490,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 {{#rustdoc_include BuilderReference.java:111:115}}
 ```
 
+<div class = "video-container-12">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-12 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-12 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-12 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
 ---
 
 #### `Spline Heading`
@@ -488,6 +526,35 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 ```java
 {{#rustdoc_include BuilderReference.java:119:123}}
 ```
+
+<div class = "video-container-13">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-13 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-13 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-13 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
 
 ---
 
@@ -503,9 +570,9 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`.strafeToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?2df122402fceaecc)
 - [`.lineToX()` Video Playground](https://rr.brott.dev/playground/?24fae2ad24c95f39)
 - [`.lineToY()` Video Playground](https://rr.brott.dev/playground/?539e8ead2f501b29)
-- [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
-- [`.splineToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
+- [`.splineTo()` Video Playground](https://rr.brott.dev/playground/?0a660e7b5fae2b70d)
+- [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?728d3c0e2e969023)
+- [`.splineToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?31ac47a09d8222c7)
 - [`.splineToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 - [`.splineToSplineHeading(0` Video Playground](https://rr.brott.dev/playground/?a660e7b5fae2b70d)
 
