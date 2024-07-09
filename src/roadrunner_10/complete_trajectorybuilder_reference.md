@@ -28,8 +28,8 @@ the TrajectoryBuilder class for Road Runner 1.0.
 8. [`strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#strafetosplineheadingnew-vector2dx-y-mathtoradiansheading)
 9. [`lineToX(x: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoxx-double--linetoxconstantheadingx-double)
 10. [`lineToY(y: double)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#linetoyy-double--linetoyconstantheadingy-double)
-11. [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent)
-
+11. [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-
+    
 #### [Heading Primitives:](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#heading-primitives-1)
 12. [`Tangent Heading (default)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#tangent-heading-default)
 13. [`Constant Heading`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#constant-heading)
@@ -38,7 +38,8 @@ the TrajectoryBuilder class for Road Runner 1.0.
 
 ### Path Primitives
 
-The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the exception of [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent), which has a heading of $\frac{\pi}{2}$.
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), with the exception of [`splineTo(new Vector2d(x, y), tangent)`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html#splinetonew-vector2dx-y-tangent), which has a heading of \\( \frac{\pi}{2} \\).
+
 
 #### `waitSeconds(double: seconds)`
 
@@ -369,7 +370,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 ---
 
-#### `splineTo(new Vector2d(x, y), tangent)`
+#### `splineTo(new Vector2d(x, y), tangent)` | Heading is \\( \frac{\pi}{6} \\)
 
 ```java
 {{#rustdoc_include BuilderReference.java:89:91}}
@@ -408,7 +409,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{6}$, with the e
 
 ### Heading Primitives
 
-The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 #### `Tangent Heading (default)`
 
@@ -529,7 +530,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 
 <div class = "video-container-13">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -574,7 +575,7 @@ The begin pose is the origin (0,0) with a heading of $\frac{\pi}{2}$.
 - [`.splineTo() (default)` Video Playground](https://rr.brott.dev/playground/?728d3c0e2e969023)
 - [`.splineToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?31ac47a09d8222c7)
 - [`.splineToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?b152980ce38bbdaa)
-- [`.splineToSplineHeading(0` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
+- [`.splineToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
 *Last Updated: 2024-07-02*

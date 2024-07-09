@@ -8,3 +8,6 @@ title = "The Cookbook"
 [output.html.code.hidelines]
 java = "# "
 kt = "# "
+
+[output.html]
+mathjax-support = true
