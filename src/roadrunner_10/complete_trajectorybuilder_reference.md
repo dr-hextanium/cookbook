@@ -168,25 +168,9 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 {{#rustdoc_include BuilderReference.java:36:43}}
 ```
 
-```java
-{{#rustdoc_include BuilderReference.java:47:50}}
-```
-
-```java
-{{#rustdoc_include BuilderReference.java:54:63}}
-```
-
----
-
-#### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
-
-```java
-{{#rustdoc_include BuilderReference.java:67:72}}
-```
-
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/5e27c06d-330b-42a8-9ce5-d2c5a3cbaf69.mp4" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -213,17 +197,13 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 }
 </style>
 
----
-
-#### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
-
 ```java
-{{#rustdoc_include BuilderReference.java:76:79}}
+{{#rustdoc_include BuilderReference.java:47:50}}
 ```
 
 <div class = "video-container-5">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/66e8f52f-8480-4372-bcaa-ee7313a1d637.mp4" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -250,17 +230,21 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 }
 </style>
 
+```java
+{{#rustdoc_include BuilderReference.java:54:63}}
+```
+
 ---
 
-#### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
+#### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:83:86}}
+{{#rustdoc_include BuilderReference.java:67:72}}
 ```
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -287,25 +271,17 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 }
 </style>
 
-> **What is the difference between spline interpolation and linear interpolation?**
-> - Interpolation is a method of finding new data points (angle heading) in between two given data points (initial heading and final heading).
-> - Linear interpolation means that the robot interpolates its heading and turns at a constant, linear rate, from start to the end of the trajectory.
-> - Spline interpolation is the opposite, as the robot turns at a non-linear rate.
-
 ---
 
-#### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
-
-> 🚨 **WARNING:** 🚨  
-> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
+#### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:90:95}}
+{{#rustdoc_include BuilderReference.java:76:79}}
 ```
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -334,18 +310,15 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 ---
 
-#### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
-
-> 🚨 **WARNING:** 🚨  
-> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
+#### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:99:104}}
+{{#rustdoc_include BuilderReference.java:83:86}}
 ```
 
 <div class = "video-container-8">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -372,17 +345,25 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 }
 </style>
 
+> **What is the difference between spline interpolation and linear interpolation?**
+> - Interpolation is a method of finding new data points (angle heading) in between two given data points (initial heading and final heading).
+> - Linear interpolation means that the robot interpolates its heading and turns at a constant, linear rate, from start to the end of the trajectory.
+> - Spline interpolation is the opposite, as the robot turns at a non-linear rate.
+
 ---
 
-#### `splineTo(new Vector2d(x, y), tangent)` | Heading is \\( \frac{\pi}{6} \\)
+#### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
+
+> 🚨 **WARNING:** 🚨  
+> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
 
 ```java
-{{#rustdoc_include BuilderReference.java:108:110}}
+{{#rustdoc_include BuilderReference.java:90:95}}
 ```
 
 <div class = "video-container-9">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -411,19 +392,18 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 ---
 
-### Heading Primitives
+#### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
-The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
-
-#### `Tangent Heading (default)`
+> 🚨 **WARNING:** 🚨  
+> It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
 
 ```java
-{{#rustdoc_include BuilderReference.java:114:117}}
+{{#rustdoc_include BuilderReference.java:99:104}}
 ```
 
-<div class = "video-container-10">
+<div class = "video-container-13">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/22fefc44-44cb-42dd-bac5-1384cfa2d35d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -452,15 +432,15 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 ---
 
-#### `Constant Heading`
+#### `splineTo(new Vector2d(x, y), tangent)` | Heading is \\( \frac{\pi}{6} \\)
 
 ```java
-{{#rustdoc_include BuilderReference.java:121:126}}
+{{#rustdoc_include BuilderReference.java:108:110}}
 ```
 
 <div class = "video-container-11">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -489,15 +469,19 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 ---
 
-#### `Linear Heading`
+### Heading Primitives
+
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
+
+#### `Tangent Heading (default)`
 
 ```java
-{{#rustdoc_include BuilderReference.java:130:134}}
+{{#rustdoc_include BuilderReference.java:114:117}}
 ```
 
 <div class = "video-container-12">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="https://rr-playground-server.brott.dev/22fefc44-44cb-42dd-bac5-1384cfa2d35d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
 
@@ -526,10 +510,10 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 ---
 
-#### `Spline Heading`
+#### `Constant Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:138:142}}
+{{#rustdoc_include BuilderReference.java:121:126}}
 ```
 
 <div class = "video-container-13">
@@ -555,6 +539,80 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
     }
     
     .video-container-13 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
+---
+
+#### `Linear Heading`
+
+```java
+{{#rustdoc_include BuilderReference.java:130:134}}
+```
+
+<div class = "video-container-14">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-14 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-14 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-14 iframe {
+        width: 328px;
+        height: 423px;
+    }
+}
+</style>
+
+---
+
+#### `Spline Heading`
+
+```java
+{{#rustdoc_include BuilderReference.java:138:142}}
+```
+
+<div class = "video-container-15">
+    <iframe width="505" height="650"
+        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+    </iframe>
+</div>
+
+<style>
+.video-container-15 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .video-container-15 {
+        width: 328px;
+        height: 423px;
+    }
+    
+    .video-container-15 iframe {
         width: 328px;
         height: 423px;
     }
