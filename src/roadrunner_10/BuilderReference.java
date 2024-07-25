@@ -35,13 +35,32 @@
 
 // If you see these hooks on the start and/or end of spline trajectories, you can use `setReversed()` to fix them
 // These hooks make your robot move backwards instead of forward or vice versa in splines, creating suboptimal paths.
-// This can be fixed by reversing the path using `setReversed(true)`. By default, each trajectory is set to `setReversed(false)`, which does not reverse the paths.
+// This can be fixed by reversing the path using `setReversed(true)`.
 
-.setReversed(false) // Unreversed trajectory has hooks on the start and end
-.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+.setReversed(false)  // Unreversed trajectory has hooks on the start and end
+.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.setReversed(false)
+.splineTo(Vector2d(-48.0, 0.0), Math.PI)
 
-.setReversed(true) // Reversed trajectory has no hooks on the start and end
-.splineTo(new Vector2d(-24, 24), Math.PI / 2)
+
+
+.setReversed(true)  // Unreversed trajectory has hooks on the start and end, and is smooth
+.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.setReversed(false)
+.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+
+
+
+// By default, each trajectory is set to `setReversed(false)`, which does not reverse the paths.
+// This means that:
+.setReversed(false)
+.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.setReversed(false)
+.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+
+// Is the same as:
+.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.splineTo(Vector2d(-48.0, 0.0), Math.PI)
 
 
 
@@ -121,4 +140,5 @@
 
 .setTangent(0)
 .splineToSplineHeading(new Pose2d(48, 48, 0), Math.PI / 2)
+
 

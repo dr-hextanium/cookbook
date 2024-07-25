@@ -165,11 +165,15 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 #### `setReversed(boolean: reversed)`
 
 ```java
-{{#rustdoc_include BuilderReference.java:36:41}}
+{{#rustdoc_include BuilderReference.java:36:43}}
 ```
 
 ```java
-{{#rustdoc_include BuilderReference.java:43:44}}
+{{#rustdoc_include BuilderReference.java:47:50}}
+```
+
+```java
+{{#rustdoc_include BuilderReference.java:54:63}}
 ```
 
 ---
@@ -177,7 +181,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 #### `.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:48:53}}
+{{#rustdoc_include BuilderReference.java:67:72}}
 ```
 
 <div class = "video-container-4">
@@ -214,7 +218,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 #### `.strafeToLinearHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:57:60}}
+{{#rustdoc_include BuilderReference.java:76:79}}
 ```
 
 <div class = "video-container-5">
@@ -251,7 +255,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 #### `.strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`
 
 ```java
-{{#rustdoc_include BuilderReference.java:64:67}}
+{{#rustdoc_include BuilderReference.java:83:86}}
 ```
 
 <div class = "video-container-6">
@@ -296,7 +300,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
 
 ```java
-{{#rustdoc_include BuilderReference.java:71:76}}
+{{#rustdoc_include BuilderReference.java:90:95}}
 ```
 
 <div class = "video-container-7">
@@ -336,7 +340,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](https://arushyadlapati.github.io/cookbook/roadrunner_10/complete_trajectorybuilder_reference.html) instead of any `lineTo()`'s! 🚨
 
 ```java
-{{#rustdoc_include BuilderReference.java:80:85}}
+{{#rustdoc_include BuilderReference.java:99:104}}
 ```
 
 <div class = "video-container-8">
@@ -373,7 +377,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 #### `splineTo(new Vector2d(x, y), tangent)` | Heading is \\( \frac{\pi}{6} \\)
 
 ```java
-{{#rustdoc_include BuilderReference.java:89:91}}
+{{#rustdoc_include BuilderReference.java:108:110}}
 ```
 
 <div class = "video-container-9">
@@ -414,7 +418,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 #### `Tangent Heading (default)`
 
 ```java
-{{#rustdoc_include BuilderReference.java:95:98}}
+{{#rustdoc_include BuilderReference.java:114:117}}
 ```
 
 <div class = "video-container-10">
@@ -451,7 +455,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 #### `Constant Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:102:107}}
+{{#rustdoc_include BuilderReference.java:121:126}}
 ```
 
 <div class = "video-container-11">
@@ -488,7 +492,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 #### `Linear Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:111:115}}
+{{#rustdoc_include BuilderReference.java:130:134}}
 ```
 
 <div class = "video-container-12">
@@ -525,7 +529,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 #### `Spline Heading`
 
 ```java
-{{#rustdoc_include BuilderReference.java:119:123}}
+{{#rustdoc_include BuilderReference.java:138:142}}
 ```
 
 <div class = "video-container-13">
@@ -578,4 +582,4 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 - [`.splineToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
-*Last Updated: 2024-07-02*
+*Last Updated: 2024-07-25*
