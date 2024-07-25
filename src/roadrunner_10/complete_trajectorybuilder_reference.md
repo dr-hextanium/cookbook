@@ -570,6 +570,8 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 - [`waitSeconds()` Video Playground](https://rr.brott.dev/playground/?367582b88299b654)
 - [`turn()` Video Playground](https://rr.brott.dev/playground/?5a434271b239e5bc )
 - [`turnTo()` Video Playground](https://rr.brott.dev/playground/?ad40438ae13740f7)
+- [`.setReversed(false)` Video Playground](https://rr.brott.dev/playground/?78c18fcfaa629ea1)
+- [`.setReversed(true)` Video Playground](https://rr.brott.dev/playground/?f13b09a93d37031c)
 - [`strafeTo()` / `strafeToConstantHeading()` Video Playground](https://rr.brott.dev/playground/?f49042fdf5ea3ab0)
 - [`.strafeToLinearHeading()` Video Playground](https://rr.brott.dev/playground/?ed5d41566d46b59f)
 - [`.strafeToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?2df122402fceaecc)
