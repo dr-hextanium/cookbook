@@ -2,14 +2,11 @@
 
 ### Ingredients
 
-1. A fully tuned Road Runner 1.0 setup _**or**_ [MeepMeep for Road Runner 1.0](https://github.com/acmerobotics/MeepMeep)
+1. A fully tuned [Road Runner 1.0](https://rr.brott.dev/docs/) setup _**or**_ [MeepMeep for Road Runner 1.0](https://github.com/acmerobotics/MeepMeep)
 
 ### The Problem
 
-The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/) in
-the official Road Runner 1.0 docs only has a few TrajectoryBuilder methods, and does
-not explain them very well in depth. This is a complete reference for more methods in
-the TrajectoryBuilder class for Road Runner 1.0.
+The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder-ref/) in the official [Road Runner 1.0](https://rr.brott.dev/docs/) docs only has a few TrajectoryBuilder methods, and does  not explain them very well in depth. This is a complete reference for more methods in the TrajectoryBuilder class for [Road Runner 1.0](https://rr.brott.dev/docs/).
 
 ---
 
@@ -114,6 +111,13 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
     }
 }
 </style>
+
+> **Why Radians?**  
+> You may have noticed that we are turning by \\( \frac{\pi}{6} \\) degrees instead of degrees. 
+> This is because Road Runner 1.0's units are inches and radians by default. To use degrees, we can convert degrees to radians by using Java's `Math.toRadians(degrees)`
+> 
+> Example:
+> `Math.toRadians(90)` converts 90 degrees to radians. 90 degrees is the same as \\( \frac{\pi}{2} \\) radians.
 
 ---
 

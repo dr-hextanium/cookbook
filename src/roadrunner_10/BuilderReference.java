@@ -1,4 +1,4 @@
-// Robot waits for the specified time in seconds
+// Robot waits for the specified time in seconds (NOT MILLISECONDS!)
 // This is a simple wait segment that is useful for running actions in between trajectories.
 
 .waitSeconds(5)
