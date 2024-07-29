@@ -646,4 +646,4 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 - [`.splineToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
-*Last Updated: 2024-07-25*
+*Last Updated: 2024-07-29*
