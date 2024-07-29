@@ -44,7 +44,7 @@
 
 
 
-.setReversed(true)  // Unreversed trajectory has hooks on the start and end, and is smooth
+.setReversed(true)  // Reversed trajectory has no hooks on the start and end, and is smooth
 .splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
 .setReversed(false)
 .splineTo(Vector2d(-48.0, 0.0), Math.PI)
