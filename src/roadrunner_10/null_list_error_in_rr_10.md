@@ -17,4 +17,4 @@ You must first run the OpMode from the Driver Station and then stop it once the 
 Finally, you can open the tuning page on your robot's Wi-Fi network, as the Road Runner docs say.
 
 
-*last Updated: 2024-05-29*
+*Last Updated: 2024-05-29*

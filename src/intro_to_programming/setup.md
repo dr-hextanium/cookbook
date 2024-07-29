@@ -100,4 +100,4 @@ Congratulations! You have successfully installed the necessary software to progr
 
 ## Troubleshooting
 - If you have questions/issues with the installation process, the [Unofficial FTC Discord](https://discord.gg/first-tech-challenge) has many experienced programmers who can help you with all sorts of issues, including installation issues.
-- Last updated on May 30th, 2024.
+- *Last Updated: 2024-05-30*
