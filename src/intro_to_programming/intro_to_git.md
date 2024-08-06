@@ -87,5 +87,5 @@ If you've committed files to GitHub, you might want to pull that commit on anoth
 
 At this point, right click on the branch you intend on pulling from, and press `Merge origin/<branch> into <branch>`. This will simply update those files in your local branch, or download them if they were created in the commit. 
 
-
+*Last updated: 2024-08-05*
 
