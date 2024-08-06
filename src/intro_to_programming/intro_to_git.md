@@ -29,6 +29,15 @@ First, you're going to need to open the [FtcRobotController repository](https://
 
 Under the `Owner` dropdown, select your organization (if you elected to create one), as opposed to your individual user account. Under `Repository name`, I recommend naming your repo after the current FTC season (such as Into The Deep or CenterStage). After that, press `Create fork` and you're good to move on to the next step.
 
+#### 1.5 Logging into GitHub on Android Studio
+First, open your [GitHub token settings](https://github.com/settings/tokens), either by clicking on that link or by going to Account Settings -> Developer Settings -> Tokens (Classic). Press `Generate new token (classic)` at the top and that will take you to a page that looks like this:
+
+![The token generation page](../static/intro_to_git/personal_access_token.png)
+
+For `Note`, write the use case of the token, such as "Android Studio". For `Expiration`, select `No expiration`, which may cause GitHub to warn you. For `Select scopes`, select `repo`, `workflow`, `read:org`, and `gist`. Click `Generate token` and copy it.
+
+Now open Android Studio. Open your settings and then to `Version Control` -> `GitHub`. At the top left corner of the box, press the `+` icon and `Log in with token...`, and paste in the token you just generated.
+
 ### 2. Opening Your Fork in Android Studio
 This step needs to be done by everyone who intends on programming for your team.
 
@@ -45,7 +54,7 @@ This step is technically optional, but highly recommended in order to take advan
 
 ![Branches and Commits](../static/intro_to_git/branches.png)
 
-Personally, I recommend everyone who intends on programming for your team create a branch. To do that in AS, in the top menu to go `Git` -> `New Branch`, and type in your name. AS will automatically checkout that branch, meaning all future commits from your client will be to that branch.
+Personally, I recommend creating branches for each feature your team intends on creating. To do that in AS, in the top menu to go `Git` -> `New Branch`, and type in the name of that feature. AS will automatically checkout that branch, meaning all future commits from your client will be to that branch.
 
 At this point, you are free to start adding and editing files! Unless you absolutely know what you are doing, *do not* edit any files outside of the `TeamCode/src/main/java/org/firstinspires/ftc/teamcode` directory unless told to do so by another guide. 
 
@@ -58,6 +67,25 @@ Now that you've made some changes, press the button on the left side that looks 
 
 I recommend selecting all files under the `Changes` section. Then, write a commit message in the box in the lower portion of the menu to describe what you've changed. In this example, I added a `MecanumChassis` wrapper and edited some other files, so that's what I wrote in my commit message. The length and complexity of your commit messages is up to you and your team, and that should be a discussion you have with them.
 
-Once you're done, press `Commit and Push...` which will commit your changes and push them to  `Remote`, the version of your repo on the internet (as opposed to your device). Then you can move on to the next step!
+Once you're done, press `Commit and Push...` which will commit your changes and push them to  `Remote`, the version of your repo on the internet (as opposed to your device). Then you can move on to the next step (if you chose to make multiple branches; if not, proceed to step 6).
 
 ### 5. Pull Requests
+A pull request is how you can merge changes from one branch to another! For example, you can move experimental features into the main/stable branch.
+
+At this point, we're going back to the GitHub website. Open your repository and hit the `Pull Requests` tab in the top left, which will open a page that looks somewhat like this:
+
+![Pull requests](../static/intro_to_git/pull_request.png)
+
+Make sure that both repositories are the same (your repo). Then, for base, select `master`, and for `compare` select whatever branch you were working with. Press `Create pull request` and type the name and description of the commit(s) you are working with, and then press `Create pull request` again.
+
+At this point, GitHub will automatically determine if there are merge conflicts. If there are not, you're free to press `Merge pull request`.
+
+### 6. Pulling To Android Studio
+If you've committed files to GitHub, you might want to pull that commit on another device. To do that, open the Git menu in AS, which can be seen below.
+
+![Git menu](../static/intro_to_git/git_menu.png)
+
+At this point, right click on the branch you intend on pulling from, and press `Merge origin/<branch> into <branch>`. This will simply update those files in your local branch, or download them if they were created in the commit. 
+
+
+
