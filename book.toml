@@ -8,3 +8,9 @@ title = "The Cookbook"
 [output.html.code.hidelines]
 java = "# "
 kt = "# "
+
+[output.html]
+mathjax-support = true
+site-url = "/cookbook/"
+git-repository-url = "https://github.com/ArushYadlapati/cookbook/tree/main"
+edit-url-template = "https://github.com/ArushYadlapati/cookbook/tree/main/{path}"
