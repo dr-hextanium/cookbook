@@ -4,9 +4,10 @@
 
 *Are you curious about why some FTC programmers like to use Kotlin for their code bases?*
 
-Kotlin is a language with very high cross compatability with Java, which means it can be used to write your FTC code.
+Kotlin is a language with very high cross-compatability with Java, which means it can be used to write your FTC code.
 
-FIRST provides official instructions for adding Kotlin to your project [here](https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/installing_kotlin/Installing-Kotlin.html)
+FIRST provides official instructions
+for adding Kotlin to your project [here.](https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/installing_kotlin/Installing-Kotlin.html)
 
 ## Ingredients
 
@@ -15,12 +16,12 @@ FIRST provides official instructions for adding Kotlin to your project [here](ht
 
 ## The Recipe
 
-Kotlin is a language that makes a very solid attempt at modernising Java. 
-It makes writing common Java patterns extremely concise. 
+Kotlin is a language that makes a very solid attempt at modernizing Java. 
+It makes writing common Java patterns concise. 
 Kotlin also makes it easy to write safer code that is less likely to have strange bugs or throw confusing NullPointerExceptions.
 
 Kotlin is unlikely to be particularly useful to you if you are not using Object-Oriented aspects of Java already.
-If you are just writing \[Linear\]OpModes, but are not writing your own classes, Kotlin is probably not for you. 
+If you are just writing \[Linear\]OpModes but are not writing your own classes, Kotlin is probably not for you. 
 While Kotlin certainly does offer some nice features in this environment, the challenges that come with using Kotlin may also prove hard to overcome unless you are writing more complex and involved code. 
 It is also advisable not to try to switch to Kotlin at the same time as learning more Object-Oriented skills.
 
@@ -127,7 +128,26 @@ fun nullSafeMethodCall(a: Int?): Double {
 ```
 
 We'll combine the concept above with the `?.` operator, which performs a null safe method call. 
-If a is null, Kotlin won't try to call `.toDouble()` on it and will just return null, which will then be caught by the Elvis operator!
+If `a` is null, Kotlin won't try to call `.toDouble()` on it and will just return null,
+which will then be caught by the Elvis operator!
+
+### Accessing Hardware
+Because of Kotlin's null safety system, accessing hardware must be done differently.
+The best way to do this is to use the `lateinit` keyword like so:
+
+```kt
+    // Use "lateinit" so Kotlin will allow it to remain uninitialized until init, without being null.
+    lateinit var arm: DcMotorEx
+    
+    override fun runOpMode() {
+        arm = hardwareMap.get(DcMotorEx::class.java, "arm")
+        // Now that arm has been initialized, we can access it as normal:
+        arm.power = 1.0
+        telemetry.addData("armPos", arm.currentPosition)
+        telemetry.update()
+        // Note that, since we used lateinit, we do NOT need to put !! after arm to assert that it is not null
+    }
+```
 
 ### Overview
 
