@@ -4,9 +4,11 @@
 ---
 # Introduction to Programming
 - [Development Environment Setup](./intro_to_programming/setup.md)
+- [Introduction to Git and Github](./intro_to_programming/intro_to_git.md)
 
 # Road Runner 1.0
 - [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
+- [Complete TrajectoryBuilder Reference](./roadrunner_10/complete_trajectorybuilder_reference.md)
 
 # Road Runner 0.5.6
 - [Is the bump on feedforward tuner normal?](./roadrunner_056/is_the_bump_on_manual_feedforward_tuner_normal.md)

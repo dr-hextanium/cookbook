@@ -120,16 +120,18 @@ press `Commit and Push...` which will commit your changes and push them to GitHu
 
 In some situations (such as when you are offline, or when a push fails), 
 you may also prefer to just hit the `Commit` button to save an offline snapshot of your changes,
-and then later select the `Push` icon underneath the branch selection menu to push all of your offline commits.
+and then later click your branch title in the top right, which displays the following options:
 
-![The push icon](../static/intro_to_git/push_icon.png)
+![The push icon](../static/intro_to_git/push_button.png)
+
+Click `Push...`, and then `Push` in the bottom right of the menu that comes up after that.
 
 ### 4. Pulling from GitHub
 Once one person has committed a change,
 the other programmers on your team will want to download or *pull* those changes from GitHub.
-To do this, select the `Update Project` icon or button in the top left, as shown below:
+To do this, click on your branch and then the `Update Project` icon or button in the top left, as shown below:
 
-![The pull icon](../static/intro_to_git/fetch.png)
+![The pull icon](../static/intro_to_git/update_project.png)
 
 This will ask you whether you want to Merge or to Rebase the incoming changes.
 Merging is simpler, so we will explain it here; select it and hit OK.
@@ -139,7 +141,7 @@ you will immediately be able to resume coding.
 However, occasionally when multiple people edit the same file at the same time, a Merge Conflict can occur.
 This can appear as a Conflict pop up as shown below.
 
-![The Conflict pop up](../static/intro_to_git/merge_conflicts_dialog_dark.png)
+![The Conflict pop up](../static/intro_to_git/merge_conflicts_dialog_dark.png) 
 
 See the [official JetBrains documentation](https://www.jetbrains.com/help/idea/resolve-conflicts.html)
 for what to do in this scenario.
