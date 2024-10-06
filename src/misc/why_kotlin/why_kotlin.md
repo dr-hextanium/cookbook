@@ -139,7 +139,7 @@ The best way to do this is to use the `lateinit` keyword like so:
     // Use "lateinit" so Kotlin will allow it to remain uninitialized until init, without being null.
     lateinit var arm: DcMotorEx
     
-    override fun runOpMode() {
+    override fun init() { // or runOpMode() for LinearOpModes
         arm = hardwareMap.get(DcMotorEx::class.java, "arm")
         // Now that arm has been initialized, we can access it as normal:
         arm.power = 1.0
