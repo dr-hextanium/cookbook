@@ -212,5 +212,5 @@ Once any conflicts are resolved,
 and you are ready to merge the branches (potentially after getting approval from your team),
 select the `Merge pull request` button to accept the pull request.
 
-*Last updated: 2024-08-06*
+*Last updated: 2024-10-06*
 
