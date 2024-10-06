@@ -130,24 +130,27 @@ fun nullSafeMethodCall(a: Int?): Double {
 We'll combine the concept above with the `?.` operator, which performs a null safe method call. 
 If `a` is null, Kotlin won't try to call `.toDouble()` on it and will just return null,
 which will then be caught by the Elvis operator!
-
+nsure that you access your arm variable in init in some way to trigger the by lazy function.
 ### Accessing Hardware
 Because of Kotlin's null safety system, accessing hardware must be done differently.
-The best way to do this is to use the `lateinit` keyword like so:
+There are a few ways to do this, but the one we'll show here is to use `by lazy`:
 
 ```kt
-    // Use "lateinit" so Kotlin will allow it to remain uninitialized until init, without being null.
-    lateinit var arm: DcMotorEx
-    
+    // by lazy will only initialize this variable the first time it is used.
+    // This prevents it from ever being null, but also allows you to initialize it only after your opmode begins.
+    val arm by lazy { hardwareMap["arm"] as DcMotorEx } // Alternately hardwareMap.get(DcMotorEx::class.java, "arm") also works here
+
     override fun init() { // or runOpMode() for LinearOpModes
-        arm = hardwareMap.get(DcMotorEx::class.java, "arm")
+        // To ensure that your hardware is initialized in the init stage, access it in some way to trigger the by lazy function
+        arm
         // Now that arm has been initialized, we can access it as normal:
         arm.power = 1.0
         telemetry.addData("armPos", arm.currentPosition)
         telemetry.update()
-        // Note that, since we used lateinit, we do NOT need to put !! after arm to assert that it is not null
+        // Note that, since we used by lazy, we do NOT need to put !! after arm.
     }
 ```
+There are other options to do this roo such as the `lateinit` keyword.
 
 ### Overview
 
