@@ -6,6 +6,7 @@
 - [Introduction to Git and Github](./intro_to_programming/intro_to_git.md)
 
 # Gradle
+- [Downgrading the Gradle JDK on Android Studio Ladybug](./gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.md)
 - [Don't upgrade the Gradle version or Android Gradle Plugin version](./gradle/dont_upgrade/dont_upgrade.md)
 
 # Road Runner 1.0
