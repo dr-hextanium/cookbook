@@ -6,6 +6,9 @@
 - [Development Environment Setup](./intro_to_programming/setup.md)
 - [Introduction to Git and Github](./intro_to_programming/intro_to_git.md)
 
+# Gradle
+- [Downgrading the Gradle JDK on Android Studio Ladybug](./gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.md)
+
 # Road Runner 1.0
 - [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
 - [Complete TrajectoryBuilder Reference](./roadrunner_10/complete_trajectorybuilder_reference.md)
