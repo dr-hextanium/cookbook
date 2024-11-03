@@ -76,14 +76,14 @@
 // Robot moves to the specified coordinates while linearly interpolating between the start heading and a specified end heading
 // In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates.
 
-.strafeToLinearHeading(new Vector2d(36, 36), Math.toRadians(90))
+.strafeToLinearHeading(new Vector2d(48, -48), Math.toRadians(180))
 
 
 
 // Robot moves to the specified coordinates while splinely interpolating between the start heading and a specified end heading
 // In other words, it constantly turns to a certain heading (once more, in radians) while moving to the specified coordinates.
 
-.strafeToSplineHeading(new Vector2d(36, 36), Math.toRadians(90))
+.strafeToSplineHeading(new Vector2d(48, -48), Math.toRadians(180))
 
 
 
