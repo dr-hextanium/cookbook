@@ -39,6 +39,7 @@
 - [Why Kotlin?](./misc/why_kotlin/why_kotlin.md)
 - [Terminology and Acronyms](./misc/terminology_and_acronyms.md)
 - [Improving Loop Times](./improving_loop_times/improving_loop_times.md)
+- [Pedro Pathing vs Road Runner](./misc/pedro_vs_roadrunner.md)
 
 ---
 [Contributors](./contributors.md)
