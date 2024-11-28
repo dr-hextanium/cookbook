@@ -8,6 +8,7 @@
 # Gradle
 - [Downgrading the Gradle JDK on Android Studio Ladybug](./gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.md)
 - [Don't upgrade the Gradle version or Android Gradle Plugin version](./gradle/dont_upgrade/dont_upgrade.md)
+- [Alternate Project Setups / Templates](./gradle/project_templates/project_templates.md)
 
 # Road Runner 1.0
 - [Empty list error in Road Runner 1.0](./roadrunner_10/null_list_error_in_rr_10.md)
