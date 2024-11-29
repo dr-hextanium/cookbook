@@ -1,5 +1,8 @@
 # Don't upgrade the Gradle version or Android Gradle Plugin version
 
+> Consider checking out [our article on alternate project
+> setups](../project_templates/project_templates.md)
+
 Android studio loves to tempt you with this little pop up, prompting you to
 upgrade the Android Gradle Plugin (AGP).
 
