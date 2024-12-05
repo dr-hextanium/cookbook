@@ -1,5 +1,8 @@
 # Don't upgrade the Gradle version or Android Gradle Plugin version
 
+> Consider checking out [our article on alternate project
+> setups](../project_templates/project_templates.md)
+
 Android studio loves to tempt you with this little pop up, prompting you to
 upgrade the Android Gradle Plugin (AGP).
 
@@ -20,12 +23,22 @@ ones from the SDK.
 
 It may be possible to undo the changes more simply by downgrading again.
 
-The AGP version should be `7.2.0`. It is set in the project root `build.gradle`.
-![AGP version](./agp_version.png)
-
-The Gradle version should be `7.4.2`. It is set in `gradle/wrapper/gradle-wrapper.properties`.
-![Gradle version](./gradle_wrapper_version.png)
-
-It may be easier to find these files with the file explorer set to `Project`
+> It may be easier to find these files with the file explorer set to `Project`
 mode, rather than `Android` mode.
 ![AS file explorer modes](./as_file_explorer_modes.png)
+
+## `10.1.1` onwards
+
+The AGP version should be `8.7.0`. It is set in the project root `build.gradle`.
+![AGP version](./agp_version[GTE10.1.1].png)
+
+The Gradle version should be `8.9`. It is set in `gradle/wrapper/gradle-wrapper.properties`.
+![Gradle version](./gradle_wrapper_version[GTE10.1.1].png)
+
+## Before `10.1.1`
+
+The AGP version should be `7.2.0`. It is set in the project root `build.gradle`.
+![AGP version](./agp_version[LT10.1.1].png)
+
+The Gradle version should be `7.4.2`. It is set in `gradle/wrapper/gradle-wrapper.properties`.
+![Gradle version](./gradle_wrapper_version[LT10.1.1].png)
