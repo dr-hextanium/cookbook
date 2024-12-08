@@ -1,6 +1,7 @@
 # [Summary](https://rust-lang.github.io/mdBook/format/summary.html)
 
 [Introduction](./introduction.md)
+[Tags](./tags.md)]
 # Introduction to Programming
 - [Development Environment Setup](./intro_to_programming/setup.md)
 - [Introduction to Git and Github](./intro_to_programming/intro_to_git.md)
