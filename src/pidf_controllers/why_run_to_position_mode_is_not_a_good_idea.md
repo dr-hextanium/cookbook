@@ -4,17 +4,19 @@ to use the `RUN_TO_POSITION` mode, especially since it appears in many examples.
 This motor run mode is built into the FTC SDK and is designed to move a motor to a certain encoder position autonomously.
 
 However, this mode is not ideal for a few reasons (ordered from most to least significant):
-## Locked at 20hz
+## Locked at 20 HZ
 
-The `RUN_TO_POSITION` mode is locked at 20hz, meaning that the motor will only update its position every 50ms.
+The `RUN_TO_POSITION` mode is locked at 20 HZ,
+meaning that the motor will only update its position every 50 milliseconds.
 
-**To understand why this is a problem:**
+**Why this is a problem:**
 
 Imagine a scenario where you are trying to move a motor to a certain position.
 If the motor is moving too fast, it will overshoot the target position and then have to correct itself.
 However, if the motor is only updating its position 20 times per second, it will not be able to correct itself quickly enough,
 leading to overshoots and even oscillations.
-* This is known as sample rate: Here's a [demo](https://www.youtube.com/watch?v=fusr9eTceEo&t=133s) of its effect
+
+Here's a [demo](https://www.youtube.com/watch?v=fusr9eTceEo&t=133s) of this effect.
 
 ### Why going Custom PID(F) is better:
 With a custom PID(F) controller, you can update the motor's position every loop. Since most FTC loops run at higher than 20hz,
