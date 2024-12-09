@@ -16,6 +16,7 @@ git-repository-url = "https://github.com/dr-hextanium/cookbook/tree/main"
 edit-url-template = "https://github.com/dr-hextanium/cookbook/tree/main/{path}"
 
 [output.html.redirect]
+"/help.html" = "/tags.html"
 "/as.html" = "/intro_to_programming/setup.html"
 "/git.html" = "/intro_to_programming/intro_to_git.html"
 "/jdk.html" = "/gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.html"
