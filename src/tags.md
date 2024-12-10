@@ -50,3 +50,7 @@ Here is a list of all of them:
 !cb pedrovsrr -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
 
 !cb rrvspedro -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
+
+!cb tab -> https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html
+
+!cb trajectory -> https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html
