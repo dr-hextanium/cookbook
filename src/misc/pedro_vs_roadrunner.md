@@ -11,7 +11,7 @@ Quickstart: <https://github.com/AnyiLin/Pedro-Pathing-Quickstart>
 **Pros of Pedro:**
 
 - Can make your bot drive faster
-- Support for recent sensors (otos, pinpoint) is official/built in
+- Support for recent sensors (otos, pinpoint) is official/built in (note: Pinpoint support broken as of 12/19/24)
 - Very good correction for unexpected disturbances
 
 **Cons of Pedro:**
@@ -22,6 +22,7 @@ Quickstart: <https://github.com/AnyiLin/Pedro-Pathing-Quickstart>
 - Not necessarily time consistent
 - Uses nonstandard coordinate system by default/in visualizer (as of 11/24/24)
 - Docs are lacking
+- As of 12/19/24 Pinpoint support is completely broken(!)
 
 **Road Runner** is a motion profiling-based follower library
 that includes a command-based action system and geometry. 
