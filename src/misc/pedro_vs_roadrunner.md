@@ -11,7 +11,7 @@ Quickstart: <https://github.com/AnyiLin/Pedro-Pathing-Quickstart>
 **Pros of Pedro:**
 
 - Can make your bot drive faster
-- Support for recent sensors (otos, pinpoint) is official/built in (note: Pinpoint support broken as of 12/19/24)
+- Support for recent sensors (otos, pinpoint) is official/built in 
 - Very good correction for unexpected disturbances
 
 **Cons of Pedro:**
