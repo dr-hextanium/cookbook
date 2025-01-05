@@ -40,7 +40,6 @@ Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 - Time consistent autonomous
 - Tons of support, used by hundreds or thousands of teams
 - Tons of people able to help you in FTC Discord; someone has almost certainly had your problem before
-- Easier to update and integrate with compared to Pedro; code is split into libraries
 - Lots of projects integrating with it
 - Uses standard coordinate system
 
@@ -52,4 +51,5 @@ Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 (though still exists, made by j5155)
 
 This page also available on [Pedro Docs](https://pedropathing.com/misc/pedrovsrr.html)
+
 *Last Updated: 2025-1-5*
