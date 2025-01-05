@@ -1,27 +1,23 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a recently-created library (created early 2024, last updated 10/28/24)
-somewhat based on Road Runner 0.5.
-It uses a custom algorithm to follow trajectories with speed as a top priority. 
+**Pedro Pathing** is a recently-created library for aiding teams autonomous programs.  
+It uses a custom algorithm utilizing Bézier Curves to follow trajectories with **speed as a top priority**.  
 
-Docs: <https://pedropathing.com/>
+- Docs: https://pedropathing.com
+- Quickstart: https://github.com/Pedro-Pathing/Quickstart
 
-Quickstart: <https://github.com/AnyiLin/Pedro-Pathing-Quickstart>
+**Pros of Pedro** 
+- Can make your bot drive faster.  
+- Support for recent sensors (otos, pinpoint) is official/built-in.  
+- Excellent correction for unexpected disturbances.  
+- Now exists as a standalone library, making updates and integration much easier.  
+- Documentation has significantly improved, with clear examples and tutorials.  
+- The Pedro Discord community has grown rapidly, offering helpful support and active troubleshooting assistance.  
 
-**Pros of Pedro:**
-
-- Can make your bot drive faster
-- Support for recent sensors (otos, pinpoint) is official/built in 
-- Very good correction for unexpected disturbances
-
-**Cons of Pedro:**
-
-- Newer, so potentially less stable and/or buggier
-- All the code is in the quickstart instead of in a library, so updating is harder
-- Less people are familiar with it and able to help
-- Not necessarily time consistent
-- Uses nonstandard coordinate system by default/in visualizer (as of 11/24/24)
-- Docs are lacking
+**Cons of Pedro**
+- Still newer and may have potential edge-case bugs.  
+- Less time consistency compared to Road Runner.  
+- Uses a nonstandard coordinate system by default/in the visualizer.
 
 **Road Runner** is a motion profiling-based follower library
 that includes a command-based action system and geometry. 
@@ -54,4 +50,8 @@ Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 - Support for recent sensors like otos and pinpoint is unofficial
 (though still exists, made by j5155)
 
-*Last Updated: 2024-11-25*
+**Summary**
+- Choose Pedro Pathing if speed and ultra accurate dynamic correction are your primary concerns, and you're comfortable with slightly newer technology.  
+- Choose Road Runner if time consistency, stability, and community support are your top priorities, and you're okay with unofficial sensor integrations.  
+
+*Last Updated: 2025-1-5*
