@@ -1,27 +1,23 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a recently-created library (created early 2024, last updated 10/28/24)
-somewhat based on Road Runner 0.5.
-It uses a custom algorithm to follow trajectories with speed as a top priority. 
+**Pedro Pathing** is a recently-created library for autonomous.  
+It uses a GVF algorithm utilizing Bézier Curves to follow trajectories with speed as a top priority.  
 
-Docs: <https://pedropathing.com/>
+- Docs: https://pedropathing.com
+- Quickstart: https://github.com/Pedro-Pathing/Quickstart
 
-Quickstart: <https://github.com/AnyiLin/Pedro-Pathing-Quickstart>
-
-**Pros of Pedro:**
-
-- Can make your bot drive faster
-- Support for recent sensors (otos, pinpoint) is official/built in 
-- Very good correction for unexpected disturbances
+**Pros of Pedro** 
+- Can make your bot drive faster.  
+- Support for recent sensors (OTOS, Pinpoint) is official/built-in.  
+- Excellent correction for unexpected disturbances.  
+- Now exists as a standalone library, making updates and integration much easier.
 
 **Cons of Pedro:**
 
-- Newer, so potentially less stable and/or buggier
-- All the code is in the quickstart instead of in a library, so updating is harder
-- Less people are familiar with it and able to help
-- Not necessarily time consistent
-- Uses nonstandard coordinate system by default/in visualizer (as of 11/24/24)
-- Docs are lacking
+- Newer, so potentially less stable/buggier.
+- Less people are familiar with it and able to help.
+- Not necessarily time consistent.
+- Uses a nonstandard coordinate system by default/in visualizer.
 
 **Road Runner** is a motion profiling-based follower library
 that includes a command-based action system and geometry. 
@@ -50,8 +46,10 @@ Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 
 **Cons of Roadrunner:**
 
-- Prioritizes time consistency above all else, meaning potentially worse speed and correction
+- Prioritizes time consistency above all else, meaning potentially worse correction
+- Slower speed by default
 - Support for recent sensors like otos and pinpoint is unofficial
 (though still exists, made by j5155)
 
-*Last Updated: 2024-11-25*
+This page also available on [Pedro Docs](https://pedropathing.com/misc/pedrovsrr.html)
+*Last Updated: 2025-1-5*
