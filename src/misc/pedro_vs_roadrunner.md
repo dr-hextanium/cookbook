@@ -51,7 +51,5 @@ and someone has almost certainly had your problem before.
 (though still exists, made by j5155)
 - Path visualizer is code based
 
-This page is also available on [Pedro Docs](https://pedropathing.com/misc/pedrovsrr.html).
-(Note: the Pedro team has updated the version on Pedro docs separately, and we cannot vouch for its accuracy.)
 
 *Last Updated: 2025-1-5*
