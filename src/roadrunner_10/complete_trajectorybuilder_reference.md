@@ -48,7 +48,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 ```
 <div class="video-container-1">
     <iframe width="505" height="650" 
-        src="../static/builder_reference_videos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -84,7 +84,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class="video-container-2">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/turn().mp4" title="turn()" style="border: none;" >
+        src="../static/builder_reference_videos/turn().mp4" title="turn()" style="border: none;" playsinline controls>>
     </iframe>
 </div>
 
@@ -173,7 +173,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/setReversed(false).mp4" title="setReversed(false)" style="border: none;" >
+        src="../static/builder_reference_videos/setReversed(false).mp4" title="setReversed(false)" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -206,7 +206,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-5">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/setReversed(true).mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/setReversed(true).mp4" title="setReversed(true)" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -247,7 +247,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/strafeTo().mp4" title="strafeTo()" style="border: none;" >
+        src="../static/builder_reference_videos/strafeTo().mp4" title="strafeTo()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -284,7 +284,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/strafeToLinearHeading().mp4" title="strafeToLinearHeading()" style="border: none;" >
+        src="../static/builder_reference_videos/strafeToLinearHeading().mp4" title="strafeToLinearHeading()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -366,7 +366,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-9">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/lineToX().mp4" title="lineToX()" style="border: none;" >
+        src="../static/builder_reference_videos/lineToX().mp4" title="lineToX()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -406,7 +406,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-10">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/lineToY().mp4" title="lineToY()" style="border: none;" >
+        src="../static/builder_reference_videos/lineToY().mp4" title="lineToY()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -443,7 +443,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-11">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/splineTo().mp4" title="splineTo()" style="border: none;" >
+        src="../static/builder_reference_videos/splineTo().mp4" title="splineTo()" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -484,7 +484,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-12">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/splineTo()%20(default).mp4" title="splineTo() (default)" style="border: none;" >
+        src="../static/builder_reference_videos/splineTo()%20(default).mp4" title="splineTo() (default)" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -521,7 +521,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-13">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/splineToConstantHeading().mp4" title="splineToConstantHeading() (default)" style="border: none;" >
+        src="../static/builder_reference_videos/splineToConstantHeading().mp4" title="splineToConstantHeading() (default)" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
@@ -556,10 +556,10 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 {{#rustdoc_include BuilderReference.java:130:134}}
 ```
 
-<div class = "video-container-14">
-    <iframe width="505" height="650"
-        src="../static/builder_reference_videos/src="../static/builder_reference_videos/splineToLinearHeading().mp4" title="splineToLinearHeading() (default)" style="border: none;" >().mp4" title="splineToSplineHeading() (default)" style="border: none;" >
-    </iframe>
+<div class="video-container-1">
+    <video width="505" height="650" 
+        src="../static/builder_reference_videos/splineToLinearHeading().mp4" title="splineToLinearHeading()" style="border: none;" playsinline controls>
+    </video>
 </div>
 
 <style>
@@ -595,7 +595,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-15">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/splineToSplineHeading().mp4" title="splineToSplineHeading() (default)" style="border: none;" >
+        src="../static/builder_reference_videos/splineToSplineHeading().mp4" title="splineToSplineHeading() (default)" style="border: none;" playsinline controls>
     </iframe>
 </div>
 
