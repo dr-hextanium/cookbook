@@ -48,7 +48,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 ```
 <div class="video-container-1">
     <iframe width="505" height="650" 
-        src="../static/BuilderReferenceVideos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -84,7 +84,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class="video-container-2">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/turn().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/turn().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -128,7 +128,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-3">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/turnTo().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/turnTo().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -173,7 +173,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/setReversed(false).mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/setReversed(false).mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -206,7 +206,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-5">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/setReversed(true).mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/setReversed(true).mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
@@ -247,7 +247,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/strafeTo().mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/strafeTo().mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
@@ -284,7 +284,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="../static/BuilderReferenceVideos/strafeToLinearHeading().mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/strafeToLinearHeading().mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
@@ -324,7 +324,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
     </iframe>
 </div>
-
+2
 <style>
 .video-container-8 {
     display: flex;
