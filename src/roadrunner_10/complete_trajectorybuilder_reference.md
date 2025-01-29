@@ -84,7 +84,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class="video-container-2">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/turn().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/turn().mp4" title="turn()" style="border: none;" >
     </iframe>
 </div>
 
@@ -128,7 +128,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-3">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/turnTo().mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/turnTo().mp4" title="turnTo()" style="border: none;" >
     </iframe>
 </div>
 
@@ -173,7 +173,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/setReversed(false).mp4" title="waitSeconds()" style="border: none;" >
+        src="../static/builder_reference_videos/setReversed(false).mp4" title="setReversed(false)" style="border: none;" >
     </iframe>
 </div>
 
@@ -247,7 +247,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/strafeTo().mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/strafeTo().mp4" title="strafeTo()" style="border: none;" >
     </iframe>
 </div>
 
@@ -284,7 +284,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="../static/builder_reference_videos/strafeToLinearHeading().mp4" title="setReversed(true)" style="border: none;" >
+        src="../static/builder_reference_videos/strafeToLinearHeading().mp4" title="strafeToLinearHeading()" style="border: none;" >
     </iframe>
 </div>
 
@@ -321,10 +321,10 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-8">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6ef27e52-edf0-4501-adeb-8d40b4163bac.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/strafeToSplineHeading().mp4" title="strafeToSplineHeading()" style="border: none;" >
     </iframe>
 </div>
-2
+
 <style>
 .video-container-8 {
     display: flex;
@@ -366,7 +366,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-9">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/658b0f0b-9bce-44c1-af96-6fa34597d1e4.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/lineToX().mp4" title="lineToX()" style="border: none;" >
     </iframe>
 </div>
 
@@ -406,7 +406,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-10">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/4929bf3f-74f5-45d8-bd1d-244c9ffaaa0d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/lineToY().mp4" title="lineToY()" style="border: none;" >
     </iframe>
 </div>
 
@@ -443,7 +443,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-11">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/6dd76045-92f2-454b-b853-89635c6e9635.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/splineTo().mp4" title="splineTo()" style="border: none;" >
     </iframe>
 </div>
 
@@ -484,7 +484,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-12">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/22fefc44-44cb-42dd-bac5-1384cfa2d35d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/splineTo()%20(default).mp4" title="splineTo() (default)" style="border: none;" >
     </iframe>
 </div>
 
@@ -521,7 +521,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-13">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/splineToConstantHeading().mp4" title="splineToConstantHeading() (default)" style="border: none;" >
     </iframe>
 </div>
 
@@ -558,7 +558,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-14">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d8b9fdef-59c9-415b-86fb-a68616f34bb0.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/src="../static/builder_reference_videos/splineToLinearHeading().mp4" title="splineToLinearHeading() (default)" style="border: none;" >().mp4" title="splineToSplineHeading() (default)" style="border: none;" >
     </iframe>
 </div>
 
@@ -595,7 +595,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 
 <div class = "video-container-15">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/05d9298e-6737-4a08-9374-dd09725d1a2d.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/builder_reference_videos/splineToSplineHeading().mp4" title="splineToSplineHeading() (default)" style="border: none;" >
     </iframe>
 </div>
 
@@ -645,4 +645,4 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 - [`.splineToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
-*Last Updated: 2024-07-29*
+*Last Updated: 2025-01-28*
