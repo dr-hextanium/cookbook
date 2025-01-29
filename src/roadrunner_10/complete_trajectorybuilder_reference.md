@@ -46,10 +46,9 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 ```java
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
-
 <div class="video-container-1">
     <iframe width="505" height="650" 
-        src="https://rr-playground-server.brott.dev/bcce1244-e518-4034-a384-6072fa7a491d.mp4?autoplay=0" title="waitSeconds()" style="border: none;" >
+        src="../static/BuilderReferenceVideos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -85,7 +84,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class="video-container-2">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/ac38839f-39aa-4b0e-ba6c-19f36e3b9bbe.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/turn().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -129,7 +128,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-3">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/7f7f2cc9-155d-483d-a88b-7f2d66741aaa.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/turnTo().mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -174,7 +173,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-4">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/5e27c06d-330b-42a8-9ce5-d2c5a3cbaf69.mp4" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/setReversed(false).mp4" title="waitSeconds()" style="border: none;" >
     </iframe>
 </div>
 
@@ -207,7 +206,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-5">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/66e8f52f-8480-4372-bcaa-ee7313a1d637.mp4" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/setReversed(true).mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
@@ -248,7 +247,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-6">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/d06624a8-a8fc-4e0f-8864-8b8768c68f8e.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/strafeTo().mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
@@ -285,7 +284,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 <div class = "video-container-7">
     <iframe width="505" height="650"
-        src="https://rr-playground-server.brott.dev/9504527a-6003-46a0-888a-07a4ea487341.mp4?autoplay=0" title="waitSeconds()" style="border: none;">
+        src="../static/BuilderReferenceVideos/strafeToLinearHeading().mp4" title="setReversed(true)" style="border: none;" >
     </iframe>
 </div>
 
