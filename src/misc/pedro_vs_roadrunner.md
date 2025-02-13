@@ -18,6 +18,7 @@ It uses a GVF algorithm utilizing Bézier Curves to follow trajectories with spe
 - Fewer people are familiar with it and able to help.
 - Not necessarily time-consistent.
 - Visualizer uses a nonstandard coordinate scheme, complicating AprilTag integration.
+- Does not compensate for battery voltage differences, meaning worse consistency
 
 **Road Runner** is a motion-profiling-based follower library
 that includes a command-based action system and geometry. 
@@ -42,6 +43,7 @@ Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 and someone has almost certainly had your problem before.
 - Lots of projects integrate with it
 - Uses the FIRST-recommended standard coordinate system consistently
+- Compensates for battery voltage differences to maximize auto consistency
 
 **Cons of Roadrunner:**
 
