@@ -33,6 +33,8 @@ Here is a list of all of them:
 
 !cb pid -> https://cookbook.dairy.foundation/pidf_controllers/integrating_a_custom_PIDF_controller.html
 
+!cb pidf -> https://cookbook.dairy.foundation/pidf_controllers/integrating_a_custom_PIDF_controller.html
+
 !cb pidsync -> https://cookbook.dairy.foundation/pidf_controllers/syncing_two_linear_slide_motors_using_a_pidf_controller/syncing_two_linear_slide_motors_using_a_pidf_controller.html
 
 !cb usb -> https://cookbook.dairy.foundation/electrical/why_we_should_only_use_usb_30.html
