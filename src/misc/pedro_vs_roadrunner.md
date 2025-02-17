@@ -1,7 +1,6 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a path following library.  
-It’s a reactive vector follower that implements translational, heading, and centripetal force correction to dynamically converge to the target position.  
+**Pedro Pathing** is a path following library which utilizes a reactive vector follower that implements translational, heading, and centripetal force correction to dynamically converge to the target position. 
 
 **Links:**
 - Docs: https://pedropathing.com
