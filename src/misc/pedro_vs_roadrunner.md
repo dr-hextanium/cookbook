@@ -8,7 +8,6 @@ It uses a GVF algorithm utilizing Bézier Curves to follow trajectories with spe
 
 **Pros of Pedro** 
 - Can make your bot drive faster.  
-- Support for recent sensors (OTOS, Pinpoint) is official/built-in.  
 - Excellent correction for unexpected disturbances.
 - Has a no-code, browser-based path visualizer
 
@@ -49,8 +48,6 @@ and someone has almost certainly had your problem before.
 
 - Prioritizes time consistency above all else, meaning potentially worse correction
 - Slower speed by default
-- Support for recent sensors like the SparkFun OTOS and Pinpoint is unofficial
-(though still exists, made by j5155)
 - Path visualizer is code based
 
 
