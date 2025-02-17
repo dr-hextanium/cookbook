@@ -1,6 +1,8 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a path following library which utilizes a reactive vector follower that implements translational, heading, and centripetal force correction to dynamically converge to the target position. 
+**Pedro Pathing** is a path following library which utilizes a reactive vector follower
+that implements translational, heading, and centripetal force correction
+to dynamically converge to the target position. 
 
 **Links:**
 - Docs: https://pedropathing.com
@@ -9,17 +11,15 @@
 
 **Pros of Pedro:** 
 - Can make your bot drive faster.  
-- Support for recent sensors (OTOS, Pinpoint) are official/built-in.  
+- Support for recent sensors (OTOS, Pinpoint) is official/built-in.  
 - Excellent correction for unexpected disturbances.
 - Has a no-code, browser-based path visualizer
-- Pedro can be paired efficently with command-based libraries, as it runs fully async.
-- Can be added to TeleOp in 3 lines - allows for on the fly automations and macros with driving
 
 **Cons of Pedro:**
 - Newer, so potentially buggier.
 - Less people use it compared to Road Runner.
-- Not necessarily time-consistent, as it may spend time correcting for external disturbances.
-- Visualizer uses a nonstandard coordinate scheme, but Poses can be easily converted to the FTC Standard via a class method
+- Not necessarily time-consistent; speed is prioritized over consistency
+- Visualizer uses a nonstandard coordinate scheme
 
 ---
 
