@@ -5,9 +5,9 @@ that implements translational, heading, and centripetal force correction
 to dynamically converge to the target position. 
 
 **Links:**
-- Docs: https://pedropathing.com
-- Quickstart: https://github.com/Pedro-Pathing/Quickstart
-- Library: https://github.com/Pedro-Pathing/PedroPathing
+- Docs: <https://pedropathing.com>
+- Quickstart: <https://github.com/Pedro-Pathing/Quickstart>
+- Library: <https://github.com/Pedro-Pathing/PedroPathing>
 
 **Pros of Pedro:** 
 - Can make your bot drive faster.  
