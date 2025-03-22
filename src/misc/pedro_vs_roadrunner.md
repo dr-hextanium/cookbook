@@ -26,9 +26,6 @@ to dynamically converge to the target position.
 **Road Runner** is a motion-profiling-based follower library
 that includes a command-based action system and geometry. 
 
-It was originally (0.5) created late 2020(?),
-with version 1.0 created mid-2023 and last updated 10/13.
-
 It prioritizes time consistency above all else.
 
 - Library Repo: <https://github.com/acmerobotics/road-runner/>
