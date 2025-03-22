@@ -1,13 +1,14 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a path following library which utilizes a reactive vector follower
+**Pedro Pathing** is a path-following library that utilizes a reactive vector follower
 that implements translational, heading, and centripetal force correction
 to dynamically converge to the target position. 
 
 **Links:**
-- Docs: https://pedropathing.com
-- Quickstart: https://github.com/Pedro-Pathing/Quickstart
-- Library: https://github.com/Pedro-Pathing/PedroPathing
+- Docs: <https://pedropathing.com>
+- Quickstart: <https://github.com/Pedro-Pathing/Quickstart>
+- Library: <https://github.com/Pedro-Pathing/PedroPathing>
+- Visualizer: <https://visualizer.pedropathing.com>
 
 **Pros of Pedro:** 
 - Can make your bot drive faster.  
@@ -18,7 +19,7 @@ to dynamically converge to the target position.
 - Newer, so potentially buggier.
 - Less people use it compared to Road Runner.
 - Not necessarily time-consistent; speed is prioritized over consistency
-- Visualizer uses a nonstandard coordinate scheme
+- Visualizer uses a nonstandard (0 - 144) coordinate scheme
 
 ---
 
@@ -48,4 +49,4 @@ and someone has almost certainly had your problem before.
 - Path visualizer is code based
 
 
-*Last Updated: 2025-2-16*   
+*Last Updated: 2025-3-21*   
