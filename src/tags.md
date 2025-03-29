@@ -15,6 +15,8 @@ Here is a list of all of them:
 
 !cb jdk -> https://cookbook.dairy.foundation/gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.html
 
+!cb downgrade -> https://cookbook.dairy.foundation/gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.html
+
 !cb gradle -> https://cookbook.dairy.foundation/gradle/dont_upgrade/dont_upgrade.html
 
 !cb emptylist -> https://cookbook.dairy.foundation/roadrunner_10/null_list_error_in_rr_10.html
@@ -30,6 +32,8 @@ Here is a list of all of them:
 !cb null -> https://cookbook.dairy.foundation/common_ds_errors/npe_at_init/npe_at_init.html
 
 !cb npe -> https://cookbook.dairy.foundation/common_ds_errors/npe_at_init/npe_at_init.html
+
+!cb 27971 -> https://cookbook.dairy.foundation/common_ds_errors/npe_at_init/npe_at_init.html
 
 !cb pid -> https://cookbook.dairy.foundation/pidf_controllers/integrating_a_custom_PIDF_controller.html
 
@@ -52,6 +56,10 @@ Here is a list of all of them:
 !cb pedrovsrr -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
 
 !cb rrvspedro -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
+
+!cb pedro -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
+
+!cb rrvpedro -> https://cookbook.dairy.foundation/misc/pedro_vs_roadrunner.html
 
 !cb tab -> https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html
 
