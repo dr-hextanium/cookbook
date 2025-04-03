@@ -14,6 +14,7 @@ to dynamically converge to the target position.
 - Can make your bot drive faster.  
 - Excellent correction for unexpected disturbances.
 - Has a no-code, browser-based path visualizer
+- Caches motor writes by default.
 
 **Cons of Pedro:**
 - Newer, so potentially buggier.
@@ -22,6 +23,7 @@ to dynamically converge to the target position.
 - Visualizer uses a nonstandard (0 - 144) coordinate scheme
 - Quickstart code is not under the standard TeamCode package name, 
 making using SlothLoad and integrating existing projects more difficult.
+- Does not bulk read by default.
 
 ---
 
@@ -35,18 +37,20 @@ It prioritizes time consistency above all else.
 - Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 
 **Pros of Road Runner:**
-- Stable, minimal bugs if any
-- Time consistent by default
+- Stable, minimal bugs if any.
+- Time consistent by default.
 - Extensively tested. It's used by thousands of teams that are able to help you in the FTC Discord, 
 and someone has almost certainly had your problem before.
-- Lots of projects integrate with it
-- Uses the FIRST-recommended standard coordinate system consistently
-- Works with SlothLoad immediately
+- Lots of projects integrate with it.
+- Uses the FIRST-recommended standard coordinate system consistently.
+- Works with SlothLoad immediately.
+- Bulk reads by default.
 
 **Cons of Roadrunner:**
-- Prioritizes time consistency above all else, meaning potentially worse correction
-- Slower speed by default
-- Path visualizer is code based
+- Prioritizes time consistency above all else, meaning potentially worse correction.
+- Slower speed by default.
+- Path visualizer is code based.
+- Does not cache motor writes by default.
 
 <!--
 
