@@ -70,23 +70,6 @@ available [here](https://github.com/Dairy-Foundation/CachingHardware).
 This github page provides the installation and usage instructions, so this
 recipe won't cover them.
 
-### Photon
-
-Photon is another way of increasing loop times.
-Photon is an experimental library developed by Eeshwar, an alumni originally from team 7244.
-It allows for significantly faster loop times by parallelizing much more of the hardware reads and writes.
-Installation instructions for Photon are available [here](https://github.com/Eeshwar-Krishnan/PhotonFTC).
-
-If you have Photon installed, you don't need to use CachingHardware, as Photon
-has its own caching hardware. Note that Photon is more advanced than
-CachingHardware, so it does the optimisations automatically.
-
-Photon has a few known issues at the moment, here's some troubleshooting steps:
-
-**Some people have installed photon and Android Studio does not recognize the `@Photon` annotation. Instead of `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:v3.0.1-ALPHA'`, try `implementation 'com.github.Eeshwar-Krishnan:PhotonFTC:main-SNAPSHOT'`.**
-
-**Also, be warned. Photon sometimes when used just randomly reverses motors and servos (but it's always the same ones reversed the same way).**
-
 ### Full Examples
 
 This example uses [CachingHardware](https://github.com/Dairy-Foundation/CachingHardware)
@@ -94,8 +77,4 @@ This example uses [CachingHardware](https://github.com/Dairy-Foundation/CachingH
 {{#rustdoc_include CachingOptimizedOpMode.java:12:}}
 ```
 
-This example uses [Photon](https://github.com/Eeshwar-Krishnan/PhotonFTC)
-```java
-{{#rustdoc_include PhotonOptimizedOpMode.java:13:}}
-```
 *Last Updated: 2024-10-14*
