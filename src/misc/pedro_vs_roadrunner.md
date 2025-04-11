@@ -38,8 +38,8 @@ It prioritizes time consistency above all else.
 
 **Pros of Road Runner:**
 - Stable, minimal bugs if any.
-- Time consistent by default.
-- Extensively tested and used by thousands of teams, it integrates with many projects, and someone in the FTC Discord has almost certainly faced your issue before.
+- Time consistent by default
+- Extensively tested and used by thousands of teams; almost all possible problems have been solved before 
 - Uses the FIRST-recommended standard coordinate system consistently.
 - Works with SlothLoad immediately.
 - Bulk reads by default.
