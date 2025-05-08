@@ -13,17 +13,21 @@ to dynamically converge to the target position.
 **Pros of Pedro:** 
 - Can make your bot drive faster.  
 - Excellent correction for unexpected disturbances.
-- Has a no-code, browser-based path visualizer
+- Has a no-code, browser-based path visualizer.
 - Caches motor writes by default.
+- Corrects for centripetal force to hold the robot onto curved paths.
 
 **Cons of Pedro:**
 - Newer, so potentially buggier.
 - Less people use it compared to Road Runner.
+- Tuning is almost entirely manual. <!-- 4 automatically tuned constants, minimum of 32 manually tuned constants -->
 - Not necessarily time-consistent; speed is prioritized over consistency
 - Visualizer uses a nonstandard (0 - 144) coordinate scheme
 - Quickstart code is not under the standard TeamCode package name, 
 making using SlothLoad and integrating existing projects more difficult.
 - Does not bulk read by default.
+- No logs, so no replays of each run and much more difficult debugging.
+- No AdvantageScope support.
 
 ---
 
@@ -32,23 +36,28 @@ that includes a command-based action system and geometry.
 
 It prioritizes time consistency above all else.
 
-- Library Repo: <https://github.com/acmerobotics/road-runner/>
+- Docs: <https://rr.brott.dev/docs/v1-0/installation/>
 - Quickstart: <https://github.com/acmerobotics/road-runner-quickstart/tree/master/>
-- Official Docs: <https://rr.brott.dev/docs/v1-0/installation/>
+- Library: <https://github.com/acmerobotics/road-runner/>
+- Visualizer: <https://github.com/acmerobotics/meepmeep>
 
 **Pros of Road Runner:**
 - Stable, minimal bugs if any.
-- Time consistent by default
-- Extensively tested and used by thousands of teams; almost all possible problems have been solved before 
+- Time consistent by default.
+- Tuning is almost fully automated, making it difficult to screw up. <!-- 5 automatically tuned constants, 3 manually tuned constants -->
+- Extensively tested and used by thousands of teams; almost all possible problems have been solved before.
 - Uses the FIRST-recommended standard coordinate system consistently.
 - Works with SlothLoad immediately.
 - Bulk reads by default.
+- Built-in custom logs, for easier debugging and full replays of every run.
+- [Full AdvantageScope support.](https://github.com/Mechanical-Advantage/AdvantageScope/pull/373)
 
 **Cons of Roadrunner:**
 - Prioritizes time consistency above all else, meaning potentially worse correction.
 - Slower speed by default.
 - Path visualizer is code based.
 - Does not cache motor writes by default.
+- No built-in centripetal force correction.
 
 <!--
 
