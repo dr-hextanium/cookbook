@@ -20,7 +20,7 @@ to dynamically converge to the target position.
 **Cons of Pedro:**
 - Newer, so potentially buggier.
 - Less people use it compared to Road Runner.
-- Tuning is almost entirely manual. <!-- 4 automatically tuned constants, minimum of 32 manually tuned constants -->
+- Tuning is mostly manual. <!-- 4 automatically tuned constants, minimum of 32 manually tuned constants -->
 - Not necessarily time-consistent; speed is prioritized over consistency
 - Visualizer uses a nonstandard (0 - 144) coordinate scheme
 - Quickstart code is not under the standard TeamCode package name, 
