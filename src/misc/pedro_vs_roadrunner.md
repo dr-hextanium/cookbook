@@ -16,13 +16,15 @@ to dynamically converge to the target position.
 - Has a no-code, browser-based path visualizer.
 - Caches motor writes by default.
 - Corrects for centripetal force to hold the robot onto curved paths.
+- Path curves can be manually set using control points. 
 
 **Cons of Pedro:**
 - Newer, so potentially buggier.
 - Less people use it compared to Road Runner.
 - Tuning is mostly manual. <!-- 4 automatically tuned constants, minimum of 32 manually tuned constants -->
-- Not necessarily time-consistent; speed is prioritized over consistency
-- Visualizer uses a nonstandard (0 - 144) coordinate scheme
+- Not necessarily time-consistent; speed is prioritized over consistency.
+- Visualizer uses a nonstandard (0 - 144) coordinate scheme.
+- Path curves are not automatically optimized, and must be manually set using control points.
 - Quickstart code is not under the standard TeamCode package name, 
 making using SlothLoad and integrating existing projects more difficult.
 - Does not bulk read by default.
@@ -46,6 +48,7 @@ It prioritizes time consistency above all else.
 - Time consistent by default.
 - Tuning is almost fully automated, making it difficult to screw up. <!-- 5 automatically tuned constants, 3 manually tuned constants -->
 - Extensively tested and used by thousands of teams; almost all possible problems have been solved before.
+- Path curves are automatically optimized to create the ideal path based on your robot's constants.
 - Uses the FIRST-recommended standard coordinate system consistently.
 - Works with SlothLoad immediately.
 - Bulk reads by default.
@@ -55,6 +58,7 @@ It prioritizes time consistency above all else.
 **Cons of Roadrunner:**
 - Prioritizes time consistency above all else, meaning potentially worse correction.
 - Slower speed by default.
+- Path curves are less flexible then Pedro. 
 - Path visualizer is code based.
 - Does not cache motor writes by default.
 - No built-in centripetal force correction.
