@@ -2,7 +2,7 @@
 
 *This recipe does not cover usage for Roadrunner or Command-Based structures.*
 
-[PID(F) controllers](https://www.ctrlaltftc.com/the-pid-controller) are some of the most used controllers in FTC. 
+[PID(F) controllers](https://www.ctrlaltftc.com/the-pid-controller) are some of the most used controllers in FTC.
 However, it can be confusing and challenging to properly integrate them into your OpModes.
 This recipe will go over an example of how to integrate a PID(F) controller alongside a manual control system.
 
@@ -16,7 +16,7 @@ This recipe will go over an example of how to integrate a PID(F) controller alon
 
 ### Creating a PID(F) Controller
 
-The first part of using a PID(F) controller is creating one. 
+The first part of using a PID(F) controller is creating one.
 To do this, we need to declare the PID(F) controller within the OpMode:
 
 ```java
@@ -51,10 +51,10 @@ public class ExampleOpMode extends LinearOpMode {
 }
 ```
 
-Now that we have our PID(F) controller, we need to use it! 
+Now that we have our PID(F) controller, we need to use it!
 One of the most common use cases for a PID(F) controller is moving a motor to a certain motor encoder position.
-As an example, let's say we have a linear slide, and want to move it to 500 ticks when we press "a." 
-We also want to be able to move it up and down using the triggers. 
+As an example, let's say we have a linear slide, and want to move it to 500 ticks when we press "a."
+We also want to be able to move it up and down using the triggers.
 The following code is for a LinearOpMode (the `while (opModeIsActive())` section would go in the `loop()` function for a OpMode):
 
 ```java
@@ -101,7 +101,7 @@ public void runOpMode() {
 
 ```
 
-This is a lot, so let's break it down piece by piece. 
+This is a lot, so let's break it down piece by piece.
 First, we initialize our slide motor, which we call `slides`.
 
 ```java
@@ -122,8 +122,8 @@ Gamepad lastGamepad1 = new Gamepad();
 Gamepad lastGamepad2 = new Gamepad();
 ```
 
-`targetPosition` is simply the position we want the slides to go to, which is 500. 
-`usePIDF` stores the state of our system, i.e. whether we want to run the PIDF or use manual control. 
+`targetPosition` is simply the position we want the slides to go to, which is 500.
+`usePIDF` stores the state of our system, i.e. whether we want to run the PIDF or use manual control.
 `lastGamepad1` and `lastGamepad2` are used for [Rising Edge Detectors](https://gm0.org/en/latest/docs/software/tutorials/gamepad.html?detector#rising-edge-detector).
 In short, they detect when a button begins to be pressed, and ignore when it is held.
 
@@ -145,7 +145,7 @@ if (gamepad1.a && !lastGamepad1.a) {
 
 The next part is a little complicated, but the idea is that we only want to call `slide.setPower()` once, so we group all the ways it can be called together so that they can't happen at the same time.
 
-First, we check if the left trigger is pressed. 
+First, we check if the left trigger is pressed.
 If it is, we set the slide power to an appropriate value and switch to manual control mode by setting `usePIDF` to `false`.
 
 ```java
@@ -157,7 +157,7 @@ if (gamepad1.left_trigger > 0) {
 }
 ```
 
-Next, we do the same check, but for the right trigger. 
+Next, we do the same check, but for the right trigger.
 
 
 ```java
@@ -169,7 +169,7 @@ else if (gamepad1.right_trigger > 0) {
 }
 ```
 
-Note that we use `else` to only run this code if the left trigger is not pressed. 
+Note that we use `else` to only run this code if the left trigger is not pressed.
 This prevents pressing both triggers at the same time from causing any issues.
 
 **Tip:** If your triggers return nonzero values even when they are not being pressed, you can increase the minimum value (the `0` in the statement `if (gamepad1.left_trigger > 0)`) from `0` to something like `0.1`.
@@ -183,20 +183,18 @@ else if (usePIDF) {
 }
 ```
 
-This is a pretty standard way of using the PID(F) output to set a motor power. 
+This is a pretty standard way of using the PID(F) output to set a motor power.
 `slides.getCurrentPosition()`, as the name implies, just returns the current slide position, in ticks.
 The [*FTCLib*](https://ftclib.org/) PID(F) assumes that the first input of the function is the place where your motor is, and the second input is the place where your motor wants to be.
 We will be using the *FTCLib* PID(F) syntax here for the sake of having some standard, but either way works.
 
-If you've read through this entire thing, then congrats! 
+If you've read through this entire thing, then congrats!
 You should now have a fully functioning PID(F) controller that you can implement anywhere, even in conjunction with manual control.
 
-Note that the example we went through is just one way PID(F)s can be used, and there are many ways to achieve this result. 
+Note that the example we went through is just one way PID(F)s can be used, and there are many ways to achieve this result.
 Don't worry if your code doesn't look exactly like this example!
 
-As an aside, the technique we used to make sure the PID(F) control and manual control did not interfere is a simple version of what's known as a [**Finite State Machine**](https://gm0.org/en/latest/docs/software/concepts/finite-state-machines.html). 
+As an aside, the technique we used to make sure the PID(F) control and manual control did not interfere is a simple version of what's known as a [**Finite State Machine**](https://gm0.org/en/latest/docs/software/concepts/finite-state-machines.html).
 This idea of having multiple possible states and only running one at a time to ensure they don't interfere can be used for much more complex systems, such as controlling an entire Autonomous!
 
 Best of luck with your code!
-
-*Last updated: 2024-05-29*

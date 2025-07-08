@@ -26,7 +26,7 @@ The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder
 9. [`lineToX(x: double) & .lineToXConstantHeading(x: double)`](../roadrunner_10/complete_trajectorybuilder_reference.md#linetoxx-double--linetoxconstantheadingx-double)
 10. [`lineToY(y: double) & .lineToYConstantHeading(y: double)`](../roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
 11. [`splineTo(new Vector2d(x, y), tangent)`](../roadrunner_10/complete_trajectorybuilder_reference.md#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-)
-    
+
 #### [Heading Primitives:](../roadrunner_10/complete_trajectorybuilder_reference.md#heading-primitives-1)
 12. [`Tangent Heading (default)`](../roadrunner_10/complete_trajectorybuilder_reference.md#tangent-heading-default)
 13. [`Constant Heading`](../roadrunner_10/complete_trajectorybuilder_reference.md#constant-heading)
@@ -40,14 +40,14 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 #### `waitSeconds(double: seconds)`
 
-> 🚨 **WARNING:** 🚨  
+> 🚨 **WARNING:** 🚨
 > Ensure that you are using `waitSeconds()` and not `wait()`. All Java objects have a `wait()` function which causes the current thread to wait until another thread invokes a `notify()` or `notifyAll()` method. See further details in the [Oracle JavaDoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#wait()). We don't care for this function, but it does show up in intellisense. Make sure you are using the `waitSeconds()` function instead of `wait()`.
 
 ```java
 {{#rustdoc_include BuilderReference.java:1:4}}
 ```
 <div class="video-container-1">
-    <iframe width="505" height="650" 
+    <iframe width="505" height="650"
         src="../static/builder_reference_videos/waitSeconds().mp4" title="waitSeconds()" style="border: none;" playsinline controls>
     </iframe>
 </div>
@@ -67,7 +67,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-1 iframe {
         width: 328px;
         height: 423px;
@@ -103,7 +103,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-2 iframe {
         width: 328px;
         height: 423px;
@@ -111,10 +111,10 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 }
 </style>
 
-> **Why Radians?**  
-> You may have noticed that we are turning by \\( \frac{\pi}{6} \\) degrees instead of degrees. 
+> **Why Radians?**
+> You may have noticed that we are turning by \\( \frac{\pi}{6} \\) degrees instead of degrees.
 > This is because Road Runner 1.0's units are inches and radians by default. To use degrees, we can convert degrees to radians by using Java's `Math.toRadians(degrees)`
-> 
+>
 > Example:
 > `Math.toRadians(90)` converts 90 degrees to radians. 90 degrees is the same as \\( \frac{\pi}{2} \\) radians.
 
@@ -147,7 +147,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-3 iframe {
         width: 328px;
         height: 423px;
@@ -192,7 +192,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-4 iframe {
         width: 328px;
         height: 423px;
@@ -225,7 +225,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-5 iframe {
         width: 328px;
         height: 423px;
@@ -266,7 +266,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-6 iframe {
         width: 328px;
         height: 423px;
@@ -303,7 +303,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-7 iframe {
         width: 328px;
         height: 423px;
@@ -340,7 +340,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-8 iframe {
         width: 328px;
         height: 423px;
@@ -357,7 +357,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 #### `lineToX(x: double)` & `.lineToXConstantHeading(x: double)`
 
-> 🚨 **WARNING:** 🚨  
+> 🚨 **WARNING:** 🚨
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](../roadrunner_10/complete_trajectorybuilder_reference.md) instead of any `lineTo()`'s! 🚨
 
 ```java
@@ -385,7 +385,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-9 iframe {
         width: 328px;
         height: 423px;
@@ -397,7 +397,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 #### `lineToY(y: double)` & `.lineToYConstantHeading(y: double)`
 
-> 🚨 **WARNING:** 🚨  
+> 🚨 **WARNING:** 🚨
 > It is **HIGHLY RECOMMENDED** to use [`.strafeTo()`](../roadrunner_10/complete_trajectorybuilder_reference.md) instead of any `lineTo()`'s! 🚨
 
 ```java
@@ -425,7 +425,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-10 iframe {
         width: 328px;
         height: 423px;
@@ -462,7 +462,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-11 iframe {
         width: 328px;
         height: 423px;
@@ -503,7 +503,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-12 iframe {
         width: 328px;
         height: 423px;
@@ -540,7 +540,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-13 iframe {
         width: 328px;
         height: 423px;
@@ -557,7 +557,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 ```
 
 <div class="video-container-1">
-    <video width="505" height="650" 
+    <video width="505" height="650"
         src="../static/builder_reference_videos/splineToLinearHeading().mp4" title="splineToLinearHeading()" style="border: none;" playsinline controls>
     </video>
 </div>
@@ -577,7 +577,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-14 iframe {
         width: 328px;
         height: 423px;
@@ -614,7 +614,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
         width: 328px;
         height: 423px;
     }
-    
+
     .video-container-15 iframe {
         width: 328px;
         height: 423px;
@@ -645,4 +645,3 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
 - [`.splineToSplineHeading()` Video Playground](https://rr.brott.dev/playground/?9c422405d44fed70)
 
 ---
-*Last Updated: 2025-01-28*

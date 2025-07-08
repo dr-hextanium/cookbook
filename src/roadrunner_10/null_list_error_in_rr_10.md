@@ -15,6 +15,3 @@ If you have gotten through Road Runner 1.0 tuning to the ForwardRampLogger tunin
 ### Solution
 You must first run the OpMode from the Driver Station and then stop it once the robot's speed stops increasing.
 Finally, you can open the tuning page on your robot's Wi-Fi network, as the Road Runner docs say.
-
-
-*Last Updated: 2024-05-29*

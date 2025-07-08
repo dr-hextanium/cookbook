@@ -23,8 +23,8 @@ Access to **Admin Permissions** on aforementioned computer.<br>
     - Open [Android Studio](https://developer.android.com/studio/). <br>
       <br>
 3. **Download and Open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController)**:
-    - In the [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) GitHub repository, press the blue **code** button and press [download zip](https://github.com/FIRST-Tech-Challenge/FtcRobotController/archive/refs/heads/master.zip). 
-      - You can alternatively use [Github Desktop](https://desktop.github.com/) to open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) in [Android Studio](https://developer.android.com/studio/), which is not covered in this Recipe.  
+    - In the [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) GitHub repository, press the blue **code** button and press [download zip](https://github.com/FIRST-Tech-Challenge/FtcRobotController/archive/refs/heads/master.zip).
+      - You can alternatively use [Github Desktop](https://desktop.github.com/) to open [FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController) in [Android Studio](https://developer.android.com/studio/), which is not covered in this Recipe.
     - Extract the contents of the zip file to a folder (typically in your Downloads or Documents folder).
     - In [Android Studio](https://developer.android.com/studio/), press File &rarr; Open (⌘ + O on Mac or Win + O on Windows).
     - Select the folder you extracted the zip file to, and press open. **DO NOT** open any folder inside the extracted folder.
@@ -47,11 +47,11 @@ Access to **Admin Permissions** on aforementioned computer.<br>
         - **Mac**: <br>
           - Option 1 - Using [Homebrew](https://brew.sh/) (Highly Recommended) <br>
             [Homebrew](https://brew.sh/) is a package manager for Mac. This is the easiest way and will provide automatic updates.
-            - Install the [Homebrew](https://brew.sh/) package manager by running the following command in a terminal:  
+            - Install the [Homebrew](https://brew.sh/) package manager by running the following command in a terminal:
             ```bash
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
               ```
-            
+
             - Then, run this command to install [ADB](https://developer.android.com/studio/releases/platform-tools) using [Homebrew](https://brew.sh/):
             ```bash
             brew install android-platform-tools
@@ -74,7 +74,7 @@ Access to **Admin Permissions** on aforementioned computer.<br>
             ```bash
             source ~/.bash_profile
               ```
-        - **Linux**: 
+        - **Linux**:
           <br>[ADB](https://developer.android.com/studio/releases/platform-tools) should already be installed by default with the installation of Android Studio. If not, you can use the following steps below to install [ADB](https://developer.android.com/studio/releases/platform-tools) manually:<br>
           <br>
           - Open a terminal window and run the following command:
@@ -100,4 +100,3 @@ Congratulations! You have successfully installed the necessary software to progr
 
 ## Troubleshooting
 - If you have questions/issues with the installation process, the [Unofficial FTC Discord](https://discord.gg/first-tech-challenge) has many experienced programmers who can help you with all sorts of issues, including installation issues.
-- *Last Updated: 2024-05-30*
