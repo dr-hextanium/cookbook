@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "The Cookbook"
 
+[preprocessor.blame]
+source = "https://github.com/dr-hextanium/cookbook/commit/"
+
 [output.html.code.hidelines]
 java = "# "
 kt = "# "
