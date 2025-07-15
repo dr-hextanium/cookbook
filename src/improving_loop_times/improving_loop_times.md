@@ -76,5 +76,3 @@ This example uses [CachingHardware](https://github.com/Dairy-Foundation/CachingH
 ```java
 {{#rustdoc_include CachingOptimizedOpMode.java:12:}}
 ```
-
-*Last Updated: 2024-10-14*

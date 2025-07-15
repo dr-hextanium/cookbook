@@ -32,5 +32,3 @@
 **AS**: [Android Studio](https://developer.android.com/studio)<br>
 **OBJ**: [OnBot Java](https://ftc-docs.firstinspires.org/en/latest/programming_resources/onbot_java/OnBot-Java-Tutorial.html)<br>
 **ADB**: [Android Debug Bridge (used to wireless connect to control hub)](https://developer.android.com/tools/adb)
-
-*Last Updated: 2024-01-26*
