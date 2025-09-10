@@ -95,6 +95,9 @@ public void runOpMode() {
             // Sets the slide motor power according to the PIDF output.
             slides.setPower(examplePIDF.calculate(slides.getCurrentPosition(), targetPosition));
         }
+
+        lastGamepad1 = gamepad1;
+        lastGamepad2 = gamepad2;
     }
 }
 
@@ -181,6 +184,13 @@ else if (usePIDF) {
     // Sets the slide motor power according to the PIDF output.
     slides.setPower(examplePIDF.calculate(slides.getCurrentPosition(), targetPosition));
 }
+```
+
+We also update our stored gamepads to allow the rising-edge detector to work.
+
+```java
+lastGamepad1 = gamepad1;
+lastGamepad2 = gamepad2;
 ```
 
 This is a pretty standard way of using the PID(F) output to set a motor power.
