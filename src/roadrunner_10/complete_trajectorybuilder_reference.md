@@ -16,8 +16,8 @@ The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder
 
 #### [Path Primitives:](../roadrunner_10/complete_trajectorybuilder_reference.md#path-primitives-1)
 1. [`waitSeconds(double: seconds)`](../roadrunner_10/complete_trajectorybuilder_reference.md#waitsecondsdouble-seconds)
-2. [`turn(Math.toRadians(double: angle))`](../roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-angle)
-3. [`turnTo(Math.toRadians(double: heading))`](../roadrunner_10/complete_trajectorybuilder_reference.md#turntomathtoradiansdouble-heading)
+2. [`turn(Math.toRadians(double: degrees))`](../roadrunner_10/complete_trajectorybuilder_reference.md#turnmathtoradiansdouble-degrees)
+3. [`turnTo(Math.toRadians(double: degrees))`](../roadrunner_10/complete_trajectorybuilder_reference.md#turntomathtoradiansdouble-degrees)
 4. [`setTangent(double: r)`](../roadrunner_10/complete_trajectorybuilder_reference.md#settangentdouble-r)
 5. [`setReversed(boolean: reversed)`](../roadrunner_10/complete_trajectorybuilder_reference.md#setreversedboolean-reversed)
 6. [`.strafeTo(new Vector2d(double: x, double: y))` & `.strafeToConstantHeading(new Vector2d(x: double, y: double))`](../roadrunner_10/complete_trajectorybuilder_reference.md#strafetonew-vector2ddouble-x-double-y--strafetoconstantheadingnew-vector2dx-double-y-double)
@@ -25,7 +25,7 @@ The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder
 8. [`strafeToSplineHeading(new Vector2d(x, y), Math.toRadians(heading))`](../roadrunner_10/complete_trajectorybuilder_reference.md#strafetosplineheadingnew-vector2dx-y-mathtoradiansheading)
 9. [`lineToX(x: double) & .lineToXConstantHeading(x: double)`](../roadrunner_10/complete_trajectorybuilder_reference.md#linetoxx-double--linetoxconstantheadingx-double)
 10. [`lineToY(y: double) & .lineToYConstantHeading(y: double)`](../roadrunner_10/complete_trajectorybuilder_reference.md#linetoyy-double--linetoyconstantheadingy-double)
-11. [`splineTo(new Vector2d(x, y), tangent)`](../roadrunner_10/complete_trajectorybuilder_reference.md#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-)
+11. [`splineTo(new Vector2d(x, y), tangent)`](../roadrunner_10/complete_trajectorybuilder_reference.md#splinetonew-vector2dx-y-tangent--start-heading-is--fracpi2--radians)
 
 #### [Heading Primitives:](../roadrunner_10/complete_trajectorybuilder_reference.md#heading-primitives-1)
 12. [`Tangent Heading (default)`](../roadrunner_10/complete_trajectorybuilder_reference.md#tangent-heading-default)
@@ -35,7 +35,7 @@ The current [TrajectoryBuilder Reference](https://rr.brott.dev/docs/v1-0/builder
 
 ### Path Primitives
 
-The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), with the exception of [`splineTo(new Vector2d(x, y), tangent)`](../roadrunner_10/complete_trajectorybuilder_reference.md#splinetonew-vector2dx-y-tangent--heading-is--fracpi6-), which has a heading of \\( \frac{\pi}{2} \\).
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\) radians, with the exception of [`splineTo(new Vector2d(x, y), tangent)`](../roadrunner_10/complete_trajectorybuilder_reference.md#splinetonew-vector2dx-y-tangent--start-heading-is--fracpi2--radians), which has a heading of \\( \frac{\pi}{2} \\).
 
 
 #### `waitSeconds(double: seconds)`
@@ -76,7 +76,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 </style>
 ---
 
-#### `turn(Math.toRadians(double: angle))`
+#### `turn(Math.toRadians(double: degrees))`
 
 ```java
 {{#rustdoc_include BuilderReference.java:8:14}}
@@ -112,7 +112,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 </style>
 
 > **Why Radians?**
-> You may have noticed that we are turning by \\( \frac{\pi}{6} \\) degrees instead of degrees.
+> You may have noticed that we are turning by \\( \frac{\pi}{6} \\) radians instead of 30 degrees.
 > This is because Road Runner 1.0's units are inches and radians by default. To use degrees, we can convert degrees to radians by using Java's `Math.toRadians(degrees)`
 >
 > Example:
@@ -120,7 +120,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 ---
 
-#### `turnTo(Math.toRadians(double: heading))`
+#### `turnTo(Math.toRadians(double: degrees))`
 
 ```java
 {{#rustdoc_include BuilderReference.java:18:25}}
@@ -162,6 +162,9 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 ```java
 {{#rustdoc_include BuilderReference.java:29:32}}
 ```
+>**Tip!**
+>
+>You can learn more about tangents in RoadRunner [here](https://rr.brott.dev/docs/v1-0/guides/tangents/).
 
 ---
 
@@ -435,7 +438,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 ---
 
-#### `splineTo(new Vector2d(x, y), tangent)` | Heading is \\( \frac{\pi}{6} \\)
+#### `splineTo(new Vector2d(x, y), tangent)` | Start heading is \\( \frac{\pi}{2} \\) radians
 
 ```java
 {{#rustdoc_include BuilderReference.java:108:110}}
@@ -474,7 +477,7 @@ The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{6} \\), wi
 
 ### Heading Primitives
 
-The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\).
+The begin pose is the origin `(0,0)` with a heading of \\( \frac{\pi}{2} \\) radians.
 
 #### `Tangent Heading (default)`
 

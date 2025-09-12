@@ -10,8 +10,8 @@
 // If you see `Math.PI`, it is already in radians, and does not need `Math.toRadians()`. Degrees from 0 to 360 need to be converted to radians.
 // To turn clockwise, use a negative angle.
 
-.turn(-Math.PI / 6) // Turns clockwise by `Math.PI / 6` degrees, ending at a heading of 0 degrees
-.turn(Math.PI / 6) // Turns counterclockwise by `Math.PI / 6` degrees, ending at the original heading
+.turn(-Math.PI / 6) // Turns clockwise by `Math.PI / 6` radians (30 degrees), ending at a heading of 0 degrees
+.turn(Math.PI / 6) // Turns counterclockwise by `Math.PI / 6` radians (30 degrees), ending at the original heading
 
 
 
@@ -22,14 +22,14 @@
 // If it still does not work, you can use the `turn()` method instead.
 
 .turnTo(Math.toRadians(90)) // Turns to a heading of 90 degrees
-.turnTo(Math.PI / 6) // Turns to a heading of `Math.PI / 6` degrees, ending at the original heading
+.turnTo(Math.PI / 6) // Turns to a heading of `Math.PI / 6` radians, ending at the original heading
 
 
 
 // `setTangent()` allows you to set a heading tangent on a trajectory, allowing you to follow a trajectory at arbitrary heading tangents
 // This is equivalent to specifying a custom tangent in the `TrajectoryBuilder()` constructor.
 
-.setTangent(90) // Sets tangent to 90
+.setTangent(Math.toRadians(90)) // Sets tangent to 90 degrees
 
 
 
@@ -38,29 +38,29 @@
 // This can be fixed by reversing the path using `setReversed(true)`.
 
 .setReversed(false)  // Unreversed trajectory has hooks on the start and end
-.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.splineTo(new Vector2d(-48.0, -24.0), -Math.PI / 2)
 .setReversed(false)
-.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+.splineTo(new Vector2d(-48.0, 0.0), Math.PI)
 
 
 
 .setReversed(true)  // Reversed trajectory has no hooks on the start and end, and is smooth
-.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.splineTo(new Vector2d(-48.0, -24.0), -Math.PI / 2)
 .setReversed(false)
-.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+.splineTo(new Vector2d(-48.0, 0.0), Math.PI)
 
 
 
 // By default, each trajectory is set to `setReversed(false)`, which does not reverse the paths.
 // This means that:
 .setReversed(false)
-.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
+.splineTo(new Vector2d(-48.0, -24.0), -Math.PI / 2)
 .setReversed(false)
-.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+.splineTo(new Vector2d(-48.0, 0.0), Math.PI)
 
 // Is the same as:
-.splineTo(Vector2d(-48.0, -24.0), -Math.PI / 2)
-.splineTo(Vector2d(-48.0, 0.0), Math.PI)
+.splineTo(new Vector2d(-48.0, -24.0), -Math.PI / 2)
+.splineTo(new Vector2d(-48.0, 0.0), Math.PI)
 
 
 
