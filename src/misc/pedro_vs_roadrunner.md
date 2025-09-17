@@ -1,87 +1,21 @@
 # Pedro Pathing vs Road Runner
 
-**Pedro Pathing** is a path-following library that utilizes a reactive vector follower
-that implements translational, heading, and centripetal force correction
-to dynamically converge to the target position.
+[**Pedro Pathing**](https://pedropathing.com) and
+[**RoadRunner**](https://rr.brott.dev) are two popular autonomous movement
+libraries for FTC. The goal of this article is to provide an unbiased
+comparison to help you decide which to use. The goal of this article is
+**not** to recommend one over the other.
 
-**Links:**
-- Docs: <https://pedropathing.com>
-- Quickstart: <https://github.com/Pedro-Pathing/Quickstart>
-- Library: <https://github.com/Pedro-Pathing/PedroPathing>
-- Visualizer: <https://visualizer.pedropathing.com>
+<br/>
 
-**Pros of Pedro:**
-- Can make your bot drive faster.
-- Excellent correction for unexpected disturbances.
-- Has a no-code, browser-based path visualizer.
-- Caches motor writes by default.
-- Corrects for centripetal force to hold the robot onto curved paths.
-- Path curves can be manually set using control points.
-
-**Cons of Pedro:**
-- Newer, so potentially buggier.
-- Less people use it compared to Road Runner.
-- Tuning is mostly manual. <!-- 4 automatically tuned constants, minimum of 32 manually tuned constants -->
-- Not necessarily time-consistent; speed is prioritized over consistency.
-- Visualizer uses a nonstandard (0 - 144) coordinate scheme.
-- Path curves are not automatically optimized, and must be manually set using control points.
-- Quickstart code is not under the standard TeamCode package name,
-making using SlothLoad and integrating existing projects more difficult.
-- Does not bulk read by default.
-- No logs, so no replays of each run and much more difficult debugging.
-- No AdvantageScope support.
-
----
-
-**Road Runner** is a motion-profiling-based follower library
-that includes a command-based action system and geometry.
-
-It prioritizes time consistency above all else.
-
-- Docs: <https://rr.brott.dev/docs/v1-0/installation/>
-- Quickstart: <https://github.com/acmerobotics/road-runner-quickstart/tree/master/>
-- Library: <https://github.com/acmerobotics/road-runner/>
-- Visualizer: <https://github.com/acmerobotics/meepmeep>
-
-**Pros of Road Runner:**
-- Stable, minimal bugs if any.
-- Time consistent by default.
-- Tuning is almost fully automated, making it difficult to screw up. <!-- 5 automatically tuned constants, 3 manually tuned constants -->
-- Extensively tested and used by thousands of teams; almost all possible problems have been solved before.
-- Path curves are automatically optimized to create the ideal path based on your robot's constants.
-- Uses the FIRST-recommended standard coordinate system consistently.
-- Works with SlothLoad immediately.
-- Bulk reads by default.
-- Built-in custom logs, for easier debugging and full replays of every run.
-- [Full AdvantageScope support.](https://github.com/Mechanical-Advantage/AdvantageScope/pull/373)
-
-**Cons of Roadrunner:**
-- Prioritizes time consistency above all else, meaning potentially worse correction.
-- Slower speed by default.
-- Path curves are less flexible then Pedro.
-- Path visualizer is code based.
-- Does not cache motor writes by default.
-- No built-in centripetal force correction.
-
-<!--
-
-Guidelines for editing this page:
-
-Differences must be objective issues from a neutral point of view, not one sided.
-Ideally, people with biases in both directions should agree about these differences.
-
-Each difference will be listed twice, as a pro of one library and as a con of another.
-
-Actively avoid being reductive or summarizing into an overall recommendation;
-the idea of the page is that both libraries are good for different needs,
-and the reader should decide for themself which library aligns with their priorities.
-
-The amount of pros or cons for a library is not intended to imply that library is definitely better
-or definitely worse, and being neutral does not mean that the amount of pros and cons need to be equal.
-
-If you feel that a library has too many cons, consider fixing the underlying issues they reference
-and improving the experience for all users. Let us know (in an issue, PR, or in the Cookbook Discord)
-after this happens and we will be happy to remove it from the list.
-
-
--->
+| Aspect                  | Pedro Pathing                                                                                                                                                                                                                                                                                                                               | RoadRunner                                                                                                                                                                                                                                                                 |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Following Strategy      | Uses three PID controllers: translational, heading, and drive, along with centripetal force correction.                                                                                                                                                                                                                                     | Generates and follows motion-profiled trajectories by using a combination of feedforward and feedback control.                                                                                                                                                             |
+| Visualizer              | Has a no-code, web-based [path generator and visualizer](https://visualizer.pedropathing.com) that can export code for paths.                                                                                                                                                                                                               | Has a code-based [path visualizer](https://github.com/acmerobotics/meepmeep) that visualizes paths defined in code.                                                                                                                                                        |
+| Tuning                  | Half automatic and half manual. Has six automatic tuning steps and four manual tuning steps, although the manual steps take slightly longer.                                                                                                                                                                                                | Mostly automatic. Has four automatic tuning steps and two manual tuning steps, although the manual steps take slightly longer. If using the SparkFun OTOS for localization there are four additional automatic tuning steps.                                               |
+| Loop Time Optimizations | Automatically implements motor write caching with a configurable cache tolerance.                                                                                                                                                                                                                                                           | Automatically implements bulk reading.                                                                                                                                                                                                                                     |
+| Good At                 | Correction for unexpected disturbances.                                                                                                                                                                                                                                                                                                     | Time-consistent trajectory following.                                                                                                                                                                                                                                      |
+| Coordinate System       | Custom coordinate system. Provides a `PoseConverter` for converting to and from the official FIRST coordinate system.                                                                                                                                                                                                                       | Uses the official FIRST coordinate system.                                                                                                                                                                                                                                 |
+| Command System          | Does not come with a built-in command system, <br/>although can be integrated with others. [NextFTC](https://nextftc.dev) and [SolversLib](https://docs.seattlesolvers.com) both provide built-in integration with Pedro Pathing. Mercurial has [two sample repos](https://docs.dairy.foundation/Samples/user_samples) using Pedro Pathing. | Has a built-in actions system. Also has an example on the docs for usage with FTCLib. [NextFTC](https://nextftc.dev) provides built-in integration with RoadRunner. Mercurial has [two sample repos](https://docs.dairy.foundation/Samples/user_samples) using RoadRunner. |
+| Logging                 | Automatically logs many values to telemetry, but does not log to a file. Data such as current position can be logged by the user by using a third-party library such as [PsiKit](https://psilynx.github.io/PsiKit) for replay with [AdvantageScope](https://advantagescope.org).                                                            | Logs many values automatically to telemetry and to a file during every OpMode run. Uses a custom log format that is supported by [AdvantageScope](https://advantagescope.org).                                                                                             |
+| Drivetrain Support      | Has built-in support for mecanum drivetrains. Users can provide a custom implementation of the `Drivetrain` interface to use another drivetrain, but does not support nonholonomic drivetrains such as tank.                                                                                                                                | Has built-in support for mecanum and tank drivetrains. Does not support any other drivetrains.                                                                                                                                                                             |
