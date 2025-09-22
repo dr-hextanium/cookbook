@@ -11,3 +11,4 @@
 - ZachWaffle [(github)](https://github.com/zachwaffle4) [(discord)](https://discord.com/users/522513851942436867)
 - Baron [(github)](https://github.com/BaronClaps) [(discord)](https://discord.com/users/813531426603270144)
 - Ishaan [(github)](https://github.com/ishaanko)
+- Davis [(github)](https://github.com/BeepBot99) [(discord)](https://discord.com/users/1217246652448903188)
