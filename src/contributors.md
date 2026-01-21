@@ -12,3 +12,4 @@
 - Baron [(github)](https://github.com/BaronClaps) [(discord)](https://discord.com/users/813531426603270144)
 - Ishaan [(github)](https://github.com/ishaanko)
 - Davis [(github)](https://github.com/BeepBot99) [(discord)](https://discord.com/users/1217246652448903188)
+- Sid Shah [(github)](https://github.com/siddharth-shah121) [(discord)](https://discord.com/users/833051450812268584)

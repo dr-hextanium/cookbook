@@ -43,6 +43,7 @@
 - [Terminology and Acronyms](./misc/terminology_and_acronyms.md)
 - [Improving Loop Times](./improving_loop_times/improving_loop_times.md)
 - [Pedro Pathing vs Road Runner](./misc/pedro_vs_roadrunner.md)
+- [Capturing a Log](./misc/logcat.md)
 
 ---
 [Contributors](./contributors.md)

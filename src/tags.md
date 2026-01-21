@@ -3,7 +3,7 @@ Cookbook includes a set of quick aliases to many of the articles.
 These can be easily accessed using tools like Carl custom tags.
 One is available here: https://carl.gg/t/2167631
 
-Here is a list of all of them: 
+Here is a list of all of them:
 
 !cb tags -> this page
 
@@ -18,6 +18,8 @@ Here is a list of all of them:
 !cb downgrade -> https://cookbook.dairy.foundation/gradle/downgrading_gradle_jdk/downgrading_gradle_jdk.html
 
 !cb gradle -> https://cookbook.dairy.foundation/gradle/dont_upgrade/dont_upgrade.html
+
+!cb logcat -> https://cookbook.dairy.foundation/misc/logcat.html
 
 !cb emptylist -> https://cookbook.dairy.foundation/roadrunner_10/null_list_error_in_rr_10.html
 
