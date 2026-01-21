@@ -1,7 +1,6 @@
 [book]
 authors = ["robopandas"]
 language = "en"
-multilingual = false
 src = "src"
 title = "The Cookbook"
 

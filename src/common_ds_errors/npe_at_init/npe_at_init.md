@@ -256,5 +256,3 @@ import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.tel
 ```
 
 These two imports are incredibly nasty. The `hardwareMap` and `telemetry` above are not actually meant for us, but actually for Blocks users! This is, behind the scenes, what Blocks OpModes use. Since we are not using Blocks, these imports don't work. Luckily, although the bug is nasty, the solution is rather simple - get rid of the imports and pass `hardwareMap` and `telemetry` in like we did in the previous section!
-
-*Last updated: 2024-11-27*

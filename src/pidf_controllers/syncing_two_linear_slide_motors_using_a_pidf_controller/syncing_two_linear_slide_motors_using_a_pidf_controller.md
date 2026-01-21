@@ -32,6 +32,3 @@ This code example is going to assume you have a working PID(F) controller class 
 ```java
 {{#rustdoc_include PIDFExample.java:3:29}}
 ```
-
-
-*Last Updated: 2024-05-29*
