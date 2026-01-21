@@ -114,5 +114,3 @@ The double colon works like `class/instance::method`.
 
 **It is important to note that these were extremely simple FSMs and do not demonstrate their full capabilities. 
 This was simply meant to show you a way to integrate RoadRunner and a PIDF controller.**
-
-*Last Updated: 2024-01-23*
