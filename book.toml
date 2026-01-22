@@ -6,6 +6,7 @@ title = "The Cookbook"
 
 [preprocessor.blame]
 source = "https://github.com/dr-hextanium/cookbook/commit/"
+optional = true
 
 [output.html.code.hidelines]
 java = "# "
