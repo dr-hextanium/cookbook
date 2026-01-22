@@ -1,7 +1,7 @@
 # Tags
 Cookbook includes a set of quick aliases to many of the articles.
 These can be easily accessed using tools like Carl custom tags.
-One is available here: https://carl.gg/t/2167631
+One is available here: https://carl.gg/t/2171316
 
 Here is a list of all of them:
 
