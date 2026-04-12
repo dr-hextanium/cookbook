@@ -33,8 +33,7 @@ control docs.
 [^predictive-tuning]: [Predictive braking tuning docs](https://pedropathing.com/docs/pathing/tuning/drive-algorithm/predictive/configuration)
 [^rr-tuning]: [RoadRunner tuning docs](https://rr.brott.dev/docs/v1-0/tuning/)
 [^caching]: [Cache tolerance in Pedro constants](https://github.com/Pedro-Pathing/PedroPathing/blob/main/ftc/src/main/java/com/pedropathing/ftc/drivetrains/MecanumConstants.java#L32)
-[^bulk]: [Bulk reading in
-`Encoder`](https://github.com/acmerobotics/road-runner-ftc/blob/master/RoadRunner/src/main/java/com/acmerobotics/roadrunner/ftc/Encoders.kt#L132)
+[^bulk]: [Bulk reading in `Encoder`](https://github.com/acmerobotics/road-runner-ftc/blob/master/RoadRunner/src/main/java/com/acmerobotics/roadrunner/ftc/Encoders.kt#L132)
 [^logs]: [RoadRunner log files](https://rr.brott.dev/docs/v1-0/log-files/)
 [^custom-drivetrain]: [Custom drivetrains](https://pedropathing.com/docs/pathing/custom/drivetrain)
 [^correction]: [Pedro Pathing homepage](https://pedropathing.com/)
